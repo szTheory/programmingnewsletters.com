@@ -1,0 +1,29 @@
+# carton snapshot format: version 1.0
+DISTRIBUTIONS
+  Cpanel-JSON-XS-4.21
+    pathname: R/RU/RURBAN/Cpanel-JSON-XS-4.21.tar.gz
+    provides:
+      Cpanel::JSON::XS 4.21
+      Cpanel::JSON::XS::Type undef
+    requirements:
+      Carp 0
+      Config 0
+      Encode 1.9801
+      Exporter 0
+      ExtUtils::MakeMaker 0
+      Pod::Text 2.08
+      XSLoader 0
+      overload 0
+      strict 0
+      warnings 0
+  JSON-MaybeXS-1.004002
+    pathname: E/ET/ETHER/JSON-MaybeXS-1.004002.tar.gz
+    provides:
+      JSON::MaybeXS 1.004002
+    requirements:
+      Carp 0
+      Cpanel::JSON::XS 2.3310
+      ExtUtils::MakeMaker 0
+      JSON::PP 2.27300
+      Scalar::Util 0
+      perl 5.006
