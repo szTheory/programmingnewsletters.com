@@ -8,6 +8,6 @@ use warnings;
 
 use lib 'lib';    #tell perl we'll find modules in lib/
 
-use Build 'newsletters';
+use Newsletters 'newsletters';
 
 1;
