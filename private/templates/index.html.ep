@@ -28,7 +28,7 @@
     <ul class="entries">
     <% foreach my $entry (@{$entry_group->{entries}}) { %>
       <li class="entry">
-        <a href="<%= $entry->{url} %>"><%= $entry->{name} %></a>
+        <a href="<%= $entry->{url} %>" rel="nofollow" target="_blank"><%= $entry->{name} %></a>
         <div class="category"><%= $entry->{category} %></div>
       </li>
     <% } %>

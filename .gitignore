@@ -44,3 +44,5 @@ local
 public/index.html
 
 .ionide
+
+newsletters.backup.json

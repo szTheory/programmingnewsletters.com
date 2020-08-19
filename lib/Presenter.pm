@@ -22,6 +22,19 @@ sub _sort_newsletters {
   return;
 }
 
+sub _update_with_base_url {
+  my ($entries) = @_;
+
+  foreach my $entry ( @{$entries} ) {
+    if ( $entry->{base_url} ) {
+      print "* * * *  BASE URL * * * * * \n";
+      $entry->{url} = $entry->{base_url} . $entry->{url};
+    }
+  }
+
+  return;
+}
+
 sub _grouped_by_date {
   my ($entries) = @_;
 
@@ -64,11 +77,27 @@ sub _add_formatted_timestamp {
   return;
 }
 
+sub _remove_extra_fields {
+  my ($entries) = @_;
+
+  foreach my $entry ( @{$entries} ) {
+    delete $entry->{updated_regex};
+    delete $entry->{updated_selector};
+    delete $entry->{link_attr};
+    delete $entry->{link_selector};
+    delete $entry->{base_url};
+  }
+
+  return;
+}
+
 sub newsletters {
   my ($entries) = newsletters_json();
 
   _sort_newsletters($entries);
   _add_formatted_timestamp($entries);
+  _update_with_base_url($entries);
+  _remove_extra_fields($entries);
   my $grouped_entries = _grouped_by_date($entries);
 
   return $grouped_entries;

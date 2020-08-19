@@ -13,7 +13,11 @@ use LWP::Simple;
 use XML::Twig;
 use DateTime::Format::DateParse;
 
-use constant NEWSLETTERS_JSON_FILE => 'newsletters.json';
+use Mojo::Dom;
+
+use constant NEWSLETTERS_JSON_FILE             => 'private/newsletters.json';
+use constant RSS_FEED_DEFAULT_UPDATED_SELECTOR => 'pubDate';
+use constant RSS_FEED_DEFAULT_LINK_SELECTOR    => 'item/link';
 
 sub _newsletters_file_json {
   open my $fh, '<:encoding(UTF-8)', NEWSLETTERS_JSON_FILE;
@@ -28,30 +32,119 @@ sub _newsletters_file_json {
   return decode_json($json);
 }
 
-sub _newsletter_updated_at {
+sub _newsletter_info_rss {
   my ($newsletter_entry) = @_;
+
   use Data::Dumper;
   print Dumper($newsletter_entry);
   my $name     = $newsletter_entry->{name};
   my $feed_url = $newsletter_entry->{feed_url};
 
   print "-- Downloading $name - $feed_url\n";
-  my $content = get($feed_url);
+  my $xml = get($feed_url);
+  my $updated_selector =
+    $newsletter_entry->{updated_selector} || RSS_FEED_DEFAULT_UPDATED_SELECTOR;
+  my $link_selector =
+    $newsletter_entry->{link_selector} || RSS_FEED_DEFAULT_LINK_SELECTOR;
+  my $link_attr = $newsletter_entry->{link_attr};
+  print Dumper($updated_selector);
+  print Dumper($link_selector);
 
   print "-- Parsing XML\n";
   my @dates;
-  my $twig = XML::Twig->new(
-    twig_handlers => {
-      'pubDate'   => sub { push( @dates, $_->text_only() ) },
-      '_default_' => sub { $_->purge },
-    }
-  );
-  $twig->parse($content);
+  my @links;
+
+  my $twig_handlers = {
+    $updated_selector => sub { push( @dates, $_->text_only() ) },
+
+    # '_default_' => sub { $_->purge },
+  };
+
+  my $link_selector_callback;
+  if ($link_attr) {
+    print ",,,, link_attr\n";
+    $link_selector_callback = sub { push( @links, $_->atts()->{$link_attr} ) }
+  }
+  else {
+    print ",,,, NOOOOO link_attr\n";
+    $link_selector_callback = sub { push( @links, $_->text_only() ) }
+  }
+  $twig_handlers->{$link_selector} = $link_selector_callback;
+  print "############## twig handlers\n";
+  print Dumper($twig_handlers);
+
+  my $twig = XML::Twig->new( twig_handlers => $twig_handlers );
+  $twig->parse($xml);
+  print "--- Dates---\n";
+  print Dumper(@dates);
+  print "---- LINKS ----\n";
+  print Dumper(@links);
 
   my $timestamp =
     DateTime::Format::DateParse->parse_datetime( $dates[0] )->epoch();
 
-  return $timestamp;
+  return {
+    updated_at => $timestamp,
+    url        => @links[0]
+  };
+}
+
+sub _newsletter_info_html {
+  my ($newsletter_entry) = @_;
+
+  use Data::Dumper;
+  print Dumper($newsletter_entry);
+  my $name = $newsletter_entry->{name};
+  my $url  = $newsletter_entry->{url};
+
+  print "-- Downloading $name - $url\n";
+  my $html = get($url);
+  print Dumper($html);
+
+  my $updated_selector = $newsletter_entry->{updated_selector};
+  my $updated_regex    = $newsletter_entry->{updated_regex};
+  my $link_selector    = $newsletter_entry->{link_selector};
+  my $link_attr        = $newsletter_entry->{link_attr};
+
+  print "-- Parsing HTML\n";
+  my $dom     = Mojo::DOM->new($html);
+  my $element = $dom->at($updated_selector);
+
+  print ".... ELEMENT\n";
+  print Dumper($element);
+
+  if ( !$element ) {
+    die
+"Could not find updated timestamp for $name with selector '$updated_selector' for URL $url";
+  }
+
+  my ($timestamp_string) = $element->text =~ qr{$updated_regex};
+  print "--- TIMESTAMP STRING -----\n";
+  print Dumper($timestamp_string);
+  my $timestamp =
+    DateTime::Format::DateParse->parse_datetime($timestamp_string)->epoch();
+
+  my $link = $element->attr($link_attr);
+
+  return {
+    updated_at => $timestamp,
+    url        => $link
+  };
+}
+
+sub _newsletter_info {
+  my ($newsletter_entry) = @_;
+
+  my $info;
+
+  if ( $newsletter_entry->{feed_url} ) {
+    $info = _newsletter_info_rss($newsletter_entry);
+  }
+  else {
+    $info = _newsletter_info_html($newsletter_entry);
+  }
+
+  return $info;
 }
 
 sub _newsletter_decorate_json {
@@ -60,8 +153,12 @@ sub _newsletter_decorate_json {
   print "............\n";
   use Data::Dumper;
   print Dumper($json);
-  my $updated_at = _newsletter_updated_at($json);
-  $json->{updated_at} = $updated_at;
+  my $info = _newsletter_info($json);
+  print "~~~~ INFO ~~~~~\n";
+  print Dumper($info);
+  $json->{updated_at} = $info->{updated_at};
+  $json->{url}        = $info->{url};
+  print "~~~~~ JSON ~~~~~\n";
   print Dumper($json);
 
   return $json;
@@ -83,7 +180,6 @@ sub newsletters_json {
   }
 
   print "///////////////\n";
-  use Data::Dumper;
   print Dumper($json);
   return $json->{entries};
 }

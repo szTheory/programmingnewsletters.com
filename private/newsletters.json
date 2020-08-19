@@ -1,0 +1,14 @@
+{
+  "entries": [
+    {
+      "category": "Javascript",
+      "name": "ESNext News",
+      "url": "http://esnextnews.com/archive.html",
+      "updated_selector": "#archive section a",
+      "updated_regex": "([\\d-]+)$",
+      "link_selector": "#archive section a",
+      "link_attr": "href",
+      "base_url": "http://esnextnews.com/"
+    }
+  ]
+}
