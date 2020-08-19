@@ -28,9 +28,8 @@
     <ul class="entries">
     <% foreach my $entry (@{$entry_group->{entries}}) { %>
       <li class="entry">
-        <div class="category"><%= $entry->{category} %></div>
         <a href="<%= $entry->{url} %>"><%= $entry->{name} %></a>
-        <div class="updated-at"><%= $entry->{updated_at_formatted} %></div>
+        <div class="category"><%= $entry->{category} %></div>
       </li>
     <% } %>
     </ul>

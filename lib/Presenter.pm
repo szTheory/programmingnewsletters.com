@@ -16,7 +16,8 @@ use Data::Dumper;
 sub _sort_newsletters {
   my ($entries) = @_;
 
-  @{$entries} = sort { $b->{updated_at} <=> $a->{updated_at} } @{$entries};
+  @{$entries} =
+    reverse sort { $a->{updated_at} <=> $b->{updated_at} } @{$entries};
 
   return;
 }
