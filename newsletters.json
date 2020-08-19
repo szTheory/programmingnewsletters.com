@@ -3,7 +3,14 @@
     {
       "category": "Programming Languages",
       "name": "Ruby Weekly",
-      "url": "https://cprss.s3.amazonaws.com/rubyweekly.com.xml"
+      "url": "https://rubyweekly.com/latest",
+      "feed_url": "https://cprss.s3.amazonaws.com/rubyweekly.com.xml"
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Go Weekly",
+      "url": "https://golangweekly.com/latest",
+      "feed_url": "https://golangweekly.com/rss/"
     }
   ]
 }

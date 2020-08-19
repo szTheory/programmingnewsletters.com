@@ -1,0 +1,41 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>EasyNewsletter - Programming newsletters without email</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <% foreach my $entry_group (@{$grouped_entries}) { %>
+    <h2 class="date"><%= $entry_group->{date} %></h2>
+
+    <ul class="entries">
+    <% foreach my $entry (@{$entry_group->{entries}}) { %>
+      <li class="entry">
+        <div class="category"><%= $entry->{category} %></div>
+        <a href="<%= $entry->{url} %>"><%= $entry->{name} %></a>
+        <div class="updated-at"><%= $entry->{updated_at_formatted} %></div>
+      </li>
+    <% } %>
+    </ul>
+
+  <% } %>
+</body>
+
+</html>

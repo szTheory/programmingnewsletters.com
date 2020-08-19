@@ -1,16 +1,22 @@
-package Build 1.0;
+package Newsletters 1.0;
 
 use strict;
 use warnings;
 use autodie;
+
+use Exporter 'import';
+our @EXPORT_OK   = qw(newsletters_json);
+our %EXPORT_TAGS = ( all => \@EXPORT_OK );
 
 use JSON::MaybeXS qw(decode_json);
 use LWP::Simple;
 use XML::Twig;
 use DateTime::Format::DateParse;
 
-sub newsletters_json {
-  open my $fh, '<:encoding(UTF-8)', 'newsletters.json';
+use constant NEWSLETTERS_JSON_FILE => 'newsletters.json';
+
+sub _newsletters_file_json {
+  open my $fh, '<:encoding(UTF-8)', NEWSLETTERS_JSON_FILE;
 
   my $json = '';
   while ( my $line = <$fh> ) {
@@ -22,14 +28,15 @@ sub newsletters_json {
   return decode_json($json);
 }
 
-sub newsletter_updated_at {
+sub _newsletter_updated_at {
   my ($newsletter_entry) = @_;
+  use Data::Dumper;
+  print Dumper($newsletter_entry);
+  my $name     = $newsletter_entry->{name};
+  my $feed_url = $newsletter_entry->{feed_url};
 
-  my $name = $newsletter_entry->{'name'};
-  my $url  = $newsletter_entry->{'url'};
-
-  print "-- Downloading $name - $url\n";
-  my $content = get($url);
+  print "-- Downloading $name - $feed_url\n";
+  my $content = get($feed_url);
 
   print "-- Parsing XML\n";
   my @dates;
@@ -42,25 +49,43 @@ sub newsletter_updated_at {
   $twig->parse($content);
 
   my $timestamp =
-    DateTime::Format::DateParse->parse_datetime( @dates[0] )->datetime;
+    DateTime::Format::DateParse->parse_datetime( $dates[0] )->epoch();
 
   return $timestamp;
 }
 
-print "Parsing JSON list…\n";
+sub _newsletter_decorate_json {
+  my ($json) = @_;
 
-use Data::Dumper;
-my $json = newsletters_json();
-print Dumper($json);
+  print "............\n";
+  use Data::Dumper;
+  print Dumper($json);
+  my $updated_at = _newsletter_updated_at($json);
+  $json->{updated_at} = $updated_at;
+  print Dumper($json);
 
-print "---------------------------------------\n";
-print "Loading newsletter pages…\n";
-print "---------------------------------------\n";
+  return $json;
+}
 
-my $entry      = $json->{entries}->[0];
-my $updated_at = newsletter_updated_at($entry);
-$entry->{updated_at} = $updated_at;
-print Dumper($entry);
+sub newsletters_json {
+  print "Parsing JSON list…\n";
+
+  use Data::Dumper;
+  my $json = _newsletters_file_json();
+  print Dumper( $json->{entries} );
+
+  print "---------------------------------------\n";
+  print "Loading newsletter pages…\n";
+  print "---------------------------------------\n";
+
+  foreach my $entry ( @{ $json->{entries} } ) {
+    _newsletter_decorate_json($entry);
+  }
+
+  print "///////////////\n";
+  use Data::Dumper;
+  print Dumper($json);
+  return $json->{entries};
+}
 
 1;
-

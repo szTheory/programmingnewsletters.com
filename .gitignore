@@ -41,4 +41,6 @@ inc/
 # Carton package manager for Perl
 local
 
+public/index.html
+
 .ionide
