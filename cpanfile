@@ -6,3 +6,4 @@ requires 'LWP::Simple', '6.46';
 requires 'LWP::Protocol::https', '6.09';
 requires 'XML::Twig', '3.52';
 requires 'DateTime::Format::DateParse', '0.05';
+requires 'Date::Manip', '6.82';

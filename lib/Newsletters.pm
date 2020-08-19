@@ -12,6 +12,7 @@ use JSON::MaybeXS qw(decode_json);
 use LWP::Simple;
 use XML::Twig;
 use DateTime::Format::DateParse;
+use Date::Manip qw(ParseDate UnixDate);
 
 use Mojo::Dom;
 
@@ -101,30 +102,51 @@ sub _newsletter_info_html {
   my $html = get($url);
   print Dumper($html);
 
-  my $updated_selector = $newsletter_entry->{updated_selector};
-  my $updated_regex    = $newsletter_entry->{updated_regex};
-  my $link_selector    = $newsletter_entry->{link_selector};
-  my $link_attr        = $newsletter_entry->{link_attr};
+  my $updated_selector  = $newsletter_entry->{updated_selector};
+  my $updated_regex     = $newsletter_entry->{updated_regex};
+  my $updated_fixed_day = $newsletter_entry->{updated_fixed_day};
+  my $link_selector     = $newsletter_entry->{link_selector};
+  my $link_attr         = $newsletter_entry->{link_attr};
 
   print "-- Parsing HTML\n";
-  my $dom     = Mojo::DOM->new($html);
-  my $element = $dom->at($updated_selector);
+  my $dom = Mojo::DOM->new($html);
+  my $timestamp_string;
+  my $link;
 
-  print ".... ELEMENT\n";
-  print Dumper($element);
+  if ($updated_fixed_day) {
+    my $day = ParseDate($updated_fixed_day);
 
-  if ( !$element ) {
-    die
+    if ( $day eq ParseDate('today') ) {
+      $timestamp_string = $day;
+    }
+    else {
+      $timestamp_string = ParseDate("last $updated_fixed_day");
+    }
+    $timestamp_string = UnixDate( $timestamp_string, "%A %D" );
+
+    $link = $dom->at($link_selector)->attr($link_attr);
+  }
+  else {
+    my $element = $dom->at($updated_selector);
+
+    print ".... ELEMENT\n";
+    print Dumper($element);
+
+    if ( !$element ) {
+      die
 "Could not find updated timestamp for $name with selector '$updated_selector' for URL $url";
+    }
+
+    ($timestamp_string) = $element->text =~ qr{$updated_regex};
+
+    $link = $element->attr($link_attr);
   }
 
-  my ($timestamp_string) = $element->text =~ qr{$updated_regex};
   print "--- TIMESTAMP STRING -----\n";
   print Dumper($timestamp_string);
+
   my $timestamp =
     DateTime::Format::DateParse->parse_datetime($timestamp_string)->epoch();
-
-  my $link = $element->attr($link_attr);
 
   return {
     updated_at => $timestamp,

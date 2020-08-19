@@ -1,14 +1,12 @@
 {
   "entries": [
     {
-      "category": "Javascript",
-      "name": "ESNext News",
-      "url": "http://esnextnews.com/archive.html",
-      "updated_selector": "#archive section a",
-      "updated_regex": "([\\d-]+)$",
-      "link_selector": "#archive section a",
-      "link_attr": "href",
-      "base_url": "http://esnextnews.com/"
+      "category": "Elixir",
+      "name": "Elixir Weekly",
+      "url": "https://elixirweekly.net/",
+      "updated_fixed_day": "Thursday",
+      "link_selector": "a[href^=http://elixirweekly.net/issues]",
+      "link_attr": "href"
     }
   ]
 }
