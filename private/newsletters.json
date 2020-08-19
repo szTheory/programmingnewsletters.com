@@ -1,13 +1,11 @@
 {
   "entries": [
     {
-      "category": "Programming Languages",
-      "name": "Java Weekly",
-      "url": "https://www.baeldung.com/",
-      "feed_url": "https://feeds.feedburner.com/Baeldung",
-      "updated_selector": "//item/pubDate",
-      "link_selector": "//item/feedburner:origLink",
-      "link_contains_text": "java-weekly"
+      "category": "Mobile",
+      "name": "Flutter Weekly",
+      "url": "https://us17.campaign-archive.com/home/?u=c8d8d18b6e2c6316ddc1d48a0&id=47548a283b",
+      "feed_url": "https://us17.campaign-archive.com/feed?u=c8d8d18b6e2c6316ddc1d48a0&id=47548a283b",
+      "updated_selector": "item/pubDate"
     }
   ]
 }

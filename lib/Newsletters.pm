@@ -19,8 +19,9 @@ use List::SomeUtils qw(indexes);
 use constant NEWSLETTERS_JSON_FILE             => 'private/newsletters.json';
 use constant RSS_FEED_DEFAULT_UPDATED_SELECTOR => 'pubDate';
 use constant RSS_FEED_DEFAULT_LINK_SELECTOR    => 'item/link';
-use constant USER_AGENT                        => 'Mozilla/5.0';
-use constant GET_TIMEOUT                       => 5;
+use constant USER_AGENT =>
+'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1';
+use constant GET_TIMEOUT => 5;
 
 sub _newsletters_file_json {
   open my $fh, '<:encoding(UTF-8)', NEWSLETTERS_JSON_FILE;
@@ -47,6 +48,9 @@ sub _newsletter_info_rss {
   my $ua = LWP::UserAgent->new( timeout => GET_TIMEOUT );
   $ua->agent(USER_AGENT);
   my $res = $ua->get($feed_url);
+  if ( $res->is_error() ) {
+    die "XML download error: " . $res->error_as_HTML();
+  }
   my $xml = $res->content;
   if ( !$xml ) {
     die "Could not load XML for $name - $feed_url";
@@ -114,6 +118,13 @@ sub _newsletter_info_rss {
     DateTime::Format::DateParse->parse_datetime( $dates[$timestamp_index] )
     ->epoch();
 
+  if ( !$link ) {
+    die "Could not find link for $name - $feed_url";
+  }
+  if ( !$timestamp ) {
+    die "Could not find updated timestamp for $name - $feed_url";
+  }
+
   return {
     updated_at => $timestamp,
     url        => $link
@@ -133,7 +144,8 @@ sub _newsletter_info_html {
   $ua->agent(USER_AGENT);
   my $res  = $ua->get($url);
   my $html = $res->content;
-  print Dumper($html);
+
+  # print Dumper($html);
 
   my $updated_selector  = $newsletter_entry->{updated_selector};
   my $updated_regex     = $newsletter_entry->{updated_regex};
@@ -167,16 +179,31 @@ sub _newsletter_info_html {
     my $element = $dom->at($updated_selector);
 
     print ".... ELEMENT\n";
-    print Dumper($element);
+
+    # print Dumper($element);
+    print Dumper( $element->text );
 
     if ( !$element ) {
       die
 "Could not find updated timestamp for $name with selector '$updated_selector' for URL $url";
     }
 
-    ($timestamp_string) = $element->text =~ qr{$updated_regex};
+    if ($updated_regex) {
+      ($timestamp_string) = $element->text =~ qr{$updated_regex};
+    }
+    else {
+      $timestamp_string = $element->text;
+    }
 
-    if ($link_attr) {
+    if ($link_selector) {
+      my $link_elem = $dom->at($link_selector);
+      print "*** link elem ***\n";
+      print Dumper( $dom->at($link_selector)->text );
+
+      # print Dumper($link_elem);
+      $link = $link_elem->attr('href');
+    }
+    elsif ($link_attr) {
       $link = $element->attr($link_attr);
     }
     else {
@@ -189,6 +216,13 @@ sub _newsletter_info_html {
 
   my $timestamp =
     DateTime::Format::DateParse->parse_datetime($timestamp_string)->epoch();
+
+  if ( !$link ) {
+    die "Could not find link for $name - $url";
+  }
+  if ( !$timestamp ) {
+    die "Could not find updated timestamp for $name - $url";
+  }
 
   return {
     updated_at => $timestamp,
