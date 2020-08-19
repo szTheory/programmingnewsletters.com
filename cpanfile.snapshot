@@ -2026,6 +2026,32 @@ DISTRIBUTIONS
       base 0
       perl 5.008001
       strict 0
+  List-SomeUtils-0.58
+    pathname: D/DR/DROLSKY/List-SomeUtils-0.58.tar.gz
+    provides:
+      List::SomeUtils 0.58
+      List::SomeUtils::PP 0.58
+    requirements:
+      Carp 0
+      Exporter 0
+      ExtUtils::MakeMaker 0
+      List::SomeUtils::XS 0.54
+      List::Util 0
+      Module::Implementation 0
+      Text::ParseWords 0
+      perl 5.006
+      strict 0
+      vars 0
+      warnings 0
+  List-SomeUtils-XS-0.58
+    pathname: D/DR/DROLSKY/List-SomeUtils-XS-0.58.tar.gz
+    provides:
+      List::SomeUtils::XS 0.58
+    requirements:
+      ExtUtils::MakeMaker 0
+      XSLoader 0
+      strict 0
+      warnings 0
   MRO-Compat-0.13
     pathname: H/HA/HAARG/MRO-Compat-0.13.tar.gz
     provides:
@@ -2818,32 +2844,32 @@ DISTRIBUTIONS
     requirements:
       ExtUtils::MakeMaker 0
       perl 5.010
-  libwww-perl-6.46
-    pathname: O/OA/OALDERS/libwww-perl-6.46.tar.gz
+  libwww-perl-6.47
+    pathname: O/OA/OALDERS/libwww-perl-6.47.tar.gz
     provides:
-      LWP 6.46
-      LWP::Authen::Basic 6.46
-      LWP::Authen::Digest 6.46
-      LWP::Authen::Ntlm 6.46
-      LWP::ConnCache 6.46
-      LWP::Debug 6.46
-      LWP::Debug::TraceHTTP 6.46
-      LWP::DebugFile 6.46
-      LWP::MemberMixin 6.46
-      LWP::Protocol 6.46
-      LWP::Protocol::cpan 6.46
-      LWP::Protocol::data 6.46
-      LWP::Protocol::file 6.46
-      LWP::Protocol::ftp 6.46
-      LWP::Protocol::gopher 6.46
-      LWP::Protocol::http 6.46
-      LWP::Protocol::loopback 6.46
-      LWP::Protocol::mailto 6.46
-      LWP::Protocol::nntp 6.46
-      LWP::Protocol::nogo 6.46
-      LWP::RobotUA 6.46
-      LWP::Simple 6.46
-      LWP::UserAgent 6.46
+      LWP 6.47
+      LWP::Authen::Basic 6.47
+      LWP::Authen::Digest 6.47
+      LWP::Authen::Ntlm 6.47
+      LWP::ConnCache 6.47
+      LWP::Debug 6.47
+      LWP::Debug::TraceHTTP 6.47
+      LWP::DebugFile 6.47
+      LWP::MemberMixin 6.47
+      LWP::Protocol 6.47
+      LWP::Protocol::cpan 6.47
+      LWP::Protocol::data 6.47
+      LWP::Protocol::file 6.47
+      LWP::Protocol::ftp 6.47
+      LWP::Protocol::gopher 6.47
+      LWP::Protocol::http 6.47
+      LWP::Protocol::loopback 6.47
+      LWP::Protocol::mailto 6.47
+      LWP::Protocol::nntp 6.47
+      LWP::Protocol::nogo 6.47
+      LWP::RobotUA 6.47
+      LWP::Simple 6.47
+      LWP::UserAgent 6.47
       libwww::perl undef
     requirements:
       CPAN::Meta::Requirements 2.120620
@@ -2863,7 +2889,7 @@ DISTRIBUTIONS
       HTTP::Request 6
       HTTP::Request::Common 6
       HTTP::Response 6
-      HTTP::Status 6
+      HTTP::Status 6.18
       IO::Select 0
       IO::Socket 0
       LWP::MediaTypes 6

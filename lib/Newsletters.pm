@@ -9,16 +9,18 @@ our @EXPORT_OK   = qw(newsletters_json);
 our %EXPORT_TAGS = ( all => \@EXPORT_OK );
 
 use JSON::MaybeXS qw(decode_json);
-use LWP::Simple;
+use LWP::UserAgent;
 use XML::Twig;
 use DateTime::Format::DateParse;
 use Date::Manip qw(ParseDate UnixDate);
-
 use Mojo::Dom;
+use List::SomeUtils qw(indexes);
 
 use constant NEWSLETTERS_JSON_FILE             => 'private/newsletters.json';
 use constant RSS_FEED_DEFAULT_UPDATED_SELECTOR => 'pubDate';
 use constant RSS_FEED_DEFAULT_LINK_SELECTOR    => 'item/link';
+use constant USER_AGENT                        => 'Mozilla/5.0';
+use constant GET_TIMEOUT                       => 5;
 
 sub _newsletters_file_json {
   open my $fh, '<:encoding(UTF-8)', NEWSLETTERS_JSON_FILE;
@@ -42,12 +44,22 @@ sub _newsletter_info_rss {
   my $feed_url = $newsletter_entry->{feed_url};
 
   print "-- Downloading $name - $feed_url\n";
-  my $xml = get($feed_url);
+  my $ua = LWP::UserAgent->new( timeout => GET_TIMEOUT );
+  $ua->agent(USER_AGENT);
+  my $res = $ua->get($feed_url);
+  my $xml = $res->content;
+  if ( !$xml ) {
+    die "Could not load XML for $name - $feed_url";
+  }
+  print ".... XML ....\n";
+  print Dumper($xml);
   my $updated_selector =
     $newsletter_entry->{updated_selector} || RSS_FEED_DEFAULT_UPDATED_SELECTOR;
   my $link_selector =
     $newsletter_entry->{link_selector} || RSS_FEED_DEFAULT_LINK_SELECTOR;
-  my $link_attr = $newsletter_entry->{link_attr};
+  my $link_attr          = $newsletter_entry->{link_attr};
+  my $link_last          = $newsletter_entry->{link_last};
+  my $link_contains_text = $newsletter_entry->{link_contains_text};
   print Dumper($updated_selector);
   print Dumper($link_selector);
 
@@ -81,12 +93,30 @@ sub _newsletter_info_rss {
   print "---- LINKS ----\n";
   print Dumper(@links);
 
+  my $timestamp_index = 0;
+  my $link_index      = 0;
+
+  my $link;
+  if ($link_contains_text) {
+    my ($matching_index) = indexes { $_ =~ /$link_contains_text/ } @links;
+    print "((( matching indices ))))\n";
+    print Dumper($matching_index);
+
+    $timestamp_index = $matching_index;
+    $link_index      = $matching_index;
+  }
+  elsif ($link_last) {
+    $link_index = -1;
+  }
+  $link = @links[$link_index];
+
   my $timestamp =
-    DateTime::Format::DateParse->parse_datetime( $dates[0] )->epoch();
+    DateTime::Format::DateParse->parse_datetime( $dates[$timestamp_index] )
+    ->epoch();
 
   return {
     updated_at => $timestamp,
-    url        => @links[0]
+    url        => $link
   };
 }
 
@@ -99,7 +129,10 @@ sub _newsletter_info_html {
   my $url  = $newsletter_entry->{url};
 
   print "-- Downloading $name - $url\n";
-  my $html = get($url);
+  my $ua = LWP::UserAgent->new( timeout => GET_TIMEOUT );
+  $ua->agent(USER_AGENT);
+  my $res  = $ua->get($url);
+  my $html = $res->content;
   print Dumper($html);
 
   my $updated_selector  = $newsletter_entry->{updated_selector};
@@ -110,6 +143,10 @@ sub _newsletter_info_html {
 
   print "-- Parsing HTML\n";
   my $dom = Mojo::DOM->new($html);
+  if ( !$dom ) {
+    die "Could not load DOM for $name - $url";
+  }
+
   my $timestamp_string;
   my $link;
 
@@ -122,7 +159,7 @@ sub _newsletter_info_html {
     else {
       $timestamp_string = ParseDate("last $updated_fixed_day");
     }
-    $timestamp_string = UnixDate( $timestamp_string, "%A %D" );
+    $timestamp_string = UnixDate( $timestamp_string, '%A %D' );
 
     $link = $dom->at($link_selector)->attr($link_attr);
   }
@@ -139,7 +176,12 @@ sub _newsletter_info_html {
 
     ($timestamp_string) = $element->text =~ qr{$updated_regex};
 
-    $link = $element->attr($link_attr);
+    if ($link_attr) {
+      $link = $element->attr($link_attr);
+    }
+    else {
+      $link = $url;
+    }
   }
 
   print "--- TIMESTAMP STRING -----\n";

@@ -1,12 +1,13 @@
 {
   "entries": [
     {
-      "category": "Elixir",
-      "name": "Elixir Weekly",
-      "url": "https://elixirweekly.net/",
-      "updated_fixed_day": "Thursday",
-      "link_selector": "a[href^=http://elixirweekly.net/issues]",
-      "link_attr": "href"
+      "category": "Programming Languages",
+      "name": "Java Weekly",
+      "url": "https://www.baeldung.com/",
+      "feed_url": "https://feeds.feedburner.com/Baeldung",
+      "updated_selector": "//item/pubDate",
+      "link_selector": "//item/feedburner:origLink",
+      "link_contains_text": "java-weekly"
     }
   ]
 }
