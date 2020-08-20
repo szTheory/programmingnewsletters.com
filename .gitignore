@@ -49,4 +49,5 @@ private/newsletters.backup.json
 private/newsletters-cache.json
 
 public/css/**
-public/index.html
+public/javascript/**
+public/*.html

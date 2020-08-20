@@ -138,6 +138,15 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 0
       Test::Differences 0
       perl 5.010000
+  CSS-Packer-2.07
+    pathname: L/LE/LEEJO/CSS-Packer-2.07.tar.gz
+    provides:
+      CSS::Packer 2.07
+    requirements:
+      ExtUtils::MakeMaker 0
+      Regexp::RegGrp 1.001_001
+      Test::File::Contents 0.21
+      Test::More 0
   Capture-Tiny-0.48
     pathname: D/DA/DAGOLDEN/Capture-Tiny-0.48.tar.gz
     provides:
@@ -1807,6 +1816,17 @@ DISTRIBUTIONS
       perl 5.006
       strict 0
       vars 0
+  HTML-Packer-2.10
+    pathname: L/LE/LEEJO/HTML-Packer-2.10.tar.gz
+    provides:
+      HTML::Packer 2.10
+    requirements:
+      CSS::Packer 2.01
+      Digest::SHA 0
+      ExtUtils::MakeMaker 0
+      JavaScript::Packer 2.01
+      Regexp::RegGrp 1.001_001
+      Test::More 0
   HTML-Parser-3.72
     pathname: G/GA/GAAS/HTML-Parser-3.72.tar.gz
     provides:
@@ -2014,6 +2034,14 @@ DISTRIBUTIONS
       JSON::PP 2.27300
       Scalar::Util 0
       perl 5.006
+  JavaScript-Packer-2.06
+    pathname: L/LE/LEEJO/JavaScript-Packer-2.06.tar.gz
+    provides:
+      JavaScript::Packer 2.06
+    requirements:
+      ExtUtils::MakeMaker 0
+      Regexp::RegGrp 1.001_001
+      Test::More 0
   LWP-MediaTypes-6.04
     pathname: O/OA/OALDERS/LWP-MediaTypes-6.04.tar.gz
     provides:
@@ -2415,6 +2443,14 @@ DISTRIBUTIONS
       strict 0
       warnings 0
       warnings::register 0
+  Regexp-RegGrp-2.01
+    pathname: L/LE/LEEJO/Regexp-RegGrp-2.01.tar.gz
+    provides:
+      Regexp::RegGrp 2.01
+      Regexp::RegGrp::Data undef
+    requirements:
+      ExtUtils::MakeMaker 0
+      Test::More 0
   Role-Tiny-2.001004
     pathname: H/HA/HAARG/Role-Tiny-2.001004.tar.gz
     provides:
@@ -2537,6 +2573,18 @@ DISTRIBUTIONS
       Try::Tiny 0.07
       strict 0
       warnings 0
+  Test-File-Contents-0.23
+    pathname: D/DW/DWHEELER/Test-File-Contents-0.23.tar.gz
+    provides:
+      Test::File::Contents 0.23
+    requirements:
+      Digest::MD5 0
+      File::Spec 0
+      Module::Build 0.30
+      Test::Builder 0.70
+      Test::More 0.70
+      Text::Diff 0.35
+      perl 5.008003
   Text-Diff-1.45
     pathname: N/NE/NEILB/Text-Diff-1.45.tar.gz
     provides:

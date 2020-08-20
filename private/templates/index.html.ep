@@ -1,9 +1,9 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <title>EasyNewsletter - Programming newsletters without email</title>
+  <title>ProgrammingNewsletters - No email needed</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -17,26 +17,30 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/default.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <script src="javascript/main.js" defer></script>
 
   <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
-  <ul>
+  <h1>Programming<br/>Newsletters<span class="accent">.com</span></h1>
+
+  <ul id="nav-links">
     <% foreach my $category (@{$categories}) { %>
-      <li><%= $category %></li>
+      <li class="<%= $category eq 'All' ? 'selected' : '' %>"><%= $category %></li>
     <% } %>
   </ul>
 
-  <div class="category">
+  <div class="entry-group">
     <% foreach my $entry_group (@{$grouped_entries}) { %>
       <h2 class="date"><%= $entry_group->{date} %></h2>
 
       <ul class="entries">
       <% foreach my $entry (@{$entry_group->{entries}}) { %>
-        <li class="entry">
+        <li class="entry" data-category="<%= $entry->{category} %>">
           <a href="<%= $entry->{url} %>" rel="nofollow" target="_blank"><%= $entry->{name} %></a>
-          <div class="category"><%= $entry->{category} %></div>
         </li>
       <% } %>
       </ul>

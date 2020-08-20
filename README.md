@@ -1,22 +1,33 @@
-# EasyNewsletter
+# ProgrammingNewsletters.com
 
->weekly programming newsletters without an email subscription
+>The best weekly programming newsletters on one website
 
-## Building
+## Features
+
+- Ordered by last update
+- Filter by category
+- No email needed
+- No CloudFlare
+- No analytics
+- Free
+
+## Development
+
+### Building the site
 
 To build the site:
 
 ```bash
-carton exec perl
+carton exec perl Run.pm
 ```
 
 To force a rebuild, overriding newsletters cache:
 
 ```bash
-carton exec perl --build
+carton exec perl Run.pm --build
 ```
 
-## Development
+## Viewing the site locally
 
 Download the code and start a webserver.
 

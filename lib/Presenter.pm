@@ -71,7 +71,7 @@ sub _add_formatted_timestamp {
 
   foreach my $entry ( @{$entries} ) {
     my $date = DateTime->from_epoch( epoch => $entry->{updated_at} );
-    $entry->{updated_at_formatted} = $date->strftime('%A %D');
+    $entry->{updated_at_formatted} = $date->strftime('%b %d');
   }
 
   return;
@@ -117,9 +117,12 @@ sub presenter {
   _remove_extra_fields($entries);
   my $grouped_entries = _grouped_by_date($entries);
 
+  my $categories = _grouped_entries_categories($grouped_entries);
+  unshift @{$categories}, 'All';
+
   my $presenter = {
     grouped_entries => $grouped_entries,
-    categories      => _grouped_entries_categories($grouped_entries)
+    categories      => $categories
   };
 
   # print "--- Presenter Output ---\n";

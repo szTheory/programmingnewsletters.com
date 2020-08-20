@@ -7,6 +7,7 @@ use autodie;
 use lib 'lib';
 use Build::HTML qw(write_html_file);
 use Build::CSS qw(write_css_files);
+use Build::JavaScript qw(write_js_files);
 
 use Exporter 'import';
 our @EXPORT_OK   = qw(build);
@@ -19,6 +20,7 @@ sub build {
 
   write_html_file($should_rebuild);
   write_css_files();
+  write_js_files();
 
   return;
 }
