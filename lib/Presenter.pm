@@ -28,7 +28,6 @@ sub _update_with_base_url {
 
   foreach my $entry ( @{$entries} ) {
     if ( $entry->{base_url} ) {
-      print "* * * *  BASE URL * * * * * \n";
       $entry->{url} = $entry->{base_url} . $entry->{url};
     }
   }
@@ -101,7 +100,10 @@ sub _grouped_entries_categories {
     map { @{$_} }
     map { $_->{entries} } @{$entries};
 
-  return uniq( ( \@categories ) );
+  my @unique_categories = uniq(@categories);
+  my @sorted_categories = sort @unique_categories;
+
+  return \@sorted_categories;
 }
 
 sub presenter {
