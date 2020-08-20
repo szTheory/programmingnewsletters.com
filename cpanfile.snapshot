@@ -1,5 +1,12 @@
 # carton snapshot format: version 1.0
 DISTRIBUTIONS
+  Algorithm-Diff-1.1903
+    pathname: T/TY/TYEMQ/Algorithm-Diff-1.1903.tar.gz
+    provides:
+      Algorithm::Diff 1.1903
+      Algorithm::Diff::_impl 1.1903
+    requirements:
+      ExtUtils::MakeMaker 0
   Alien-Build-2.29
     pathname: P/PL/PLICEASE/Alien-Build-2.29.tar.gz
     provides:
@@ -123,6 +130,14 @@ DISTRIBUTIONS
       perl 5.006001
       strict 0
       warnings 0
+  CSS-Compressor-0.05
+    pathname: J/JA/JANUS/CSS-Compressor-0.05.tar.gz
+    provides:
+      CSS::Compressor 0.05
+    requirements:
+      ExtUtils::MakeMaker 0
+      Test::Differences 0
+      perl 5.010000
   Capture-Tiny-0.48
     pathname: D/DA/DAGOLDEN/Capture-Tiny-0.48.tar.gz
     provides:
@@ -2500,6 +2515,16 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 0
       Scalar::Util 0
       perl 5.006
+  Test-Differences-0.67
+    pathname: D/DC/DCANTRELL/Test-Differences-0.67.tar.gz
+    provides:
+      Test::Differences 0.67
+    requirements:
+      Capture::Tiny 0.24
+      Data::Dumper 2.126
+      ExtUtils::MakeMaker 0
+      Test::More 0.88
+      Text::Diff 1.43
   Test-Fatal-0.016
     pathname: R/RJ/RJBS/Test-Fatal-0.016.tar.gz
     provides:
@@ -2512,6 +2537,18 @@ DISTRIBUTIONS
       Try::Tiny 0.07
       strict 0
       warnings 0
+  Text-Diff-1.45
+    pathname: N/NE/NEILB/Text-Diff-1.45.tar.gz
+    provides:
+      Text::Diff 1.45
+      Text::Diff::Base 1.45
+      Text::Diff::Config 1.44
+      Text::Diff::Table 1.44
+    requirements:
+      Algorithm::Diff 1.19
+      Exporter 0
+      ExtUtils::MakeMaker 0
+      perl 5.006
   TimeDate-2.33
     pathname: A/AT/ATOOMIC/TimeDate-2.33.tar.gz
     provides:

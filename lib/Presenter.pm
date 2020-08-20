@@ -122,9 +122,9 @@ sub presenter {
     categories      => _grouped_entries_categories($grouped_entries)
   };
 
-  print "-------------- PRESENTER FINAL ---------------\n";
-  use Data::Dumper;
-  print Dumper($presenter);
+  # print "--- Presenter Output ---\n";
+  # use Data::Dumper;
+  # print Dumper($presenter);
 
   return $presenter;
 }
