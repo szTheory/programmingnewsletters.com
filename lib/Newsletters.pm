@@ -40,23 +40,26 @@ sub _newsletter_info_rss {
   my ($newsletter_entry) = @_;
 
   use Data::Dumper;
-  print Dumper($newsletter_entry);
+
+  # print Dumper($newsletter_entry);
   my $name     = $newsletter_entry->{name};
+  my $url      = $newsletter_entry->{url};
   my $feed_url = $newsletter_entry->{feed_url};
 
-  print "-- Downloading $name - $feed_url\n";
+  print "\nDownloading $name - $feed_url\n";
   my $ua = LWP::UserAgent->new( timeout => GET_TIMEOUT );
   $ua->agent(USER_AGENT);
   my $res = $ua->get($feed_url);
   if ( $res->is_error() ) {
-    die "XML download error: " . $res->error_as_HTML();
+    die 'XML download error: ' . $res->error_as_HTML();
   }
   my $xml = $res->content;
   if ( !$xml ) {
     die "Could not load XML for $name - $feed_url";
   }
-  print ".... XML ....\n";
-  print Dumper($xml);
+
+  # print ".... XML ....\n";
+  # print Dumper($xml);
   my $updated_selector =
     $newsletter_entry->{updated_selector} || RSS_FEED_DEFAULT_UPDATED_SELECTOR;
   my $link_selector =
@@ -64,10 +67,8 @@ sub _newsletter_info_rss {
   my $link_attr          = $newsletter_entry->{link_attr};
   my $link_last          = $newsletter_entry->{link_last};
   my $link_contains_text = $newsletter_entry->{link_contains_text};
-  print Dumper($updated_selector);
-  print Dumper($link_selector);
 
-  print "-- Parsing XML\n";
+  print "----> Parsing XML\n";
   my @dates;
   my @links;
 
@@ -79,32 +80,22 @@ sub _newsletter_info_rss {
 
   my $link_selector_callback;
   if ($link_attr) {
-    print ",,,, link_attr\n";
     $link_selector_callback = sub { push( @links, $_->atts()->{$link_attr} ) }
   }
   else {
-    print ",,,, NOOOOO link_attr\n";
     $link_selector_callback = sub { push( @links, $_->text_only() ) }
   }
   $twig_handlers->{$link_selector} = $link_selector_callback;
-  print "############## twig handlers\n";
-  print Dumper($twig_handlers);
 
   my $twig = XML::Twig->new( twig_handlers => $twig_handlers );
   $twig->parse($xml);
-  print "--- Dates---\n";
-  print Dumper(@dates);
-  print "---- LINKS ----\n";
-  print Dumper(@links);
 
   my $timestamp_index = 0;
   my $link_index      = 0;
 
   my $link;
   if ($link_contains_text) {
-    my ($matching_index) = indexes { $_ =~ /$link_contains_text/ } @links;
-    print "((( matching indices ))))\n";
-    print Dumper($matching_index);
+    my ($matching_index) = indexes { /$link_contains_text/ } @links;
 
     $timestamp_index = $matching_index;
     $link_index      = $matching_index;
@@ -112,14 +103,14 @@ sub _newsletter_info_rss {
   elsif ($link_last) {
     $link_index = -1;
   }
-  $link = @links[$link_index];
+  $link = $links[$link_index];
 
   my $timestamp =
     DateTime::Format::DateParse->parse_datetime( $dates[$timestamp_index] )
     ->epoch();
 
   if ( !$link ) {
-    die "Could not find link for $name - $feed_url";
+    $link = $url;
   }
   if ( !$timestamp ) {
     die "Could not find updated timestamp for $name - $feed_url";
@@ -135,17 +126,16 @@ sub _newsletter_info_html {
   my ($newsletter_entry) = @_;
 
   use Data::Dumper;
-  print Dumper($newsletter_entry);
+
+  # print Dumper($newsletter_entry);
   my $name = $newsletter_entry->{name};
   my $url  = $newsletter_entry->{url};
 
-  print "-- Downloading $name - $url\n";
+  print "\nDownloading $name - $url\n";
   my $ua = LWP::UserAgent->new( timeout => GET_TIMEOUT );
   $ua->agent(USER_AGENT);
   my $res  = $ua->get($url);
   my $html = $res->content;
-
-  # print Dumper($html);
 
   my $updated_selector  = $newsletter_entry->{updated_selector};
   my $updated_regex     = $newsletter_entry->{updated_regex};
@@ -178,10 +168,7 @@ sub _newsletter_info_html {
   else {
     my $element = $dom->at($updated_selector);
 
-    print ".... ELEMENT\n";
-
-    # print Dumper($element);
-    print Dumper( $element->text );
+    # print Dumper( $element->text );
 
     if ( !$element ) {
       die
@@ -197,10 +184,6 @@ sub _newsletter_info_html {
 
     if ($link_selector) {
       my $link_elem = $dom->at($link_selector);
-      print "*** link elem ***\n";
-      print Dumper( $dom->at($link_selector)->text );
-
-      # print Dumper($link_elem);
       $link = $link_elem->attr('href');
     }
     elsif ($link_attr) {
@@ -210,9 +193,6 @@ sub _newsletter_info_html {
       $link = $url;
     }
   }
-
-  print "--- TIMESTAMP STRING -----\n";
-  print Dumper($timestamp_string);
 
   my $timestamp =
     DateTime::Format::DateParse->parse_datetime($timestamp_string)->epoch();
@@ -248,27 +228,18 @@ sub _newsletter_info {
 sub _newsletter_decorate_json {
   my ($json) = @_;
 
-  print "............\n";
-  use Data::Dumper;
-  print Dumper($json);
   my $info = _newsletter_info($json);
-  print "~~~~ INFO ~~~~~\n";
-  print Dumper($info);
   $json->{updated_at} = $info->{updated_at};
   $json->{url}        = $info->{url};
-  print "~~~~~ JSON ~~~~~\n";
-  print Dumper($json);
 
   return $json;
 }
 
 sub newsletters_json {
   print "Parsing JSON list…\n";
-
-  use Data::Dumper;
   my $json = _newsletters_file_json();
-  print Dumper( $json->{entries} );
 
+  print "\n";
   print "---------------------------------------\n";
   print "Loading newsletter pages…\n";
   print "---------------------------------------\n";
@@ -277,8 +248,6 @@ sub newsletters_json {
     _newsletter_decorate_json($entry);
   }
 
-  print "///////////////\n";
-  print Dumper($json);
   return $json->{entries};
 }
 

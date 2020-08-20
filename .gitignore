@@ -39,10 +39,11 @@ inc/
 .vscode
 
 # Carton package manager for Perl
-local
+local/**
 
 public/index.html
 
 .ionide
 
-newsletters.backup.json
+private/newsletters.backup.json
+private/presenter-cache.json

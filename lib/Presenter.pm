@@ -5,13 +5,14 @@ use warnings;
 use autodie;
 
 use Exporter 'import';
-our @EXPORT_OK   = qw(newsletters);
+our @EXPORT_OK   = qw(presenter);
 our %EXPORT_TAGS = ( all => \@EXPORT_OK );
 
 use lib 'lib';
 use Newsletters qw(newsletters_json);
 
 use Data::Dumper;
+use List::SomeUtils qw(uniq);
 
 sub _sort_newsletters {
   my ($entries) = @_;
@@ -86,12 +87,24 @@ sub _remove_extra_fields {
     delete $entry->{link_attr};
     delete $entry->{link_selector};
     delete $entry->{base_url};
+    delete $entry->{feed_url};
   }
 
   return;
 }
 
-sub newsletters {
+sub _grouped_entries_categories {
+  my ($entries) = @_;
+
+  use Data::Dumper;
+  my @categories = map { $_->{category} }
+    map { @{$_} }
+    map { $_->{entries} } @{$entries};
+
+  return uniq( \@categories );
+}
+
+sub presenter {
   my ($entries) = newsletters_json();
 
   _sort_newsletters($entries);
@@ -100,7 +113,16 @@ sub newsletters {
   _remove_extra_fields($entries);
   my $grouped_entries = _grouped_by_date($entries);
 
-  return $grouped_entries;
+  my $presenter = {
+    grouped_entries => $grouped_entries,
+    categories      => _grouped_entries_categories($grouped_entries)
+  };
+
+  print "-------------- PRESENTER FINAL ---------------\n";
+  use Data::Dumper;
+  print Dumper($presenter);
+
+  return $presenter;
 }
 
 1;
