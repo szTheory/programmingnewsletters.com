@@ -15,8 +15,9 @@ body {
 h1 {
   line-height: 36px;
   font-size: 48px;
-  color: #333;
+  color: #457b9d;
   font-weight: normal;
+  margin: 48px 0 24px;
 }
 
 .accent {
@@ -25,9 +26,8 @@ h1 {
 
 a {
   color: #457b9d;
-  text-decoration: none;
-  border-bottom: 1px dotted #457b9d;
-  border-spacing: 20px;
+  text-decoration: underline;
+  text-decoration-style: dotted;
 }
 
 ul {
@@ -63,9 +63,16 @@ ul {
   font-style: italic;
   font-family: Garamond;
   font-weight: normal;
-  margin: 48px 0 12px;
+  margin-bottom: 12px;
 
-  color: #888;
+  color: #1d3557;
+  border-top: 4px solid #1d3557;
+}
+.date:first-child {
+  margin-top: 48px;
+}
+.date:not(:first-child) {
+  margin-top: 48px;
 }
 
 .entry a {
