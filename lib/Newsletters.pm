@@ -5,7 +5,7 @@ use warnings;
 use autodie;
 
 use Exporter 'import';
-our @EXPORT_OK   = qw(newsletters_json);
+our @EXPORT_OK   = qw(newsletters);
 our %EXPORT_TAGS = ( all => \@EXPORT_OK );
 
 use JSON::MaybeXS qw(decode_json);
@@ -225,7 +225,7 @@ sub _newsletter_info {
   return $info;
 }
 
-sub _newsletter_decorate_json {
+sub _newsletter_decorate {
   my ($json) = @_;
 
   my $info = _newsletter_info($json);
@@ -235,7 +235,7 @@ sub _newsletter_decorate_json {
   return $json;
 }
 
-sub newsletters_json {
+sub newsletters {
   print "Parsing JSON list…\n";
   my $json = _newsletters_file_json();
 
@@ -245,7 +245,7 @@ sub newsletters_json {
   print "---------------------------------------\n";
 
   foreach my $entry ( @{ $json->{entries} } ) {
-    _newsletter_decorate_json($entry);
+    _newsletter_decorate($entry);
   }
 
   return $json->{entries};

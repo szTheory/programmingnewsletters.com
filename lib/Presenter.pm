@@ -9,7 +9,7 @@ our @EXPORT_OK   = qw(presenter);
 our %EXPORT_TAGS = ( all => \@EXPORT_OK );
 
 use lib 'lib';
-use Newsletters qw(newsletters_json);
+use Cache qw(cached_newsletters);
 
 use Data::Dumper;
 use List::SomeUtils qw(uniq);
@@ -101,11 +101,13 @@ sub _grouped_entries_categories {
     map { @{$_} }
     map { $_->{entries} } @{$entries};
 
-  return uniq( \@categories );
+  return uniq( ( \@categories ) );
 }
 
 sub presenter {
-  my ($entries) = newsletters_json();
+  my ($should_rebuild) = @_;
+
+  my ($entries) = cached_newsletters($should_rebuild);
 
   _sort_newsletters($entries);
   _add_formatted_timestamp($entries);

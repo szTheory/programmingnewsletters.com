@@ -46,4 +46,4 @@ public/index.html
 .ionide
 
 private/newsletters.backup.json
-private/presenter-cache.json
+private/newsletters-cache.json

@@ -22,19 +22,27 @@
 </head>
 
 <body>
-  <% foreach my $entry_group (@{$grouped_entries}) { %>
-    <h2 class="date"><%= $entry_group->{date} %></h2>
-
-    <ul class="entries">
-    <% foreach my $entry (@{$entry_group->{entries}}) { %>
-      <li class="entry">
-        <a href="<%= $entry->{url} %>" rel="nofollow" target="_blank"><%= $entry->{name} %></a>
-        <div class="category"><%= $entry->{category} %></div>
-      </li>
+  <ul>
+    <% foreach my $category (@{$categories}) { %>
+      <li><%= $category %></li>
     <% } %>
-    </ul>
+  </ul>
 
-  <% } %>
+  <div class="category">
+    <% foreach my $entry_group (@{$grouped_entries}) { %>
+      <h2 class="date"><%= $entry_group->{date} %></h2>
+
+      <ul class="entries">
+      <% foreach my $entry (@{$entry_group->{entries}}) { %>
+        <li class="entry">
+          <a href="<%= $entry->{url} %>" rel="nofollow" target="_blank"><%= $entry->{name} %></a>
+          <div class="category"><%= $entry->{category} %></div>
+        </li>
+      <% } %>
+      </ul>
+
+    <% } %>
+  </div>
 </body>
 
 </html>

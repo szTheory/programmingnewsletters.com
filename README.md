@@ -2,6 +2,19 @@
 
 >weekly programming newsletters without an email subscription
 
+## Building
+
+To build the site:
+
+```bash
+carton exec perl
+```
+
+To force a rebuild, overriding newsletters cache:
+
+```bash
+carton exec perl --build
+```
 
 ## Development
 
