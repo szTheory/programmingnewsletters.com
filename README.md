@@ -1,4 +1,4 @@
-# <img src="private/images/logo.svg" width="32" height="32" style="position: relative; top: 5px;"> ProgrammingNewsletters.com
+# <img src="private/images/logo.svg" width=25 height=25>ProgrammingNewsletters.com
 
 >The best weekly programming newsletters on one website
 
