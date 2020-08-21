@@ -39,6 +39,12 @@ python3 -m http.server --directory public
 
 Now visit `localhost:8000` to view the website.
 
+## Netlify deploy command
+
+```bash
+export PERL5LIB=/opt/buildhome/perl5/lib/perl5 && curl -L https://cpanmin.us | perl - App::cpanminus && /opt/buildhome/perl5/bin/cpanm Carton && /opt/buildhome/perl5/bin/carton install && /opt/buildhome/perl5/bin/carton exec perl Run.pm
+```
+
 ## Credits
 
 Logo icon made by [Freepik](https://www.flaticon.com/authors/freepik)
