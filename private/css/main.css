@@ -103,6 +103,10 @@ ul {
   margin-bottom: 8px;
 }
 
+.hidden {
+  display: none;
+}
+
 footer {
   color: #1d3557;
   padding: 240px 0 32px;

@@ -42,12 +42,12 @@
 
   <ul id="nav-links">
     <% foreach my $category (@{$categories}) { %>
-      <li class="<%= $category eq 'All' ? 'selected' : '' %>"><%= $category %></li>
+      <li class="category-filter <%= $category eq 'All' ? 'selected' : '' %>" data-category="<%= $category %>"><%= $category %></li>
     <% } %>
   </ul>
 
-  <div class="entry-group">
-    <% foreach my $entry_group (@{$grouped_entries}) { %>
+  <% foreach my $entry_group (@{$grouped_entries}) { %>
+    <div class="entry-group">
       <h2 class="date topoff"><%= $entry_group->{date} %></h2>
 
       <ul class="entries">
@@ -58,8 +58,8 @@
       <% } %>
       </ul>
 
-    <% } %>
-  </div>
+    </div>
+  <% } %>
 
   <footer>
     ©<%= $year %> <%= $developer %> :: <a href="<%= $source_url %>">Source code</a>
