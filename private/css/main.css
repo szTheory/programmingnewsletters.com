@@ -6,6 +6,11 @@ Celadon xBluex #457b9d
 Prussian xBluex #1d3557 
 */
 
+#noscript-header {
+  position: static;
+  opacity: 0.5;
+}
+
 html {
   background: url("../images/bg.png") #fefefd;
 }
@@ -14,15 +19,29 @@ body {
   font-family: Garamond;
   max-width: 480px;
   margin: 0 auto;
-  padding: 0px 18px 0;
+  padding: 48px 18px 0;
 }
 
-h1 {
-  line-height: 36px;
-  font-size: 48px;
+#logo {
+  padding-bottom: 24px;
+}
+#logo svg {
+  margin-top: -38px;
+  display: inline-block;
+}
+#logo path {
+  fill: #457b9d !important;
+}
+#logo-text {
+  display: inline-block;
+}
+#logo-text h1 {
+  display: inline-block;
+  font-size: 31px;
+  line-height: 23px;
   color: #457b9d;
   font-weight: normal;
-  padding: 48px 0 24px;
+  padding: 0;
   margin: 0;
 }
 
@@ -72,7 +91,7 @@ ul {
   border-top: 4px solid #1d3557;
 }
 .date:first-child {
-  margin-top: 64px;
+  margin-top: 84px;
 }
 .date:not(:first-child) {
   margin-top: 84px;

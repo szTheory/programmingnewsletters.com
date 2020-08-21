@@ -27,7 +27,7 @@ To force a rebuild, overriding newsletters cache:
 carton exec perl Run.pm --build
 ```
 
-## Viewing the site locally
+### Viewing the site locally
 
 Download the code and start a webserver.
 
@@ -38,3 +38,7 @@ python3 -m http.server --directory public
 ```
 
 Now visit `localhost:8000` to view the website.
+
+## Credits
+
+Logo icon made by [xnimrodx](https://www.flaticon.com/authors/xnimrodx)
