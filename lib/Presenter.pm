@@ -14,7 +14,7 @@ use Cache qw(cached_newsletters);
 use Data::Dumper;
 use List::SomeUtils qw(uniq);
 
-use constant TITLE     => 'ProgrammingNewsletters';
+use constant TITLE     => 'ProgrammingNewsletters.com';
 use constant SUBTITLE  => 'No email needed';
 use constant DEVELOPER => 'szTheory';
 use constant SOURCE_URL =>
@@ -77,6 +77,10 @@ sub _add_formatted_timestamp {
 
   foreach my $entry ( @{$entries} ) {
     my $date = DateTime->from_epoch( epoch => $entry->{updated_at} );
+    print "-----\n";
+    use Data::Dumper;
+    print Dumper( $entry->{name} );
+    print Dumper( $entry->{updated_at} );
     $entry->{updated_at_formatted} = $date->strftime('%b %d');
   }
 
@@ -136,9 +140,9 @@ sub presenter {
     source_url      => SOURCE_URL
   };
 
-  # print "--- Presenter Output ---\n";
-  # use Data::Dumper;
-  # print Dumper($presenter);
+  print "--- Presenter Output ---\n";
+  use Data::Dumper;
+  print Dumper($presenter);
 
   return $presenter;
 }

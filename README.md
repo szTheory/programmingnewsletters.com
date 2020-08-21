@@ -41,4 +41,4 @@ Now visit `localhost:8000` to view the website.
 
 ## Credits
 
-Logo icon made by [xnimrodx](https://www.flaticon.com/authors/xnimrodx)
+Logo icon made by [Freepik](https://www.flaticon.com/authors/freepik)

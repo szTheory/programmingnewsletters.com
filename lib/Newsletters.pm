@@ -161,7 +161,7 @@ sub _newsletter_info_html {
     else {
       $timestamp_string = ParseDate("last $updated_fixed_day");
     }
-    $timestamp_string = UnixDate( $timestamp_string, '%A %D' );
+    $timestamp_string = UnixDate($timestamp_string);
 
     $link = $dom->at($link_selector)->attr($link_attr);
   }

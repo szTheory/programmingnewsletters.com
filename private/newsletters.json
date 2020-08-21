@@ -143,7 +143,7 @@
       "base_url": "http://esnextnews.com/"
     },
     {
-      "category": "Elixir",
+      "category": "Programming Languages",
       "name": "Elixir Weekly",
       "url": "https://elixirweekly.net/",
       "updated_fixed_day": "Thursday",
@@ -173,7 +173,7 @@
     },
     {
       "category": "Programming Languages",
-      "name": "PyCoder Weekly",
+      "name": "PyCoder Python Weekly",
       "url": "https://pycoders.com/latest",
       "feed_url": "https://pycoders.com/feed",
       "link_selector": "entry/id",

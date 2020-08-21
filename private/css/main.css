@@ -26,7 +26,7 @@ body {
   padding-bottom: 24px;
 }
 #logo svg {
-  margin-top: -42px;
+  margin-top: -37px;
   display: inline-block;
 }
 #logo path {
@@ -37,7 +37,7 @@ body {
 }
 #logo-text h1 {
   display: inline-block;
-  font-family: Helvetica;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-size: 26px;
   line-height: 26px;
   font-weight: 400;
@@ -70,7 +70,7 @@ ul {
   display: inline-block;
   border-radius: 12px;
   padding: 1px 8px 0px;
-  font-family: Helvetica;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 300;
 }
 
@@ -86,7 +86,7 @@ ul {
 .date {
   font-size: 24px;
   font-style: italic;
-  font-family: Garamond;
+  font-family: Garamond, "Times New Roman", serif;
   font-weight: normal;
   margin-bottom: 12px;
 
