@@ -14,6 +14,12 @@ use Cache qw(cached_newsletters);
 use Data::Dumper;
 use List::SomeUtils qw(uniq);
 
+use constant TITLE     => 'ProgrammingNewsletters';
+use constant SUBTITLE  => 'No email needed';
+use constant DEVELOPER => 'szTheory';
+use constant SOURCE_URL =>
+  'https://github.com/szTheory/ProgrammingNewsletters.com';
+
 sub _sort_newsletters {
   my ($entries) = @_;
 
@@ -122,7 +128,12 @@ sub presenter {
 
   my $presenter = {
     grouped_entries => $grouped_entries,
-    categories      => $categories
+    categories      => $categories,
+    year            => DateTime->today()->year(),
+    developer       => DEVELOPER,
+    title           => TITLE,
+    subtitle        => SUBTITLE,
+    source_url      => SOURCE_URL
   };
 
   # print "--- Presenter Output ---\n";

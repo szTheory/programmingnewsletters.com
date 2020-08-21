@@ -14,7 +14,7 @@ body {
   font-family: Garamond;
   max-width: 480px;
   margin: 0 auto;
-  padding: 0px 18px 132px;
+  padding: 0px 18px 0;
 }
 
 h1 {
@@ -83,4 +83,8 @@ ul {
 }
 .entry:not(:last-child) {
   margin-bottom: 8px;
+}
+
+footer {
+  padding: 240px 0 32px;
 }

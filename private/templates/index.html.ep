@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>ProgrammingNewsletters - No email needed</title>
+  <title><%= $title %> - <%= $subtitle %></title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,10 +15,7 @@
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/default.css">
-  <link rel="stylesheet" href="css/main.css">
-
+  <link rel="stylesheet" href="css/index.css">
   <script src="javascript/main.js" defer></script>
 
   <meta name="theme-color" content="#fafafa">
@@ -49,6 +46,10 @@
 
     <% } %>
   </div>
+
+  <footer>
+    ©<%= $year %> <%= $developer %> :: <a href="<%= $source_url %>">Source code</a>
+  </footer>
 </body>
 
 </html>

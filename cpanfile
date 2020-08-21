@@ -8,6 +8,6 @@ requires 'XML::Twig', '3.52';
 requires 'DateTime::Format::DateParse', '0.05';
 requires 'Date::Manip', '6.82';
 requires 'List::SomeUtils', '0.58';
-requires 'CSS::Compressor', '0.05';
 requires 'HTML::Packer', '2.10';
+requires 'CSS::Packer', '2.07';
 requires 'JavaScript::Packer', '2.06';
