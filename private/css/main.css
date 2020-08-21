@@ -11,10 +11,6 @@ Prussian xBluex #1d3557
   opacity: 0.5;
 }
 
-html {
-  background: url("../images/bg.png") #fefefd;
-}
-
 body {
   font-family: Garamond;
   max-width: 480px;

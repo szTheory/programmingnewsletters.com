@@ -11,7 +11,6 @@ our %EXPORT_TAGS = ( all => \@EXPORT_OK );
 use lib 'lib';
 use Cache qw(cached_newsletters);
 
-use Data::Dumper;
 use List::SomeUtils qw(uniq);
 
 use constant TITLE     => 'ProgrammingNewsletters.com';
@@ -19,6 +18,14 @@ use constant SUBTITLE  => 'No email needed';
 use constant DEVELOPER => 'szTheory';
 use constant SOURCE_URL =>
   'https://github.com/szTheory/ProgrammingNewsletters.com';
+
+sub _remove_empty {
+  my ($entries) = @_;
+
+  @{$entries} = grep { $_->{updated_at} } @{$entries};
+
+  return;
+}
 
 sub _sort_newsletters {
   my ($entries) = @_;
@@ -77,10 +84,6 @@ sub _add_formatted_timestamp {
 
   foreach my $entry ( @{$entries} ) {
     my $date = DateTime->from_epoch( epoch => $entry->{updated_at} );
-    print "-----\n";
-    use Data::Dumper;
-    print Dumper( $entry->{name} );
-    print Dumper( $entry->{updated_at} );
     $entry->{updated_at_formatted} = $date->strftime('%b %d');
   }
 
@@ -105,7 +108,6 @@ sub _remove_extra_fields {
 sub _grouped_entries_categories {
   my ($entries) = @_;
 
-  use Data::Dumper;
   my @categories = map { $_->{category} }
     map { @{$_} }
     map { $_->{entries} } @{$entries};
@@ -121,6 +123,7 @@ sub presenter {
 
   my ($entries) = cached_newsletters($should_rebuild);
 
+  _remove_empty($entries);
   _sort_newsletters($entries);
   _add_formatted_timestamp($entries);
   _update_with_base_url($entries);
@@ -140,9 +143,9 @@ sub presenter {
     source_url      => SOURCE_URL
   };
 
-  print "--- Presenter Output ---\n";
-  use Data::Dumper;
-  print Dumper($presenter);
+  # print "--- Presenter Output ---\n";
+  # use Data::Dumper;
+  # print Dumper($presenter);
 
   return $presenter;
 }

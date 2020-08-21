@@ -12,7 +12,9 @@ use JSON::MaybeXS qw(decode_json);
 use LWP::UserAgent;
 use XML::Twig;
 use DateTime::Format::DateParse;
-use Date::Manip qw(ParseDate UnixDate);
+
+# use Date::Manip qw(ParseDate UnixDate);
+use Date::Manip::Date;
 use Mojo::Dom;
 use List::SomeUtils qw(indexes);
 
@@ -21,7 +23,8 @@ use constant RSS_FEED_DEFAULT_UPDATED_SELECTOR => 'pubDate';
 use constant RSS_FEED_DEFAULT_LINK_SELECTOR    => 'item/link';
 use constant USER_AGENT =>
 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1';
-use constant GET_TIMEOUT => 5;
+use constant GET_TIMEOUT         => 5;
+use constant DATE_COMPARE_PRINTF => '%b %d';
 
 sub _newsletters_file_json {
   open my $fh, '<:encoding(UTF-8)', NEWSLETTERS_JSON_FILE;
@@ -39,9 +42,6 @@ sub _newsletters_file_json {
 sub _newsletter_info_rss {
   my ($newsletter_entry) = @_;
 
-  use Data::Dumper;
-
-  # print Dumper($newsletter_entry);
   my $name     = $newsletter_entry->{name};
   my $url      = $newsletter_entry->{url};
   my $feed_url = $newsletter_entry->{feed_url};
@@ -51,7 +51,8 @@ sub _newsletter_info_rss {
   $ua->agent(USER_AGENT);
   my $res = $ua->get($feed_url);
   if ( $res->is_error() ) {
-    die 'XML download error: ' . $res->error_as_HTML();
+    warn 'XML download error: ' . $res->error_as_HTML();
+    return {};
   }
   my $xml = $res->content;
   if ( !$xml ) {
@@ -59,6 +60,7 @@ sub _newsletter_info_rss {
   }
 
   # print ".... XML ....\n";
+  # use Data::Dumper;
   # print Dumper($xml);
   my $updated_selector =
     $newsletter_entry->{updated_selector} || RSS_FEED_DEFAULT_UPDATED_SELECTOR;
@@ -125,9 +127,6 @@ sub _newsletter_info_rss {
 sub _newsletter_info_html {
   my ($newsletter_entry) = @_;
 
-  use Data::Dumper;
-
-  # print Dumper($newsletter_entry);
   my $name = $newsletter_entry->{name};
   my $url  = $newsletter_entry->{url};
 
@@ -136,6 +135,10 @@ sub _newsletter_info_html {
   $ua->agent(USER_AGENT);
   my $res  = $ua->get($url);
   my $html = $res->content;
+  if ( $html =~ /Attention Required! | Cloudflare/ ) {
+    warn "Caught in CloudFlare while fetching $name - $url";
+    return {};
+  }
 
   my $updated_selector  = $newsletter_entry->{updated_selector};
   my $updated_regex     = $newsletter_entry->{updated_regex};
@@ -153,22 +156,33 @@ sub _newsletter_info_html {
   my $link;
 
   if ($updated_fixed_day) {
-    my $day = ParseDate($updated_fixed_day);
 
-    if ( $day eq ParseDate('today') ) {
-      $timestamp_string = $day;
+    my $day = Date::Manip::Date->new;
+    $day->parse($updated_fixed_day);
+
+    my $today = Date::Manip::Date->new;
+    $today->parse('today');
+
+    my $selected_day;
+    if (
+      $day->printf(DATE_COMPARE_PRINTF) eq $today->printf(DATE_COMPARE_PRINTF) )
+    {
+      $selected_day = $day;
     }
     else {
-      $timestamp_string = ParseDate("last $updated_fixed_day");
+      my $last_day = Date::Manip::Date->new;
+      $last_day->parse("last $updated_fixed_day");
+
+      $selected_day = $last_day;
     }
-    $timestamp_string = UnixDate($timestamp_string);
+
+    # get epoch (seconds)
+    $timestamp_string = $selected_day->printf(DATE_COMPARE_PRINTF);
 
     $link = $dom->at($link_selector)->attr($link_attr);
   }
   else {
     my $element = $dom->at($updated_selector);
-
-    # print Dumper( $element->text );
 
     if ( !$element ) {
       die
