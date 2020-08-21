@@ -26,7 +26,7 @@ body {
   padding-bottom: 24px;
 }
 #logo svg {
-  margin-top: -38px;
+  margin-top: -42px;
   display: inline-block;
 }
 #logo path {
@@ -37,16 +37,19 @@ body {
 }
 #logo-text h1 {
   display: inline-block;
-  font-size: 31px;
-  line-height: 23px;
+  font-family: Helvetica;
+  font-size: 26px;
+  line-height: 26px;
+  font-weight: 400;
   color: #457b9d;
-  font-weight: normal;
   padding: 0;
   margin: 0;
 }
 
 .accent {
   color: #e63946;
+  font-weight: 100;
+  opacity: 0.8;
 }
 
 a {
@@ -105,5 +108,6 @@ ul {
 }
 
 footer {
+  color: #1d3557;
   padding: 240px 0 32px;
 }
