@@ -1,23 +1,29 @@
-body {
-  font-family: Garamond;
-  padding: 0px 18px 132px;
-  background-color: #fefefd;
-  max-width: 480px;
-  margin: 0 auto;
+/* 
+Imperial xRedx #e63946
+Honeydey #f1faee
+Powder xBluex #a8dadc
+Celadon xBluex #457b9d
+Prussian xBluex #1d3557 
+*/
+
+html {
+  background: url("../images/bg.png") #fefefd;
 }
 
-/* @media screen and (min-width: 480px) {
-  body {
-    width: 480px;
-  }
-} */
+body {
+  font-family: Garamond;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0px 18px 132px;
+}
 
 h1 {
   line-height: 36px;
   font-size: 48px;
   color: #457b9d;
   font-weight: normal;
-  margin: 48px 0 24px;
+  padding: 48px 0 24px;
+  margin: 0;
 }
 
 .accent {
@@ -44,9 +50,6 @@ ul {
   padding: 1px 8px 0px;
   font-family: Helvetica;
   font-weight: 300;
-
-  background-color: #a8dadc;
-  color: #1d3557;
 }
 
 #nav-links li.selected {
@@ -69,10 +72,10 @@ ul {
   border-top: 4px solid #1d3557;
 }
 .date:first-child {
-  margin-top: 48px;
+  margin-top: 64px;
 }
 .date:not(:first-child) {
-  margin-top: 48px;
+  margin-top: 84px;
 }
 
 .entry a {

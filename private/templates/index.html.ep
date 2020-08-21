@@ -25,6 +25,8 @@
 </head>
 
 <body>
+  <img src="../images/bg.png" style="display: none;">
+
   <h1>Programming<br/>Newsletters<span class="accent">.com</span></h1>
 
   <ul id="nav-links">
