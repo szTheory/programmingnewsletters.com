@@ -7,111 +7,6 @@ DISTRIBUTIONS
       Algorithm::Diff::_impl 1.1903
     requirements:
       ExtUtils::MakeMaker 0
-  Alien-Build-2.29
-    pathname: P/PL/PLICEASE/Alien-Build-2.29.tar.gz
-    provides:
-      Alien::Base 2.29
-      Alien::Base::PkgConfig 2.29
-      Alien::Base::Wrapper 2.29
-      Alien::Build 2.29
-      Alien::Build::CommandSequence 2.29
-      Alien::Build::Helper 2.29
-      Alien::Build::Interpolate 2.29
-      Alien::Build::Interpolate::Default 2.29
-      Alien::Build::Interpolate::Helper 2.29
-      Alien::Build::Log 2.29
-      Alien::Build::Log::Abbreviate 2.29
-      Alien::Build::Log::Default 2.29
-      Alien::Build::MM 2.29
-      Alien::Build::Meta 2.29
-      Alien::Build::Plugin 2.29
-      Alien::Build::Plugin::Build::Autoconf 2.29
-      Alien::Build::Plugin::Build::CMake 2.29
-      Alien::Build::Plugin::Build::Copy 2.29
-      Alien::Build::Plugin::Build::MSYS 2.29
-      Alien::Build::Plugin::Build::Make 2.29
-      Alien::Build::Plugin::Build::SearchDep 2.29
-      Alien::Build::Plugin::Core::CleanInstall 2.29
-      Alien::Build::Plugin::Core::Download 2.29
-      Alien::Build::Plugin::Core::FFI 2.29
-      Alien::Build::Plugin::Core::Gather 2.29
-      Alien::Build::Plugin::Core::Legacy 2.29
-      Alien::Build::Plugin::Core::Override 2.29
-      Alien::Build::Plugin::Core::Setup 2.29
-      Alien::Build::Plugin::Core::Tail 2.29
-      Alien::Build::Plugin::Decode::DirListing 2.29
-      Alien::Build::Plugin::Decode::DirListingFtpcopy 2.29
-      Alien::Build::Plugin::Decode::HTML 2.29
-      Alien::Build::Plugin::Decode::Mojo 2.29
-      Alien::Build::Plugin::Download::Negotiate 2.29
-      Alien::Build::Plugin::Extract::ArchiveTar 2.29
-      Alien::Build::Plugin::Extract::ArchiveZip 2.29
-      Alien::Build::Plugin::Extract::CommandLine 2.29
-      Alien::Build::Plugin::Extract::Directory 2.29
-      Alien::Build::Plugin::Extract::Negotiate 2.29
-      Alien::Build::Plugin::Fetch::CurlCommand 2.29
-      Alien::Build::Plugin::Fetch::HTTPTiny 2.29
-      Alien::Build::Plugin::Fetch::LWP 2.29
-      Alien::Build::Plugin::Fetch::Local 2.29
-      Alien::Build::Plugin::Fetch::LocalDir 2.29
-      Alien::Build::Plugin::Fetch::NetFTP 2.29
-      Alien::Build::Plugin::Fetch::Wget 2.29
-      Alien::Build::Plugin::Gather::IsolateDynamic 2.29
-      Alien::Build::Plugin::PkgConfig::CommandLine 2.29
-      Alien::Build::Plugin::PkgConfig::LibPkgConf 2.29
-      Alien::Build::Plugin::PkgConfig::MakeStatic 2.29
-      Alien::Build::Plugin::PkgConfig::Negotiate 2.29
-      Alien::Build::Plugin::PkgConfig::PP 2.29
-      Alien::Build::Plugin::Prefer::BadVersion 2.29
-      Alien::Build::Plugin::Prefer::GoodVersion 2.29
-      Alien::Build::Plugin::Prefer::SortVersions 2.29
-      Alien::Build::Plugin::Probe::CBuilder 2.29
-      Alien::Build::Plugin::Probe::CommandLine 2.29
-      Alien::Build::Plugin::Probe::Vcpkg 2.29
-      Alien::Build::Plugin::Test::Mock 2.29
-      Alien::Build::PluginMeta 2.29
-      Alien::Build::Temp 2.29
-      Alien::Build::TempDir 2.29
-      Alien::Build::Util 2.29
-      Alien::Build::Version::Basic 2.29
-      Alien::Build::rc 2.29
-      Alien::Role 2.29
-      Test::Alien 2.29
-      Test::Alien::Build 2.29
-      Test::Alien::CanCompile 2.29
-      Test::Alien::CanPlatypus 2.29
-      Test::Alien::Diag 2.29
-      Test::Alien::Run 2.29
-      Test::Alien::Synthetic 2.29
-      alienfile 2.29
-    requirements:
-      Capture::Tiny 0.17
-      ExtUtils::CBuilder 0
-      ExtUtils::MakeMaker 6.64
-      ExtUtils::ParseXS 3.30
-      FFI::CheckLib 0.11
-      File::Which 1.10
-      File::chdir 0
-      JSON::PP 0
-      List::Util 1.33
-      Path::Tiny 0.077
-      Test2::API 1.302096
-      Text::ParseWords 3.26
-      perl 5.008004
-  Alien-Libxml2-0.16
-    pathname: P/PL/PLICEASE/Alien-Libxml2-0.16.tar.gz
-    provides:
-      Alien::Libxml2 0.16
-    requirements:
-      Alien::Base 2.12
-      Alien::Build 2.12
-      Alien::Build::MM 2.12
-      Alien::Build::Plugin::Build::SearchDep 0.35
-      Alien::Build::Plugin::Prefer::BadVersion 1.05
-      Alien::Build::Plugin::Probe::Vcpkg 0
-      ExtUtils::CBuilder 0
-      ExtUtils::MakeMaker 6.52
-      perl 5.006
   B-Hooks-EndOfScope-0.24
     pathname: E/ET/ETHER/B-Hooks-EndOfScope-0.24.tar.gz
     provides:
@@ -130,14 +25,6 @@ DISTRIBUTIONS
       perl 5.006001
       strict 0
       warnings 0
-  CSS-Compressor-0.05
-    pathname: J/JA/JANUS/CSS-Compressor-0.05.tar.gz
-    provides:
-      CSS::Compressor 0.05
-    requirements:
-      ExtUtils::MakeMaker 0
-      Test::Differences 0
-      perl 5.010000
   CSS-Packer-2.07
     pathname: L/LE/LEEJO/CSS-Packer-2.07.tar.gz
     provides:
@@ -147,21 +34,6 @@ DISTRIBUTIONS
       Regexp::RegGrp 1.001_001
       Test::File::Contents 0.21
       Test::More 0
-  Capture-Tiny-0.48
-    pathname: D/DA/DAGOLDEN/Capture-Tiny-0.48.tar.gz
-    provides:
-      Capture::Tiny 0.48
-    requirements:
-      Carp 0
-      Exporter 0
-      ExtUtils::MakeMaker 6.17
-      File::Spec 0
-      File::Temp 0
-      IO::Handle 0
-      Scalar::Util 0
-      perl 5.006
-      strict 0
-      warnings 0
   Class-Data-Inheritable-0.08
     pathname: T/TM/TMTM/Class-Data-Inheritable-0.08.tar.gz
     provides:
@@ -1135,26 +1007,6 @@ DISTRIBUTIONS
       strict 0
       warnings 0
       warnings::register 0
-  DateTime-Format-Builder-0.83
-    pathname: D/DR/DROLSKY/DateTime-Format-Builder-0.83.tar.gz
-    provides:
-      DateTime::Format::Builder 0.83
-      DateTime::Format::Builder::Parser 0.83
-      DateTime::Format::Builder::Parser::Dispatch 0.83
-      DateTime::Format::Builder::Parser::Quick 0.83
-      DateTime::Format::Builder::Parser::Regex 0.83
-      DateTime::Format::Builder::Parser::Strptime 0.83
-      DateTime::Format::Builder::Parser::generic 0.83
-    requirements:
-      Carp 0
-      DateTime 1.00
-      DateTime::Format::Strptime 1.04
-      ExtUtils::MakeMaker 0
-      Params::Validate 0.72
-      Scalar::Util 0
-      parent 0
-      strict 0
-      warnings 0
   DateTime-Format-DateParse-0.05
     pathname: J/JH/JHOBLITT/DateTime-Format-DateParse-0.05.tar.gz
     provides:
@@ -1164,70 +1016,6 @@ DISTRIBUTIONS
       DateTime 0.29
       DateTime::TimeZone 0.27
       Time::Zone 2.22
-  DateTime-Format-ISO8601-0.14
-    pathname: D/DR/DROLSKY/DateTime-Format-ISO8601-0.14.tar.gz
-    provides:
-      DateTime::Format::ISO8601 0.14
-      DateTime::Format::ISO8601::Types 0.14
-    requirements:
-      Carp 0
-      DateTime 1.45
-      DateTime::Format::Builder 0.77
-      ExtUtils::MakeMaker 0
-      Params::ValidationCompiler 0.26
-      Specio 0.18
-      Specio::Declare 0
-      Specio::Exporter 0
-      Specio::Library::Builtins 0
-      namespace::autoclean 0
-      parent 0
-      strict 0
-      warnings 0
-  DateTime-Format-Mail-0.403
-    pathname: B/BO/BOOK/DateTime-Format-Mail-0.403.tar.gz
-    provides:
-      DateTime::Format::Mail 0.403
-    requirements:
-      Carp 0
-      DateTime 1.04
-      ExtUtils::MakeMaker 0
-      Params::Validate 0
-      perl 5.006
-      strict 0
-      vars 0
-  DateTime-Format-Strptime-1.77
-    pathname: D/DR/DROLSKY/DateTime-Format-Strptime-1.77.tar.gz
-    provides:
-      DateTime::Format::Strptime 1.77
-      DateTime::Format::Strptime::Types 1.77
-    requirements:
-      Carp 0
-      DateTime 1.00
-      DateTime::Locale 1.23
-      DateTime::Locale::Base 0
-      DateTime::Locale::FromData 0
-      DateTime::TimeZone 2.09
-      Exporter 0
-      ExtUtils::MakeMaker 0
-      Params::ValidationCompiler 0
-      Specio 0.33
-      Specio::Declare 0
-      Specio::Exporter 0
-      Specio::Library::Builtins 0
-      Specio::Library::String 0
-      Try::Tiny 0
-      constant 0
-      parent 0
-      strict 0
-      warnings 0
-  DateTime-Format-W3CDTF-0.07
-    pathname: G/GW/GWILLIAMS/DateTime-Format-W3CDTF-0.07.tar.gz
-    provides:
-      DateTime::Format::W3CDTF 0.07
-    requirements:
-      DateTime 0
-      ExtUtils::MakeMaker 6.36
-      Test::More 0.61
   DateTime-Locale-1.26
     pathname: D/DR/DROLSKY/DateTime-Locale-1.26.tar.gz
     provides:
@@ -1749,13 +1537,6 @@ DISTRIBUTIONS
       perl 5.006
       strict 0
       warnings 0
-  FFI-CheckLib-0.27
-    pathname: P/PL/PLICEASE/FFI-CheckLib-0.27.tar.gz
-    provides:
-      FFI::CheckLib 0.27
-    requirements:
-      ExtUtils::MakeMaker 0
-      perl 5.006
   File-Listing-6.04
     pathname: G/GA/GAAS/File-Listing-6.04.tar.gz
     provides:
@@ -1794,28 +1575,6 @@ DISTRIBUTIONS
       perl 5.006
       strict 0
       warnings 0
-  File-Which-1.23
-    pathname: P/PL/PLICEASE/File-Which-1.23.tar.gz
-    provides:
-      File::Which 1.23
-    requirements:
-      ExtUtils::MakeMaker 0
-      perl 5.006
-  File-chdir-0.1010
-    pathname: D/DA/DAGOLDEN/File-chdir-0.1010.tar.gz
-    provides:
-      File::chdir 0.1010
-      File::chdir::ARRAY 0.1010
-      File::chdir::SCALAR 0.1010
-    requirements:
-      Carp 0
-      Cwd 3.16
-      Exporter 0
-      ExtUtils::MakeMaker 6.17
-      File::Spec::Functions 3.27
-      perl 5.006
-      strict 0
-      vars 0
   HTML-Packer-2.10
     pathname: L/LE/LEEJO/HTML-Packer-2.10.tar.gz
     provides:
@@ -1842,72 +1601,12 @@ DISTRIBUTIONS
       HTML::Tagset 3
       XSLoader 0
       perl 5.008
-  HTML-Selector-Element-0.95
-    pathname: B/BA/BARTL/HTML-Selector-Element-0.95.tar.gz
-    provides:
-      HTML::Element 0.95
-      HTML::Selector::Element 0.95
-      HTML::Selector::Element::Trait 0.95
-    requirements:
-      Carp 0
-      Exporter 0
-      ExtUtils::MakeMaker 0
-      HTML::TreeBuilder 0
-      perl 5.008001
-      strict 0
-  HTML-Selector-XPath-0.25
-    pathname: C/CO/CORION/HTML-Selector-XPath-0.25.tar.gz
-    provides:
-      HTML::Selector::XPath 0.25
-    requirements:
-      Carp 0
-      Exporter 0
-      ExtUtils::MakeMaker 0
-      perl 5.008001
-      strict 0
   HTML-Tagset-3.20
     pathname: P/PE/PETDANCE/HTML-Tagset-3.20.tar.gz
     provides:
       HTML::Tagset 3.20
     requirements:
       ExtUtils::MakeMaker 0
-  HTML-Tree-5.07
-    pathname: K/KE/KENTNL/HTML-Tree-5.07.tar.gz
-    provides:
-      HTML::AsSubs 5.07
-      HTML::Element 5.07
-      HTML::Element::traverse 5.07
-      HTML::Parse 5.07
-      HTML::Tree 5.07
-      HTML::TreeBuilder 5.07
-    requirements:
-      Carp 0
-      Encode 0
-      Exporter 0
-      HTML::Entities 0
-      HTML::Parser 3.46
-      HTML::Tagset 3.02
-      Module::Build 0.2808
-      Scalar::Util 0
-      Test::Fatal 0
-      Test::More 0
-      base 0
-      integer 0
-      perl 5.008
-  HTML-TreeBuilder-XPath-0.14
-    pathname: M/MI/MIROD/HTML-TreeBuilder-XPath-0.14.tar.gz
-    provides:
-      HTML::Element 0.14
-      HTML::TreeBuilder::XPath 0.14
-      HTML::TreeBuilder::XPath::Attribute 0.14
-      HTML::TreeBuilder::XPath::Node 0.14
-      HTML::TreeBuilder::XPath::Root 0.14
-      HTML::TreeBuilder::XPath::TextNode 0.14
-    requirements:
-      ExtUtils::MakeMaker 0
-      HTML::TreeBuilder 0
-      List::Util 0
-      XML::XPathEngine 0.12
   HTTP-Cookies-6.08
     pathname: O/OA/OALDERS/HTTP-Cookies-6.08.tar.gz
     provides:
@@ -2380,25 +2079,6 @@ DISTRIBUTIONS
       perl 5.008001
       strict 0
       warnings 0
-  Params-Validate-1.29
-    pathname: D/DR/DROLSKY/Params-Validate-1.29.tar.gz
-    provides:
-      Params::Validate 1.29
-      Params::Validate::Constants 1.29
-      Params::Validate::PP 1.29
-      Params::Validate::XS 1.29
-    requirements:
-      Carp 0
-      Exporter 0
-      ExtUtils::CBuilder 0
-      Module::Build 0.28
-      Module::Implementation 0
-      Scalar::Util 1.10
-      XSLoader 0
-      perl 5.008001
-      strict 0
-      vars 0
-      warnings 0
   Params-ValidationCompiler-0.30
     pathname: D/DR/DROLSKY/Params-ValidationCompiler-0.30.tar.gz
     provides:
@@ -2417,32 +2097,6 @@ DISTRIBUTIONS
       overload 0
       strict 0
       warnings 0
-  Path-Tiny-0.114
-    pathname: D/DA/DAGOLDEN/Path-Tiny-0.114.tar.gz
-    provides:
-      Path::Tiny 0.114
-      Path::Tiny::Error 0.114
-    requirements:
-      Carp 0
-      Cwd 0
-      Digest 1.03
-      Digest::SHA 5.45
-      Encode 0
-      Exporter 5.57
-      ExtUtils::MakeMaker 6.17
-      Fcntl 0
-      File::Copy 0
-      File::Glob 0
-      File::Path 2.07
-      File::Spec 0.86
-      File::Temp 0.19
-      File::stat 0
-      constant 0
-      overload 0
-      perl 5.008001
-      strict 0
-      warnings 0
-      warnings::register 0
   Regexp-RegGrp-2.01
     pathname: L/LE/LEEJO/Regexp-RegGrp-2.01.tar.gz
     provides:
@@ -2551,16 +2205,6 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 0
       Scalar::Util 0
       perl 5.006
-  Test-Differences-0.67
-    pathname: D/DC/DCANTRELL/Test-Differences-0.67.tar.gz
-    provides:
-      Test::Differences 0.67
-    requirements:
-      Capture::Tiny 0.24
-      Data::Dumper 2.126
-      ExtUtils::MakeMaker 0
-      Test::More 0.88
-      Text::Diff 1.43
   Test-Fatal-0.016
     pathname: R/RJ/RJBS/Test-Fatal-0.016.tar.gz
     provides:
@@ -2749,81 +2393,6 @@ DISTRIBUTIONS
       Fcntl 0
       URI 1.10
       perl 5.008001
-  XML-LibXML-2.0205
-    pathname: S/SH/SHLOMIF/XML-LibXML-2.0205.tar.gz
-    provides:
-      XML::LibXML 2.0205
-      XML::LibXML::Attr 2.0205
-      XML::LibXML::AttributeHash 2.0205
-      XML::LibXML::Boolean 2.0205
-      XML::LibXML::CDATASection 2.0205
-      XML::LibXML::Comment 2.0205
-      XML::LibXML::Common 2.0205
-      XML::LibXML::Devel 2.0205
-      XML::LibXML::Document 2.0205
-      XML::LibXML::DocumentFragment 2.0205
-      XML::LibXML::Dtd 2.0205
-      XML::LibXML::Element 2.0205
-      XML::LibXML::ErrNo 2.0205
-      XML::LibXML::Error 2.0205
-      XML::LibXML::InputCallback 2.0205
-      XML::LibXML::Literal 2.0205
-      XML::LibXML::NamedNodeMap 2.0205
-      XML::LibXML::Namespace 2.0205
-      XML::LibXML::Node 2.0205
-      XML::LibXML::NodeList 2.0205
-      XML::LibXML::Number 2.0205
-      XML::LibXML::PI 2.0205
-      XML::LibXML::Pattern 2.0205
-      XML::LibXML::Reader 2.0205
-      XML::LibXML::RegExp 2.0205
-      XML::LibXML::RelaxNG 2.0205
-      XML::LibXML::SAX 2.0205
-      XML::LibXML::SAX::AttributeNode 2.0205
-      XML::LibXML::SAX::Builder 2.0205
-      XML::LibXML::SAX::Generator 2.0205
-      XML::LibXML::SAX::Parser 2.0205
-      XML::LibXML::Schema 2.0205
-      XML::LibXML::Text 2.0205
-      XML::LibXML::XPathContext 2.0205
-      XML::LibXML::XPathExpression 2.0205
-      XML::LibXML::_SAXParser 2.0205
-    requirements:
-      Alien::Base::Wrapper 0
-      Alien::Libxml2 0.14
-      Carp 0
-      Config 0
-      DynaLoader 0
-      Encode 0
-      Exporter 5.57
-      ExtUtils::MakeMaker 0
-      IO::Handle 0
-      Scalar::Util 0
-      Tie::Hash 0
-      XML::NamespaceSupport 1.07
-      XML::SAX 0.11
-      XML::SAX::Base 0
-      XML::SAX::DocumentLocator 0
-      XML::SAX::Exception 0
-      base 0
-      constant 0
-      overload 0
-      parent 0
-      perl 5.008001
-      strict 0
-      vars 0
-      warnings 0
-  XML-NamespaceSupport-1.12
-    pathname: P/PE/PERIGRIN/XML-NamespaceSupport-1.12.tar.gz
-    provides:
-      XML::NamespaceSupport 1.12
-    requirements:
-      ExtUtils::MakeMaker 6.17
-      constant 0
-      perl 5.006
-      strict 0
-      vars 0
-      warnings 0
   XML-Parser-2.46
     pathname: T/TO/TODDR/XML-Parser-2.46.tar.gz
     provides:
@@ -2838,57 +2407,6 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 0
       LWP::UserAgent 0
       perl 5.00405
-  XML-RSS-1.61
-    pathname: S/SH/SHLOMIF/XML-RSS-1.61.tar.gz
-    provides:
-      XML::RSS 1.61
-      XML::RSS::Private::Output::Base 1.61
-      XML::RSS::Private::Output::Roles::ImageDims 1.61
-      XML::RSS::Private::Output::Roles::ModulesElems 1.61
-      XML::RSS::Private::Output::V0_9 1.61
-      XML::RSS::Private::Output::V0_91 1.61
-      XML::RSS::Private::Output::V1_0 1.61
-      XML::RSS::Private::Output::V2_0 1.61
-    requirements:
-      Carp 0
-      DateTime::Format::Mail 0
-      DateTime::Format::W3CDTF 0
-      ExtUtils::MakeMaker 0
-      HTML::Entities 0
-      Module::Build 0.28
-      XML::Parser 0
-      perl 5.008
-      strict 0
-      vars 0
-      warnings 0
-  XML-SAX-1.02
-    pathname: G/GR/GRANTM/XML-SAX-1.02.tar.gz
-    provides:
-      XML::SAX 1.02
-      XML::SAX::DocumentLocator undef
-      XML::SAX::ParserFactory 1.02
-      XML::SAX::PurePerl 1.02
-      XML::SAX::PurePerl::DebugHandler undef
-      XML::SAX::PurePerl::Exception undef
-      XML::SAX::PurePerl::Productions undef
-      XML::SAX::PurePerl::Reader undef
-      XML::SAX::PurePerl::Reader::Stream undef
-      XML::SAX::PurePerl::Reader::String undef
-      XML::SAX::PurePerl::Reader::URI undef
-    requirements:
-      ExtUtils::MakeMaker 0
-      File::Temp 0
-      XML::NamespaceSupport 0.03
-      XML::SAX::Base 1.05
-  XML-SAX-Base-1.09
-    pathname: G/GR/GRANTM/XML-SAX-Base-1.09.tar.gz
-    provides:
-      XML::SAX::Base 1.09
-      XML::SAX::Base::NoHandler 1.09
-      XML::SAX::Exception 1.09
-    requirements:
-      ExtUtils::MakeMaker 0
-      perl 5.008
   XML-Twig-3.52
     pathname: M/MI/MIROD/XML-Twig-3.52.tar.gz
     provides:
@@ -2905,23 +2423,6 @@ DISTRIBUTIONS
     requirements:
       ExtUtils::MakeMaker 0
       XML::Parser 2.23
-  XML-XPathEngine-0.14
-    pathname: M/MI/MIROD/XML-XPathEngine-0.14.tar.gz
-    provides:
-      XML::XPathEngine 0.14
-      XML::XPathEngine::Boolean undef
-      XML::XPathEngine::Expr undef
-      XML::XPathEngine::Function undef
-      XML::XPathEngine::Literal undef
-      XML::XPathEngine::LocationPath undef
-      XML::XPathEngine::NodeSet undef
-      XML::XPathEngine::Number undef
-      XML::XPathEngine::Root undef
-      XML::XPathEngine::Step undef
-      XML::XPathEngine::Variable undef
-    requirements:
-      ExtUtils::MakeMaker 0
-      Test::More 0
   XString-0.002
     pathname: A/AT/ATOOMIC/XString-0.002.tar.gz
     provides:
