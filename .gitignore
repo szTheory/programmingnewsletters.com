@@ -48,8 +48,8 @@ public/index.html
 private/newsletters.backup.json
 private/newsletters-cache.json
 
-public/css/**
-public/javascript/**
+public/css/*.css
+public/javascript/*.js
 public/*.html
 
 !/lib/Build
