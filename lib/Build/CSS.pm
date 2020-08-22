@@ -16,7 +16,7 @@ use File::Spec;
 
 use constant SOURCE_DIR      => 'private/css';
 use constant OUTPUT_DIR      => 'public/css';
-use constant OUTPUT_FILENAME => '/index.css';
+use constant OUTPUT_FILENAME => 'index.css';
 use constant SOURCE_CSS_FILENAMES =>
   ( 'normalize.css', 'default.css', 'main.css' );
 
