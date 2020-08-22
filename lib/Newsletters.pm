@@ -8,16 +8,6 @@ use Exporter 'import';
 our @EXPORT_OK   = qw(newsletters);
 our %EXPORT_TAGS = ( all => \@EXPORT_OK );
 
-use JSON::MaybeXS qw(decode_json);
-use LWP::UserAgent;
-use XML::Twig;
-use DateTime::Format::DateParse;
-
-# use Date::Manip qw(ParseDate UnixDate);
-use Date::Manip::Date;
-use Mojo::Dom;
-use List::SomeUtils qw(indexes);
-
 use constant NEWSLETTERS_JSON_FILE             => 'private/newsletters.json';
 use constant RSS_FEED_DEFAULT_UPDATED_SELECTOR => 'pubDate';
 use constant RSS_FEED_DEFAULT_LINK_SELECTOR    => 'item/link';
@@ -25,6 +15,14 @@ use constant USER_AGENT =>
 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1';
 use constant GET_TIMEOUT         => 5;
 use constant DATE_COMPARE_PRINTF => '%b %d';
+
+use JSON::MaybeXS qw(decode_json);
+use LWP::UserAgent;
+use XML::Twig;
+use DateTime::Format::DateParse;
+use Date::Manip::Date;
+use Mojo::DOM;
+use List::SomeUtils qw(indexes);
 
 sub _newsletters_file_json {
   open my $fh, '<:encoding(UTF-8)', NEWSLETTERS_JSON_FILE;
