@@ -67,6 +67,7 @@ sub _newsletter_info_rss {
   my $link_attr          = $newsletter_entry->{link_attr};
   my $link_last          = $newsletter_entry->{link_last};
   my $link_contains_text = $newsletter_entry->{link_contains_text};
+  my $link_base_filter   = $newsletter_entry->{link_base_filter};
 
   print "----> Parsing XML\n";
   my @dates;
@@ -77,7 +78,6 @@ sub _newsletter_info_rss {
 
     # '_default_' => sub { $_->purge },
   };
-
   my $link_selector_callback;
   if ($link_attr) {
     $link_selector_callback = sub { push( @links, $_->atts()->{$link_attr} ) }
@@ -93,8 +93,18 @@ sub _newsletter_info_rss {
   my $timestamp_index = 0;
   my $link_index      = 0;
 
+  if ($link_base_filter) {
+    @links = grep { /$link_base_filter/ } @links;
+  }
+
   my $link;
   if ($link_contains_text) {
+    if ( $#links != $#dates ) {
+      warn
+"Different number of $#links links and $#dates dates for $name - $feed_url";
+      return {};
+    }
+
     my ($matching_index) = indexes { /$link_contains_text/ } @links;
 
     $timestamp_index = $matching_index;
@@ -105,9 +115,16 @@ sub _newsletter_info_rss {
   }
   $link = $links[$link_index];
 
-  my $timestamp =
-    DateTime::Format::DateParse->parse_datetime( $dates[$timestamp_index] )
-    ->epoch();
+  my $timestamp;
+  my $datetime =
+    DateTime::Format::DateParse->parse_datetime( $dates[$timestamp_index] );
+  if ($datetime) {
+    $timestamp = $datetime->epoch();
+  }
+  else {
+    warn "Error while parsing timestamp for $name - $feed_url";
+    return {};
+  }
 
   if ( !$link ) {
     $link = $url;

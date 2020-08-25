@@ -192,7 +192,8 @@
       "feed_url": "https://feeds.feedburner.com/Baeldung",
       "updated_selector": "//item/pubDate",
       "link_selector": "//item/feedburner:origLink",
-      "link_contains_text": "java-weekly"
+      "link_contains_text": "java-weekly",
+      "link_base_filter": "baeldung.com"
     },
     {
       "category": "Programming Languages",
