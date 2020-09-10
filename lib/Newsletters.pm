@@ -88,7 +88,7 @@ sub _newsletter_info_rss {
   $twig_handlers->{$link_selector} = $link_selector_callback;
 
   my $twig = XML::Twig->new( twig_handlers => $twig_handlers );
-  $twig->parse($xml);
+  $twig->safe_parse($xml);
 
   my $timestamp_index = 0;
   my $link_index      = 0;

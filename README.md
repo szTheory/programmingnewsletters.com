@@ -24,7 +24,7 @@ carton exec perl Run.pm
 To force a rebuild, overriding newsletters cache:
 
 ```bash
-carton exec perl Run.pm --build
+carton exec perl Run.pm --rebuild
 ```
 
 ### Viewing the site locally
