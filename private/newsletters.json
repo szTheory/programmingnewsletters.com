@@ -104,26 +104,26 @@
       "updated_selector": "item/dc:date"
     },
     {
-      "category": "Devops",
+      "category": "DevOps",
       "name": "cron.weekly",
       "url": "https://ma.ttias.be/cronweekly/",
       "feed_url": "https://ma.ttias.be/cronweekly/index.xml"
     },
     {
-      "category": "Devops",
+      "category": "DevOps",
       "name": "Serverless Status",
       "url": "https://serverless.email/latest",
       "feed_url": "https://serverless.email/rss/"
     },
     {
-      "category": "Devops",
+      "category": "DevOps",
       "name": "The New Stack",
       "url": "https://us11.campaign-archive.com/home/?u=ab6c02b160780b8e6569144f8&id=a196bfbac7",
       "feed_url": "https://us11.campaign-archive.com/feed?u=ab6c02b160780b8e6569144f8&id=a196bfbac7",
       "updated_selector": "item/pubDate"
     },
     {
-      "category": "Devops",
+      "category": "DevOps",
       "name": "This Week in Devops",
       "url": "https://thisweekindevops.com/",
       "feed_url": "https://thisweekindevops.com/feed/"
