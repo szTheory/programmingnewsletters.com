@@ -90,10 +90,8 @@
       "category": "Security",
       "name": "Crypto-Gram",
       "url": "https://www.schneier.com/crypto-gram/",
-      "feed_url": "https://www.schneier.com/feed/atom",
-      "link_selector": "entry/link",
-      "link_attr": "href",
-      "updated_selector": "updated"
+      "updated_selector": ".excerpt a:first-child",
+      "link_selector": ".excerpt a:first-child"
     },
     {
       "category": "Linux",
