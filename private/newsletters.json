@@ -1,6 +1,13 @@
 {
   "entries": [
     {
+      "category": "JavaScript",
+      "name": "TinyJS Newsletter",
+      "url": "https://buttondown.email/tinyjs/archive",
+      "feed_url": "https://buttondown.email/tinyjs/rss",
+      "updated_selector": "item/pubDate"
+    },
+    {
       "category": "DevOps",
       "name": "Kubelist",
       "url": "https://kubelist.com/issues",
