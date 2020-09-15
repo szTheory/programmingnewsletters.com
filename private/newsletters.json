@@ -1,6 +1,22 @@
 {
   "entries": [
     {
+      "category": "DevOps",
+      "name": "Kubelist",
+      "url": "https://kubelist.com/issues",
+      "base_url": "https://kubelist.com",
+      "link_selector": "#__next > div > div:nth-child(2) a:first-child",
+      "updated_selector": "#__next > div > div:nth-child(2) a:first-child",
+      "updated_regex": "^([\\d-]+)"
+    },
+    {
+      "category": "DevOps",
+      "name": "Kube Weekly",
+      "url": "https://kubeweekly.io/#templateBody",
+      "updated_selector": ".mcnTextContent strong",
+      "updated_regex": ": (.+)$"
+    },
+    {
       "category": "Programming Languages",
       "name": "Ruby Weekly",
       "url": "https://rubyweekly.com/latest",

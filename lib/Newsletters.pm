@@ -162,6 +162,7 @@ sub _newsletter_info_html {
   my $link_attr         = $newsletter_entry->{link_attr};
 
   print "-- Parsing HTML\n";
+  $html = Mojo::Util::decode( 'UTF-8', $html );
   my $dom = Mojo::DOM->new($html);
   if ( !$dom ) {
     die "Could not load DOM for $name - $url";
@@ -223,8 +224,12 @@ sub _newsletter_info_html {
     }
   }
 
-  my $timestamp =
-    DateTime::Format::DateParse->parse_datetime($timestamp_string)->epoch();
+  my $datetime = DateTime::Format::DateParse->parse_datetime($timestamp_string);
+  unless ($datetime) {
+    die "Could not parse datetime for timestamp string: $timestamp_string";
+  }
+
+  my $timestamp = $datetime->epoch();
 
   if ( !$link ) {
     die "Could not find link for $name - $url";
