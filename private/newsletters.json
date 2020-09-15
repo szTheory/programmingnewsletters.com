@@ -90,7 +90,7 @@
       "category": "Security",
       "name": "Crypto-Gram",
       "url": "https://www.schneier.com/crypto-gram/",
-      "feed_url": "https://www.schneier.com/crypto-gram/atom.xml",
+      "feed_url": "https://www.schneier.com/feed/atom",
       "link_selector": "entry/link",
       "link_attr": "href",
       "updated_selector": "updated"
