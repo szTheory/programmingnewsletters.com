@@ -1,6 +1,14 @@
 {
   "entries": [
     {
+      "category": "Software Engineering",
+      "name": "Changelog Weekly",
+      "url": "https://changelog.com/weekly/archive",
+      "updated_selector": "article li:first-child",
+      "updated_regex": "(\\w+ \\d+, \\d+)$",
+      "link_selector": "article li:first-child a"
+    },
+    {
       "category": "Frontend",
       "name": "Frontend Focus",
       "url": "https://frontendfoc.us/latest",
