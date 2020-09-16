@@ -1,6 +1,12 @@
 {
   "entries": [
     {
+      "category": "Frontend",
+      "name": "Frontend Weekly",
+      "url": "https://frontendweekly.co/",
+      "feed_url": "https://frontendweekly.co/issues.rss"
+    },
+    {
       "category": "JavaScript",
       "name": "JavaScript Kicks",
       "url": "https://javascriptkicks.com/",
