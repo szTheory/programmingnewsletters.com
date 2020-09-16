@@ -1,6 +1,13 @@
 {
   "entries": [
     {
+      "category": "Programming Languages",
+      "name": "Rakudo Weekly News",
+      "url": "https://rakudoweekly.blog/blog-feed/",
+      "feed_url": "https://rakudoweekly.blog/feed/",
+      "updated_selector": "item/pubDate"
+    },
+    {
       "category": "JavaScript",
       "name": "TinyJS Newsletter",
       "url": "https://buttondown.email/tinyjs/archive",
