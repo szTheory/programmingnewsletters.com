@@ -2,6 +2,13 @@
   "entries": [
     {
       "category": "DevOps",
+      "name": "SRE Weekly",
+      "url": "https://sreweekly.com/",
+      "feed_url": "https://sreweekly.com/feed/",
+      "updated_selector": "item/pubDate"
+    },
+    {
+      "category": "DevOps",
       "name": "Last Week in AWS",
       "url": "https://www.lastweekinaws.com/newsletter/",
       "feed_url": "https://www.lastweekinaws.com/newsletter/feed/",
