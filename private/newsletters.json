@@ -1,6 +1,13 @@
 {
   "entries": [
     {
+      "category": "Frontend",
+      "name": "Web Tools Weekly",
+      "url": "https://webtoolsweekly.com/?view=archive",
+      "feed_url": "https://us5.campaign-archive.com/feed?u=ea228d7061e8bbfa8639666ad&id=104d6bcc2d",
+      "updated_selector": "item/pubDate"
+    },
+    {
       "category": "Programming Languges",
       "name": "PHP Weekly",
       "url": "http://www.phpweekly.com/archive.html",
