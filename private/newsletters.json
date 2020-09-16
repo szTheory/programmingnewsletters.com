@@ -1,6 +1,15 @@
 {
   "entries": [
     {
+      "category": "Programming Languages",
+      "name": "Julia Monthly Newsletter",
+      "url": "https://juliacomputing.com/blog/",
+      "feed_url": "https://juliacomputing.com/blog/feed.xml",
+      "updated_selector": "entry/updated",
+      "link_selector": "entry/link",
+      "link_attr": "href"
+    },
+    {
       "category": "DevOps",
       "name": "Cloud Native News",
       "url": "https://nativecloud.dev/",
