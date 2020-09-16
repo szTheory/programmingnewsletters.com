@@ -59,6 +59,7 @@ sub _newsletter_info_rss {
 
   my $updated_selector =
     $newsletter_entry->{updated_selector} || RSS_FEED_DEFAULT_UPDATED_SELECTOR;
+  my $updated_regex = $newsletter_entry->{updated_regex};
   my $link_selector =
     $newsletter_entry->{link_selector} || RSS_FEED_DEFAULT_LINK_SELECTOR;
   my $link_attr          = $newsletter_entry->{link_attr};
@@ -120,13 +121,17 @@ sub _newsletter_info_rss {
   $link = $links[$link_index];
 
   my $timestamp;
-  my $datetime =
-    DateTime::Format::DateParse->parse_datetime( $dates[$timestamp_index] );
+  my $timestamp_string = $dates[$timestamp_index];
+  if ($updated_regex) {
+    ($timestamp_string) = $timestamp_string =~ qr{$updated_regex};
+  }
+  my $datetime = DateTime::Format::DateParse->parse_datetime($timestamp_string);
   if ($datetime) {
     $timestamp = $datetime->epoch();
   }
   else {
-    warn "Error while parsing timestamp for $name - $feed_url";
+    warn
+      "Error while parsing timestamp: $timestamp_string for $name - $feed_url";
     return {};
   }
 

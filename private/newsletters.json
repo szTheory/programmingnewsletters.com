@@ -2,6 +2,15 @@
   "entries": [
     {
       "category": "DevOps",
+      "name": "Last Week in Kubernetes Development",
+      "url": "http://lwkd.info/",
+      "feed_url": "http://lwkd.info/feed.xml",
+      "updated_selector": "entry/published",
+      "link_selector": "entry/link",
+      "link_attr": "href"
+    },
+    {
+      "category": "DevOps",
       "name": "DevOps'ish",
       "url": "https://devopsish.com/categories/weekly/",
       "updated_selector": "article.blog-post time",
