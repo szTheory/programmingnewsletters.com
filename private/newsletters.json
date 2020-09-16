@@ -1,6 +1,33 @@
 {
   "entries": [
     {
+      "category": "Data Science",
+      "name": "O'Reilly Data & AI Newsletter",
+      "url": "https://www.oreilly.com/emails/newsletters/",
+      "updated_selector": "#data a",
+      "updated_attr": "data-source",
+      "updated_regex": "(\\d+)-share",
+      "link_attr": "data-source"
+    },
+    {
+      "category": "DevOps",
+      "name": "O'Reilly Infrastructure & Ops Newsletter",
+      "url": "https://www.oreilly.com/emails/newsletters/",
+      "updated_selector": "#ops a",
+      "updated_attr": "data-source",
+      "updated_regex": "(\\d+)-share",
+      "link_attr": "data-source"
+    },
+    {
+      "category": "Programming Languages",
+      "name": "O'Reilly Programming Newsletter",
+      "url": "https://www.oreilly.com/emails/newsletters/",
+      "updated_selector": "#programming a",
+      "updated_attr": "data-source",
+      "updated_regex": "(\\d+)-share",
+      "link_attr": "data-source"
+    },
+    {
       "category": "DevOps",
       "name": "Last Week in Kubernetes Development",
       "url": "http://lwkd.info/",

@@ -159,6 +159,8 @@ sub _newsletter_info_html {
   $ua->agent(USER_AGENT);
   my $res  = $ua->get($url);
   my $html = $res->content;
+
+  # good riddance
   if ( $html =~ /Attention Required! | Cloudflare/ ) {
     warn "Caught in CloudFlare while fetching $name - $url";
     return {};
@@ -166,6 +168,7 @@ sub _newsletter_info_html {
 
   my $updated_selector     = $newsletter_entry->{updated_selector};
   my $updated_regex        = $newsletter_entry->{updated_regex};
+  my $updated_attr         = $newsletter_entry->{updated_attr};
   my $updated_fixed_day    = $newsletter_entry->{updated_fixed_day};
   my $link_selector        = $newsletter_entry->{link_selector};
   my $link_attr            = $newsletter_entry->{link_attr};
@@ -224,7 +227,13 @@ sub _newsletter_info_html {
       }
 
       if ($updated_regex) {
-        ($timestamp_string) = $element->text =~ qr{$updated_regex};
+
+        # get timestamp from an attribute or the underlying element text
+        my $updated_text =
+          $updated_attr ? $element->attr($updated_attr) : $element->text;
+
+        # filter timestamp with regular expression
+        ($timestamp_string) = $updated_text =~ qr{$updated_regex};
       }
       else {
         $timestamp_string = $element->text;
@@ -233,13 +242,20 @@ sub _newsletter_info_html {
 
     # get the link for the current newsletter issue
     if ($link_selector) {
+
+      # find link using selector
       my $link_elem = $dom->at($link_selector);
       $link = $link_elem->attr('href');
     }
     elsif ($link_attr) {
+
+      # the link is contained within an attribute of
+      # the updated timestamp element
       $link = $element->attr($link_attr);
     }
     else {
+
+      # newsletter link is the original URL
       $link = $url;
     }
   }
