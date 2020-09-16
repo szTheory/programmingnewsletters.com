@@ -1,11 +1,34 @@
 {
   "entries": [
     {
+      "category": "Data Science",
+      "name": "Machine Learning Engineer Newsletter",
+      "url": "https://ethical.institute/mle.html",
+      "base_url": "https://ethical.institute",
+      "link_selector": ".issues-container a.issue-container:first-child",
+      "updated_fixed_day": "Sunday"
+    },
+    {
+      "category": "Data Science",
+      "name": "O'Reilly Data & AI Newsletter",
+      "url": "https://www.oreilly.com/emails/newsletters/",
+      "updated_selector": "#data a",
+      "updated_attr": "data-source",
+      "updated_regex": "(\\d+)-share",
+      "updated_link_attr": "data-source"
+    },
+    {
       "category": "Webdev",
       "name": "Synk Web Dev Biweekly",
       "url": "https://synk.sh",
       "updated_selector": "#newsletter-list a:first-child span",
       "link_selector": "#newsletter-list a:first-child"
+    },
+    {
+      "category": "Webdev",
+      "name": "Ten JavaScript",
+      "url": "https://tenjs.news",
+      "updated_fixed_day": "Saturday"
     },
     {
       "category": "Mac",
@@ -180,15 +203,7 @@
       "url": "https://nativecloud.dev/",
       "feed_url": "https://blog.nativecloud.dev/rss/"
     },
-    {
-      "category": "Data Science",
-      "name": "O'Reilly Data & AI Newsletter",
-      "url": "https://www.oreilly.com/emails/newsletters/",
-      "updated_selector": "#data a",
-      "updated_attr": "data-source",
-      "updated_regex": "(\\d+)-share",
-      "link_attr": "data-source"
-    },
+
     {
       "category": "DevOps",
       "name": "O'Reilly Infrastructure & Ops Newsletter",
@@ -196,7 +211,7 @@
       "updated_selector": "#ops a",
       "updated_attr": "data-source",
       "updated_regex": "(\\d+)-share",
-      "link_attr": "data-source"
+      "updated_link_attr": "data-source"
     },
     {
       "category": "Programming Languages",
@@ -205,7 +220,7 @@
       "updated_selector": "#programming a",
       "updated_attr": "data-source",
       "updated_regex": "(\\d+)-share",
-      "link_attr": "data-source"
+      "updated_link_attr": "data-source"
     },
     {
       "category": "DevOps",
@@ -422,7 +437,7 @@
       "updated_selector": "#archive section a",
       "updated_regex": "([\\d-]+)$",
       "link_selector": "#archive section a",
-      "link_attr": "href",
+      "updated_link_attr": "href",
       "base_url": "http://esnextnews.com/"
     },
     {
@@ -430,8 +445,7 @@
       "name": "Elixir Weekly",
       "url": "https://elixirweekly.net/",
       "updated_fixed_day": "Thursday",
-      "link_selector": "a[href^=http://elixirweekly.net/issues]",
-      "link_attr": "href"
+      "link_selector": "a[href^=http://elixirweekly.net/issues]"
     },
     {
       "category": "Programming Languages",
@@ -530,19 +544,11 @@
       "name": "Data Science Weekly",
       "url": "https://www.datascienceweekly.org/newsletters",
       "base_url": "https://www.datascienceweekly.org",
-      "link_attr": "href",
+      "updated_link_attr": "href",
       "updated_selector": "#newsletter-content-index-page-inner a[href^='/newsletters/data-science-weekly-newsletter-issue-']",
       "updated_regex": "\\((.+)\\)$"
     },
-    {
-      "category": "Data Science",
-      "name": "Machine Learning Engineer Newsletter",
-      "url": "https://ethical.institute/mle.html",
-      "base_url": "https://ethical.institute",
-      "link_selector": ".issues-container a.issue-container:first-child",
-      "updated_fixed_day": "Sunday",
-      "link_attr": "href"
-    },
+
     {
       "category": "Mobile",
       "name": "Mobile Dev Weekly",
@@ -562,7 +568,6 @@
       "url": "https://www.dashingd3js.com/data-visualization-and-d3-newsletter",
       "base_url": "https://www.dashingd3js.com",
       "link_selector": "a[href^='/data-visualization-and-d3-newsletter/data-visualization-and-d3-newsletter-issue-']",
-      "link_attr": "href",
       "updated_fixed_day": "Tuesday"
     },
     {

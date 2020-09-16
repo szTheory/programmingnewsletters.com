@@ -191,7 +191,8 @@ sub _newsletter_info_html {
   my $updated_attr         = $newsletter_entry->{updated_attr};
   my $updated_fixed_day    = $newsletter_entry->{updated_fixed_day};
   my $link_selector        = $newsletter_entry->{link_selector};
-  my $link_attr            = $newsletter_entry->{link_attr};
+  my $updated_link_attr    = $newsletter_entry->{updated_link_attr};
+  my $link_constant        = $newsletter_entry->{link_contant};
   my $follow_link          = $newsletter_entry->{follow_link};
   my $european_date_format = $newsletter_entry->{european_date_format};
 
@@ -204,6 +205,7 @@ sub _newsletter_info_html {
 
   my $timestamp_string;
   my $link;
+  my $updated_element;
 
   if ($updated_fixed_day) {
 
@@ -228,20 +230,16 @@ sub _newsletter_info_html {
 
     # get epoch (seconds)
     $timestamp_string = $selected_day->printf(DATE_COMPARE_PRINTF);
-
-    # get the link for the current newsletter issue
-    $link = $dom->at($link_selector)->attr($link_attr);
   }
   else {
-    my $element;
 
     # don't bother trying to parse the date if we have to follow
     # a link before we can find out the update timestamp.
     # we'll circle back on the next pass of this function to get it
     if ( !$follow_link ) {
-      $element = $dom->at($updated_selector);
+      $updated_element = $dom->at($updated_selector);
 
-      if ( !$element ) {
+      if ( !$updated_element ) {
         die
 "Could not find updated timestamp for $name with selector '$updated_selector' for URL $url";
       }
@@ -250,34 +248,39 @@ sub _newsletter_info_html {
 
         # get timestamp from an attribute or the underlying element text
         my $updated_text =
-          $updated_attr ? $element->attr($updated_attr) : $element->text;
+            $updated_attr
+          ? $updated_element->attr($updated_attr)
+          : $updated_element->text;
 
         # filter timestamp with regular expression
         ($timestamp_string) = $updated_text =~ qr{$updated_regex};
       }
       else {
-        $timestamp_string = $element->text;
+        $timestamp_string = $updated_element->text;
       }
     }
+  }
 
-    # get the link for the current newsletter issue
-    if ($link_selector) {
+  # get the link for the current newsletter issue
+  my $link_element;
+  if ($link_selector) {
 
-      # find link using selector
-      my $link_elem = $dom->at($link_selector);
-      $link = $link_elem->attr('href');
-    }
-    elsif ($link_attr) {
+    # find link using selector
+    $link_element = $dom->at($link_selector);
+  }
 
-      # the link is contained within an attribute of
-      # the updated timestamp element
-      $link = $element->attr($link_attr);
-    }
-    else {
+  if ($updated_link_attr) {
 
-      # newsletter link is the original URL
-      $link = $url;
-    }
+    # the link is contained within an attribute of
+    # the updated timestamp element
+    $link = $updated_element->attr($updated_link_attr);
+  }
+  elsif ($link_element) {
+    $link = $link_element->attr('href');
+  }
+  else {
+    # newsletter link is the original URL
+    $link = $url;
   }
 
   my $timestamp;
