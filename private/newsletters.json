@@ -2,6 +2,15 @@
   "entries": [
     {
       "category": "DevOps",
+      "name": "DevOps Industry Updates",
+      "url": "https://corey.tech/",
+      "feed_url": "https://corey.tech/feed.xml",
+      "updated_selector": "entry/published",
+      "link_selector": "entry/link",
+      "link_attr": "href"
+    },
+    {
+      "category": "DevOps",
       "name": "0800-DevOps Newsletter",
       "url": "https://croz.net/0800-devops/",
       "follow_link": "true",

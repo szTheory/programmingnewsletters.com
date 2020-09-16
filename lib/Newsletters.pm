@@ -73,11 +73,15 @@ sub _newsletter_info_rss {
   my @dates;
   my @links;
 
+  # Build up a list of XML parsing callback handlers
+  # starting with the updated timestamp selector
   my $twig_handlers = {
     $updated_selector => sub { push( @dates, $_->text_only() ) },
 
     # '_default_' => sub { $_->purge },
   };
+
+  # Add an XML parsing callback for the link selector
   my $link_selector_callback;
   if ($link_attr) {
     $link_selector_callback = sub { push( @links, $_->atts()->{$link_attr} ) }
@@ -85,8 +89,11 @@ sub _newsletter_info_rss {
   else {
     $link_selector_callback = sub { push( @links, $_->text_only() ) }
   }
+
+  # Tie the link callback to the configured link selector
   $twig_handlers->{$link_selector} = $link_selector_callback;
 
+  # Parse XML using the callbacks
   my $twig = XML::Twig->new( twig_handlers => $twig_handlers );
   $twig->safe_parse($xml);
 
