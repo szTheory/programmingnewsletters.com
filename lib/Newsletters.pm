@@ -155,11 +155,13 @@ sub _newsletter_info_html {
     return {};
   }
 
-  my $updated_selector  = $newsletter_entry->{updated_selector};
-  my $updated_regex     = $newsletter_entry->{updated_regex};
-  my $updated_fixed_day = $newsletter_entry->{updated_fixed_day};
-  my $link_selector     = $newsletter_entry->{link_selector};
-  my $link_attr         = $newsletter_entry->{link_attr};
+  my $updated_selector     = $newsletter_entry->{updated_selector};
+  my $updated_regex        = $newsletter_entry->{updated_regex};
+  my $updated_fixed_day    = $newsletter_entry->{updated_fixed_day};
+  my $link_selector        = $newsletter_entry->{link_selector};
+  my $link_attr            = $newsletter_entry->{link_attr};
+  my $follow_link          = $newsletter_entry->{follow_link};
+  my $european_date_format = $newsletter_entry->{european_date_format};
 
   print "-- Parsing HTML\n";
   $html = Mojo::Util::decode( 'UTF-8', $html );
@@ -195,23 +197,32 @@ sub _newsletter_info_html {
     # get epoch (seconds)
     $timestamp_string = $selected_day->printf(DATE_COMPARE_PRINTF);
 
+    # get the link for the current newsletter issue
     $link = $dom->at($link_selector)->attr($link_attr);
   }
   else {
-    my $element = $dom->at($updated_selector);
+    my $element;
 
-    if ( !$element ) {
-      die
+    # don't bother trying to parse the date if we have to follow
+    # a link before we can find out the update timestamp.
+    # we'll circle back on the next pass of this function to get it
+    if ( !$follow_link ) {
+      $element = $dom->at($updated_selector);
+
+      if ( !$element ) {
+        die
 "Could not find updated timestamp for $name with selector '$updated_selector' for URL $url";
+      }
+
+      if ($updated_regex) {
+        ($timestamp_string) = $element->text =~ qr{$updated_regex};
+      }
+      else {
+        $timestamp_string = $element->text;
+      }
     }
 
-    if ($updated_regex) {
-      ($timestamp_string) = $element->text =~ qr{$updated_regex};
-    }
-    else {
-      $timestamp_string = $element->text;
-    }
-
+    # get the link for the current newsletter issue
     if ($link_selector) {
       my $link_elem = $dom->at($link_selector);
       $link = $link_elem->attr('href');
@@ -224,18 +235,39 @@ sub _newsletter_info_html {
     }
   }
 
-  my $datetime = DateTime::Format::DateParse->parse_datetime($timestamp_string);
-  unless ($datetime) {
-    die "Could not parse datetime for timestamp string: $timestamp_string";
-  }
+  my $timestamp;
 
-  my $timestamp = $datetime->epoch();
+  # don't bother trying to parse the updated timestamp
+  # if we have to follow a link to get that info first
+  if ( !$follow_link ) {
+
+    # trim surrounding whitespace
+    $timestamp_string =~ s/(^\s+|\s+$)//g;
+
+    # replace dots with dashes
+    $timestamp_string =~ s/\./-/g;
+
+    # swap month and day for european date formats
+    if ($european_date_format) {
+      $timestamp_string =~ /^(\d+)-(\d+)-(\d+)$/;
+      $timestamp_string = "$2-$1-$3";
+    }
+
+    # parse the updated timestamp
+    my $datetime =
+      DateTime::Format::DateParse->parse_datetime($timestamp_string);
+    unless ($datetime) {
+      die "Could not parse datetime for timestamp string: $timestamp_string";
+    }
+
+    $timestamp = $datetime->epoch();
+    if ( !$timestamp ) {
+      die "Could not find updated timestamp for $name - $url";
+    }
+  }
 
   if ( !$link ) {
     die "Could not find link for $name - $url";
-  }
-  if ( !$timestamp ) {
-    die "Could not find updated timestamp for $name - $url";
   }
 
   return {
@@ -244,15 +276,40 @@ sub _newsletter_info_html {
   };
 }
 
+# parse newsletter info from either an XML feed or an HTML page
 sub _newsletter_info {
   my ($newsletter_entry) = @_;
 
   my $info;
 
+  # XML
   if ( $newsletter_entry->{feed_url} ) {
+
+    # get newsletter info from XML parsing
     $info = _newsletter_info_rss($newsletter_entry);
   }
+
+  # HTML
   else {
+    # Need to follow a link before we can find the updated timestamp
+    # which means parsing HTML before the main scrape
+    if ( $newsletter_entry->{follow_link} ) {
+      my $start_info = _newsletter_info_html($newsletter_entry);
+
+      # get the URL where the updated timestamp lives
+      $newsletter_entry->{url} = $start_info->{url};
+
+      # don't need to follow links for the next pass
+      # because we have enough info to get the updated timestamp now
+      delete $newsletter_entry->{follow_link};
+
+      # we already know the link for the first pass
+      # so we'll default to the redirect URL for the link
+      # therefore we don't need the link selector anymore
+      delete $newsletter_entry->{link_selector};
+    }
+
+    # get newsletter info from HTML parsing
     $info = _newsletter_info_html($newsletter_entry);
   }
 

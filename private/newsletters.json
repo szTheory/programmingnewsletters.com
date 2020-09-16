@@ -1,6 +1,15 @@
 {
   "entries": [
     {
+      "category": "DevOps",
+      "name": "0800-DevOps Newsletter",
+      "url": "https://croz.net/0800-devops/",
+      "follow_link": "true",
+      "link_selector": ".news-container .section__description a[rel=noopener]:first-child",
+      "updated_selector": ".news-author__date",
+      "european_date_format": "true"
+    },
+    {
       "category": "Software Engineering",
       "name": "StatusCode Weekly",
       "url": "https://weekly.statuscode.com/latest",
