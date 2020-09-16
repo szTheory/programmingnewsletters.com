@@ -1,6 +1,13 @@
 {
   "entries": [
     {
+      "category": "JavaScript",
+      "name": "React Status",
+      "url": "https://react.statuscode.com/latest",
+      "feed_url": "https://react.statuscode.com/rss/",
+      "updated_selector": "item/pubDate"
+    },
+    {
       "category": "Frontend",
       "name": "Web Tools Weekly",
       "url": "https://webtoolsweekly.com/?view=archive",
