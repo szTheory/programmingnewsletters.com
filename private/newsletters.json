@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "category": "Programming Languages",
+      "name": "Java Performance Tuning",
+      "url": "https://www.javaperformancetuning.com/newsletter.shtml",
+      "feed_url": "http://www.javaperformancetuning.com/newsletters.rss",
+      "updated_selector": "pubDate"
+    },
+    {
+      "category": "Software Engineering",
+      "name": "Programming Digest",
+      "url": "https://programmingdigest.net/",
+      "feed_url": "https://feeds.feedburner.com/digest-programming"
+    },
+    {
       "category": "Software Engineering",
       "name": "Changelog Weekly",
       "url": "https://changelog.com/weekly/archive",
