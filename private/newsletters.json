@@ -1,7 +1,15 @@
 {
   "entries": [
     {
-      "category": "Software Engineer",
+      "category": "Software Engineering",
+      "name": "Software Lead Weekly",
+      "url": "https://softwareleadweekly.com/issues/",
+      "base_url": "https://softwareleadweekly.com",
+      "updated_selector": ".text-table-issue:first-child",
+      "link_selector": ".title-table-issue:first-child a"
+    },
+    {
+      "category": "Software Engineering",
       "name": "InfoQ Newsletter",
       "url": "https://assets.infoq.com/newsletter/regular/en/newsletter_sample/newsletter_sample.html",
       "updated_selector": "td.top td",
