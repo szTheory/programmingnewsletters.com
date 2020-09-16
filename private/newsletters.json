@@ -1,6 +1,13 @@
 {
   "entries": [
     {
+      "category": "JavaScript",
+      "name": "JavaScript Kicks",
+      "url": "https://javascriptkicks.com/",
+      "updated_selector": ".page-title",
+      "updated_regex": "- (.+)$"
+    },
+    {
       "category": "Security",
       "name": "Talos Threat Source",
       "url": "https://talosintelligence.com/newsletters",
