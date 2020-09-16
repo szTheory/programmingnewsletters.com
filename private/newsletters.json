@@ -1,6 +1,13 @@
 {
   "entries": [
     {
+      "category": "Programming Languges",
+      "name": "PHP Weekly",
+      "url": "http://www.phpweekly.com/archive.html",
+      "feed_url": "http://www.phpweekly.com/rss.xml",
+      "updated_selector": "item/pubDate"
+    },
+    {
       "category": "Mobile",
       "name": "Android Weekly",
       "url": "https://androidweekly.net/archive",
