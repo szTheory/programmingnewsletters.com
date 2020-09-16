@@ -1,6 +1,13 @@
 {
   "entries": [
     {
+      "category": "DevOps",
+      "name": "Cloud Native News",
+      "url": "https://nativecloud.dev/",
+      "feed_url": "https://blog.nativecloud.dev/rss/",
+      "updated_selector": "item/pubDate"
+    },
+    {
       "category": "Data Science",
       "name": "O'Reilly Data & AI Newsletter",
       "url": "https://www.oreilly.com/emails/newsletters/",
