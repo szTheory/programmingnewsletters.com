@@ -2,6 +2,13 @@
   "entries": [
     {
       "category": "DevOps",
+      "name": "DevOps'ish",
+      "url": "https://devopsish.com/categories/weekly/",
+      "updated_selector": "article.blog-post time",
+      "link_selector": ".blog-post-title a"
+    },
+    {
+      "category": "DevOps",
       "name": "DevOps Industry Updates",
       "url": "https://corey.tech/",
       "feed_url": "https://corey.tech/feed.xml",
