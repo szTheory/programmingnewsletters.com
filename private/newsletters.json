@@ -2,6 +2,13 @@
   "entries": [
     {
       "category": "Programming Languages",
+      "name": "Scala Times",
+      "url": "https://scalatimes.com/",
+      "updated_selector": ".issue-info",
+      "updated_regex": "^(.+), ISSUE"
+    },
+    {
+      "category": "Programming Languages",
       "name": "Java Performance Tuning",
       "url": "https://www.javaperformancetuning.com/newsletter.shtml",
       "feed_url": "http://www.javaperformancetuning.com/newsletters.rss",
