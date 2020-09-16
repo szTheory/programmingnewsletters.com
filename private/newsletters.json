@@ -1,32 +1,35 @@
 {
   "entries": [
     {
+      "category": "Security",
+      "name": "Talos Threat Source",
+      "url": "https://talosintelligence.com/newsletters",
+      "feed_url": "https://www.blogger.com/feeds/1029833275466591797/posts/default/-/Threat%20Source%20newsletter",
+      "updated_selector": "//published"
+    },
+    {
       "category": "JavaScript",
       "name": "React Status",
       "url": "https://react.statuscode.com/latest",
-      "feed_url": "https://react.statuscode.com/rss/",
-      "updated_selector": "item/pubDate"
+      "feed_url": "https://react.statuscode.com/rss/"
     },
     {
       "category": "Frontend",
       "name": "Web Tools Weekly",
       "url": "https://webtoolsweekly.com/?view=archive",
-      "feed_url": "https://us5.campaign-archive.com/feed?u=ea228d7061e8bbfa8639666ad&id=104d6bcc2d",
-      "updated_selector": "item/pubDate"
+      "feed_url": "https://us5.campaign-archive.com/feed?u=ea228d7061e8bbfa8639666ad&id=104d6bcc2d"
     },
     {
       "category": "Programming Languges",
       "name": "PHP Weekly",
       "url": "http://www.phpweekly.com/archive.html",
-      "feed_url": "http://www.phpweekly.com/rss.xml",
-      "updated_selector": "item/pubDate"
+      "feed_url": "http://www.phpweekly.com/rss.xml"
     },
     {
       "category": "Mobile",
       "name": "Android Weekly",
       "url": "https://androidweekly.net/archive",
-      "feed_url": "https://us2.campaign-archive1.com/feed?u=887caf4f48db76fd91e20a06d&id=4eb677ad19",
-      "updated_selector": "item/pubDate"
+      "feed_url": "https://us2.campaign-archive1.com/feed?u=887caf4f48db76fd91e20a06d&id=4eb677ad19"
     },
     {
       "category": "JavaScript",
@@ -46,32 +49,25 @@
       "category": "Programming Languages",
       "name": "Lisp Weekly",
       "url": "https://lisp-weekly.com/",
-      "feed_url": "https://us7.campaign-archive.com/feed?u=fe027ef3ceef000bae715f75a&id=191a01df12",
-      "updated_selector": "item/pubDate"
+      "feed_url": "https://us7.campaign-archive.com/feed?u=fe027ef3ceef000bae715f75a&id=191a01df12"
     },
     {
       "category": "Programming Languages",
       "name": "Elm Bits",
       "url": "https://elmbits.com/",
-      "feed_url": "https://elmbits.com/rss/",
-      "updated_selector": "item/pubDate",
-      "link_selector": "item/link"
+      "feed_url": "https://elmbits.com/rss/"
     },
     {
       "category": "Programming Languages",
       "name": "Elm Weekly",
       "url": "https://sergeytihon.com/category/f-weekly/",
-      "feed_url": "https://www.elmweekly.nl/?format=rss",
-      "updated_selector": "item/pubDate",
-      "link_selector": "item/link"
+      "feed_url": "https://www.elmweekly.nl/?format=rss"
     },
     {
       "category": "Programming Languages",
       "name": "F# Weekly",
       "url": "https://sergeytihon.com/category/f-weekly/",
-      "feed_url": "https://sergeytihon.com/category/f-weekly/feed/",
-      "updated_selector": "item/pubDate",
-      "link_selector": "item/link"
+      "feed_url": "https://sergeytihon.com/category/f-weekly/feed/"
     },
     {
       "category": "Programming Languages",
@@ -95,8 +91,7 @@
       "category": "DevOps",
       "name": "Cloud Native News",
       "url": "https://nativecloud.dev/",
-      "feed_url": "https://blog.nativecloud.dev/rss/",
-      "updated_selector": "item/pubDate"
+      "feed_url": "https://blog.nativecloud.dev/rss/"
     },
     {
       "category": "Data Science",
@@ -163,22 +158,19 @@
       "category": "Software Engineering",
       "name": "StatusCode Weekly",
       "url": "https://weekly.statuscode.com/latest",
-      "feed_url": "https://weekly.statuscode.com/rss/",
-      "updated_selector": "item/pubDate"
+      "feed_url": "https://weekly.statuscode.com/rss/"
     },
     {
       "category": "DevOps",
       "name": "SRE Weekly",
       "url": "https://sreweekly.com/",
-      "feed_url": "https://sreweekly.com/feed/",
-      "updated_selector": "item/pubDate"
+      "feed_url": "https://sreweekly.com/feed/"
     },
     {
       "category": "DevOps",
       "name": "Last Week in AWS",
       "url": "https://www.lastweekinaws.com/newsletter/",
-      "feed_url": "https://www.lastweekinaws.com/newsletter/feed/",
-      "updated_selector": "item/pubDate"
+      "feed_url": "https://www.lastweekinaws.com/newsletter/feed/"
     },
     {
       "category": "Databases",
@@ -193,22 +185,19 @@
       "category": "Databases",
       "name": "MongoDB Memo",
       "url": "https://mongodb.email/issues",
-      "feed_url": "https://mongodb.email/rss/",
-      "updated_selector": "item/pubDate"
+      "feed_url": "https://mongodb.email/rss/"
     },
     {
       "category": "Programming Languages",
       "name": "Rakudo Weekly News",
       "url": "https://rakudoweekly.blog/blog-feed/",
-      "feed_url": "https://rakudoweekly.blog/feed/",
-      "updated_selector": "item/pubDate"
+      "feed_url": "https://rakudoweekly.blog/feed/"
     },
     {
       "category": "JavaScript",
       "name": "TinyJS Newsletter",
       "url": "https://buttondown.email/tinyjs/archive",
-      "feed_url": "https://buttondown.email/tinyjs/rss",
-      "updated_selector": "item/pubDate"
+      "feed_url": "https://buttondown.email/tinyjs/rss"
     },
     {
       "category": "DevOps",
@@ -262,26 +251,18 @@
       "url": "https://frontendfoc.us/latest",
       "feed_url": "https://cprss.s3.amazonaws.com/frontendfoc.us.xml"
     },
-    {
-      "category": "Security",
-      "name": "Talos Threat Source",
-      "url": "https://talosintelligence.com/newsletters",
-      "feed_url": "https://www.blogger.com/feeds/1029833275466591797/posts/default/-/Threat%20Source%20newsletter",
-      "updated_selector": "//published"
-    },
+
     {
       "category": "Security",
       "name": "td;dr sec",
       "url": "https://us18.campaign-archive.com/home/?u=bd5eb27cbf2439548b2e8a004&id=3a3adcf571",
-      "feed_url": "https://us18.campaign-archive.com/feed?u=bd5eb27cbf2439548b2e8a004&id=3a3adcf571",
-      "updated_selector": "item/pubDate"
+      "feed_url": "https://us18.campaign-archive.com/feed?u=bd5eb27cbf2439548b2e8a004&id=3a3adcf571"
     },
     {
       "category": "Security",
       "name": "This Week in Security",
       "url": "https://us18.campaign-archive.com/home/?u=e1ad6038c994abec17dafb116&id=a2457dc8ad",
-      "feed_url": "https://us18.campaign-archive.com/feed?u=e1ad6038c994abec17dafb116&id=a2457dc8ad",
-      "updated_selector": "item/pubDate"
+      "feed_url": "https://us18.campaign-archive.com/feed?u=e1ad6038c994abec17dafb116&id=a2457dc8ad"
     },
     {
       "category": "Security",
@@ -301,7 +282,6 @@
       "name": "Distro Watch",
       "url": "https://distrowatch.com/weekly.php",
       "feed_url": "https://distrowatch.com/news/dww.xml",
-      "link_selector": "item/link",
       "updated_selector": "item/dc:date"
     },
     {
@@ -320,8 +300,7 @@
       "category": "DevOps",
       "name": "The New Stack",
       "url": "https://us11.campaign-archive.com/home/?u=ab6c02b160780b8e6569144f8&id=a196bfbac7",
-      "feed_url": "https://us11.campaign-archive.com/feed?u=ab6c02b160780b8e6569144f8&id=a196bfbac7",
-      "updated_selector": "item/pubDate"
+      "feed_url": "https://us11.campaign-archive.com/feed?u=ab6c02b160780b8e6569144f8&id=a196bfbac7"
     },
     {
       "category": "DevOps",
@@ -347,8 +326,7 @@
       "category": "JavaScript",
       "name": "TypeScript Weekly",
       "url": "https://us14.campaign-archive.com/home?u=809daf9442ece0a92a3d65f99&id=5693c0ed42",
-      "feed_url": "https://us14.campaign-archive.com/feed?u=809daf9442ece0a92a3d65f99&id=5693c0ed42",
-      "updated_selector": "item/pubDate"
+      "feed_url": "https://us14.campaign-archive.com/feed?u=809daf9442ece0a92a3d65f99&id=5693c0ed42"
     },
     {
       "category": "JavaScript",
@@ -384,8 +362,7 @@
       "category": "Programming Languages",
       "name": "Kotlin Weekly",
       "url": "https://www.kotlinweekly.net/",
-      "feed_url": "https://us12.campaign-archive.com/feed?u=f39692e245b94f7fb693b6d82&id=93b2272cb6",
-      "updated_selector": "item/pubDate"
+      "feed_url": "https://us12.campaign-archive.com/feed?u=f39692e245b94f7fb693b6d82&id=93b2272cb6"
     },
     {
       "category": "Programming Languages",
@@ -437,8 +414,7 @@
       "category": "Programming Languages",
       "name": "Clojure Weekly",
       "url": "https://us19.campaign-archive.com/home/?u=f5dea183eae58baf7428a4425&id=ef5512dc35",
-      "feed_url": "https://us19.campaign-archive.com/feed?u=f5dea183eae58baf7428a4425&id=ef5512dc35",
-      "updated_selector": "item/pubDate"
+      "feed_url": "https://us19.campaign-archive.com/feed?u=f5dea183eae58baf7428a4425&id=ef5512dc35"
     },
     {
       "category": "Mac",
@@ -512,8 +488,7 @@
       "category": "Mobile",
       "name": "Flutter Weekly",
       "url": "https://us17.campaign-archive.com/home/?u=c8d8d18b6e2c6316ddc1d48a0&id=47548a283b",
-      "feed_url": "https://us17.campaign-archive.com/feed?u=c8d8d18b6e2c6316ddc1d48a0&id=47548a283b",
-      "updated_selector": "item/pubDate"
+      "feed_url": "https://us17.campaign-archive.com/feed?u=c8d8d18b6e2c6316ddc1d48a0&id=47548a283b"
     },
     {
       "category": "JavaScript",
@@ -544,8 +519,6 @@
       "name": "Meeting C++ Weekly",
       "url": "https://meetingcpp.com/blog/blogroll/",
       "feed_url": "https://meetingcpp.com/feed.xml",
-      "updated_selector": "//item/pubDate",
-      "link_selector": "//item/link",
       "link_contains_text": "https://www.meetingcpp.com/blog/blogroll/items/Meeting-Cpp-Blogroll-"
     },
     {
@@ -559,7 +532,6 @@
       "name": "Web Design Weekly",
       "url": "https://web-design-weekly.com/",
       "feed_url": "https://web-design-weekly.com/newsletter.xml",
-      "link_selector": "//item/link",
       "updated_selector": "//lastBuildDate"
     },
     {

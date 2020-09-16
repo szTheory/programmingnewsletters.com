@@ -9,7 +9,7 @@ our @EXPORT_OK   = qw(newsletters);
 our %EXPORT_TAGS = ( all => \@EXPORT_OK );
 
 use constant NEWSLETTERS_JSON_FILE             => 'private/newsletters.json';
-use constant RSS_FEED_DEFAULT_UPDATED_SELECTOR => 'pubDate';
+use constant RSS_FEED_DEFAULT_UPDATED_SELECTOR => 'item/pubDate';
 use constant RSS_FEED_DEFAULT_LINK_SELECTOR    => 'item/link';
 use constant USER_AGENT =>
 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1';
@@ -195,7 +195,7 @@ sub _newsletter_info_html {
   my $follow_link          = $newsletter_entry->{follow_link};
   my $european_date_format = $newsletter_entry->{european_date_format};
 
-  print "-- Parsing HTML\n";
+  print "----> Parsing HTML\n";
   $html = Mojo::Util::decode( 'UTF-8', $html );
   my $dom = Mojo::DOM->new($html);
   if ( !$dom ) {
