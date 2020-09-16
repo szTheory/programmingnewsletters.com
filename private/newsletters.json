@@ -1,6 +1,13 @@
 {
   "entries": [
     {
+      "category": "Databases",
+      "name": "MongoDB Memo",
+      "url": "https://mongodb.email/issues",
+      "feed_url": "https://mongodb.email/rss/",
+      "updated_selector": "item/pubDate"
+    },
+    {
       "category": "Programming Languages",
       "name": "Rakudo Weekly News",
       "url": "https://rakudoweekly.blog/blog-feed/",
