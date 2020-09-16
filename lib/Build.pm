@@ -17,9 +17,9 @@ our %EXPORT_TAGS = ( all => \@EXPORT_OK );
 use Mojo::Template;
 
 sub build {
-  my ($should_rebuild) = @_;
+  my ( $should_rebuild, $first_only ) = @_;
 
-  write_json_file($should_rebuild);
+  write_json_file( $should_rebuild, $first_only );
   write_html_file();
   write_css_files();
   write_js_files();

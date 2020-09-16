@@ -116,10 +116,10 @@ sub _grouped_entries_categories {
 }
 
 sub presenter {
-  my ($should_rebuild) = @_;
+  my ( $should_rebuild, $first_only ) = @_;
 
   # get entries
-  my ($entries) = cached_newsletters($should_rebuild);
+  my ($entries) = cached_newsletters( $should_rebuild, $first_only );
 
   # process entries
   _remove_empty($entries);

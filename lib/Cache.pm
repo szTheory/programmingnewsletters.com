@@ -48,12 +48,12 @@ sub _is_json_cached {
 }
 
 sub cached_newsletters {
-  my ($should_rebuild) = @_;
+  my ( $should_rebuild, $first_only ) = @_;
 
   my $newsletters;
 
   if ( $should_rebuild || !_is_json_cached() ) {
-    $newsletters = newsletters();
+    $newsletters = newsletters($first_only);
     _write_json_cache($newsletters);
   }
   else {

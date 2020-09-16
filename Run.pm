@@ -10,8 +10,9 @@ use Build 'build';
 use Getopt::Long;
 
 my $rebuild;
-GetOptions( 'rebuild' => \$rebuild );
+my $first_only;
+GetOptions( 'rebuild' => \$rebuild, 'first-only' => \$first_only );
 
-build($rebuild);
+build( $rebuild, $first_only );
 
 1;

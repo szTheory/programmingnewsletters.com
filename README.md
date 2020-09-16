@@ -27,6 +27,12 @@ To force a rebuild, overriding newsletters cache:
 carton exec perl Run.pm --rebuild
 ```
 
+To build just the first item from `newsletter.json` (when adding new newsletters):
+
+```bash
+carton exec perl Run.pm --rebuild --first-only
+```
+
 ### Viewing the site locally
 
 Download the code and start a webserver.

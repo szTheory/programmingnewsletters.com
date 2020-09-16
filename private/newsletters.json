@@ -2,6 +2,14 @@
   "entries": [
     {
       "category": "Programming Languages",
+      "name": "F# Weekly",
+      "url": "https://sergeytihon.com/category/f-weekly/",
+      "feed_url": "https://sergeytihon.com/category/f-weekly/feed/",
+      "updated_selector": "item/pubDate",
+      "link_selector": "item/link"
+    },
+    {
+      "category": "Programming Languages",
       "name": "Haskell Weekly",
       "url": "https://haskellweekly.news/newsletter.html",
       "feed_url": "https://haskellweekly.news/newsletter.atom",

@@ -25,16 +25,25 @@ use Mojo::DOM;
 use List::SomeUtils qw(indexes);
 
 sub _newsletters_file_json {
+  my ($first_only) = @_;
+
+  # read JSON file to string
   open my $fh, '<:encoding(UTF-8)', NEWSLETTERS_JSON_FILE;
-
-  my $json = '';
+  my $json_str = '';
   while ( my $line = <$fh> ) {
-    $json .= $line;
+    $json_str .= $line;
   }
-
   close $fh;
 
-  return decode_json($json);
+  # decode JSON from string
+  my $json = decode_json($json_str);
+
+  # pull only the first entry?
+  if ($first_only) {
+    $json->{entries} = [ $json->{entries}[0] ];
+  }
+
+  return $json;
 }
 
 sub _newsletter_info_rss {
@@ -352,8 +361,10 @@ sub _newsletter_decorate {
 }
 
 sub newsletters {
+  my ($first_only) = @_;
+
   print "Parsing JSON list…\n";
-  my $json = _newsletters_file_json();
+  my $json = _newsletters_file_json($first_only);
 
   print "\n";
   print "---------------------------------------\n";
