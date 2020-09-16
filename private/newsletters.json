@@ -2,6 +2,15 @@
   "entries": [
     {
       "category": "Databases",
+      "name": "GraphQL Weekly",
+      "url": "https://www.graphqlweekly.com/",
+      "base_url": "https://www.graphqlweekly.com",
+      "link_selector": "#content > div:first-child > a",
+      "updated_selector": "#content > div:first-child > a > span",
+      "updated_regex": " (\\w+ \\d+, \\d+)$"
+    },
+    {
+      "category": "Databases",
       "name": "MongoDB Memo",
       "url": "https://mongodb.email/issues",
       "feed_url": "https://mongodb.email/rss/",
