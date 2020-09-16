@@ -2,6 +2,13 @@
   "entries": [
     {
       "category": "Programming Languages",
+      "name": "Lisp Weekly",
+      "url": "https://lisp-weekly.com/",
+      "feed_url": "https://us7.campaign-archive.com/feed?u=fe027ef3ceef000bae715f75a&id=191a01df12",
+      "updated_selector": "item/pubDate"
+    },
+    {
+      "category": "Programming Languages",
       "name": "Elm Bits",
       "url": "https://elmbits.com/",
       "feed_url": "https://elmbits.com/rss/",
