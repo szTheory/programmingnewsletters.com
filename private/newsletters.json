@@ -2,6 +2,15 @@
   "entries": [
     {
       "category": "Programming Languages",
+      "name": "Haskell Weekly",
+      "url": "https://haskellweekly.news/newsletter.html",
+      "feed_url": "https://haskellweekly.news/newsletter.atom",
+      "updated_selector": "entry/updated",
+      "link_selector": "entry/link",
+      "link_attr": "href"
+    },
+    {
+      "category": "Programming Languages",
       "name": "Julia Monthly Newsletter",
       "url": "https://juliacomputing.com/blog/",
       "feed_url": "https://juliacomputing.com/blog/feed.xml",
