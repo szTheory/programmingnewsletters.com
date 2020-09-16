@@ -2,6 +2,14 @@
   "entries": [
     {
       "category": "Programming Languages",
+      "name": "dotNET Weekly",
+      "url": "https://www.dotnetweekly.com/",
+      "feed_url": "https://www.dotnetweekly.com/feed/",
+      "updated_selector": "lastBuildDate",
+      "link_constant": "https://www.dotnetweekly.com/"
+    },
+    {
+      "category": "Programming Languages",
       "name": "Lisp Weekly",
       "url": "https://lisp-weekly.com/",
       "feed_url": "https://us7.campaign-archive.com/feed?u=fe027ef3ceef000bae715f75a&id=191a01df12",

@@ -75,6 +75,7 @@ sub _newsletter_info_rss {
   my $link_last          = $newsletter_entry->{link_last};
   my $link_contains_text = $newsletter_entry->{link_contains_text};
   my $link_base_filter   = $newsletter_entry->{link_base_filter};
+  my $link_constant      = $newsletter_entry->{link_constant};
 
   print "----> Parsing XML\n";
   my @dates;
@@ -97,8 +98,13 @@ sub _newsletter_info_rss {
     $link_selector_callback = sub { push( @links, $_->text_only() ) }
   }
 
-  # Tie the link callback to the configured link selector
-  $twig_handlers->{$link_selector} = $link_selector_callback;
+  # don't need a link callback handler if
+  # the link is always the same
+  unless ($link_constant) {
+
+    # Tie the link callback to the configured link selector
+    $twig_handlers->{$link_selector} = $link_selector_callback;
+  }
 
   # Parse XML using the callbacks
   my $twig = XML::Twig->new( twig_handlers => $twig_handlers );
@@ -126,6 +132,11 @@ sub _newsletter_info_rss {
   }
   elsif ($link_last) {
     $link_index = -1;
+  }
+
+  # link is always the same no matter what
+  elsif ($link_constant) {
+    $link = $link_constant;
   }
   $link = $links[$link_index];
 
