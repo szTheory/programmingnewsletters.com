@@ -1,6 +1,12 @@
 {
   "entries": [
     {
+      "category": "Blockchain",
+      "name": "Rust in Blockchain",
+      "url": "https://rustinblockchain.org/newsletters/",
+      "feed_url": "https://rustinblockchain.org/index.xml"
+    },
+    {
       "category": "Software Engineering",
       "name": "Software Lead Weekly",
       "url": "https://softwareleadweekly.com/issues/",
