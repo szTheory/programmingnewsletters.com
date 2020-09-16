@@ -1,6 +1,13 @@
 {
   "entries": [
     {
+      "category": "Software Engineering",
+      "name": "StatusCode Weekly",
+      "url": "https://weekly.statuscode.com/latest",
+      "feed_url": "https://weekly.statuscode.com/rss/",
+      "updated_selector": "item/pubDate"
+    },
+    {
       "category": "DevOps",
       "name": "SRE Weekly",
       "url": "https://sreweekly.com/",
