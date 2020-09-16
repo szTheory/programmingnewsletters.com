@@ -1,6 +1,13 @@
 {
   "entries": [
     {
+      "category": "Software Engineer",
+      "name": "InfoQ Newsletter",
+      "url": "https://assets.infoq.com/newsletter/regular/en/newsletter_sample/newsletter_sample.html",
+      "updated_selector": "td.top td",
+      "updated_regex": "In this issue, (.+)$"
+    },
+    {
       "category": "Programming Languages",
       "name": "Scala Times",
       "url": "https://scalatimes.com/",
