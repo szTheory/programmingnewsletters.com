@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "category": "Webdev",
+      "name": "Synk Web Dev Biweekly",
+      "url": "https://synk.sh",
+      "updated_selector": "#newsletter-list a:first-child span",
+      "link_selector": "#newsletter-list a:first-child"
+    },
+    {
+      "category": "Mac",
+      "name": "AppCoda Weekly Swift & iOS",
+      "url": "https://digest.appcoda.com/",
+      "feed_url": "http://digest.appcoda.com/?format=rss"
+    },
+    {
       "category": "Blockchain",
       "name": "Rust in Blockchain",
       "url": "https://rustinblockchain.org/newsletters/",
