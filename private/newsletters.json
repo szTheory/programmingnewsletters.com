@@ -1,6 +1,13 @@
 {
   "entries": [
     {
+      "category": "DevOps",
+      "name": "Last Week in AWS",
+      "url": "https://www.lastweekinaws.com/newsletter/",
+      "feed_url": "https://www.lastweekinaws.com/newsletter/feed/",
+      "updated_selector": "item/pubDate"
+    },
+    {
       "category": "Databases",
       "name": "GraphQL Weekly",
       "url": "https://www.graphqlweekly.com/",
