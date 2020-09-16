@@ -1,6 +1,13 @@
 {
   "entries": [
     {
+      "category": "Mobile",
+      "name": "Android Weekly",
+      "url": "https://androidweekly.net/archive",
+      "feed_url": "https://us2.campaign-archive1.com/feed?u=887caf4f48db76fd91e20a06d&id=4eb677ad19",
+      "updated_selector": "item/pubDate"
+    },
+    {
       "category": "JavaScript",
       "name": "Best of JavaScript Weekly Rankings",
       "url": "https://weekly.bestofjs.org/",
