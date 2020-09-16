@@ -2,6 +2,14 @@
   "entries": [
     {
       "category": "Programming Languages",
+      "name": "Elm Bits",
+      "url": "https://elmbits.com/",
+      "feed_url": "https://elmbits.com/rss/",
+      "updated_selector": "item/pubDate",
+      "link_selector": "item/link"
+    },
+    {
+      "category": "Programming Languages",
       "name": "Elm Weekly",
       "url": "https://sergeytihon.com/category/f-weekly/",
       "feed_url": "https://www.elmweekly.nl/?format=rss",
