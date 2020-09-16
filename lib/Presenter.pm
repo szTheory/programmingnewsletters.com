@@ -5,7 +5,7 @@ use warnings;
 use autodie;
 
 use Exporter 'import';
-our @EXPORT_OK   = qw(presenter);
+our @EXPORT_OK   = qw(presenter API_PATH);
 our %EXPORT_TAGS = ( all => \@EXPORT_OK );
 
 use lib 'lib';
@@ -17,7 +17,9 @@ use constant TITLE     => 'ProgrammingNewsletters.com';
 use constant SUBTITLE  => 'No email needed';
 use constant DEVELOPER => 'szTheory';
 use constant SOURCE_URL =>
-  'https://github.com/szTheory/ProgrammingNewsletters.com';
+  'https://github.com/szTheory/programmingnewsletters.com';
+use constant API_PATH             => "index.json";
+use constant ENTRY_KEYS_WHITELIST => qw(url category name);
 
 sub _remove_empty {
   my ($entries) = @_;
@@ -69,8 +71,7 @@ sub _grouped_by_date {
     }
 
     # remove unused values from entry
-    delete $entry->{updated_at};
-    delete $entry->{updated_at_formatted};
+    my $entry = _filter_entry_fields($entry);
 
     # push entry
     push @{ $entries_for_date->{entries} }, $entry;
@@ -90,19 +91,15 @@ sub _add_formatted_timestamp {
   return;
 }
 
-sub _remove_extra_fields {
-  my ($entries) = @_;
+sub _filter_entry_fields {
+  my ($entry) = @_;
 
-  foreach my $entry ( @{$entries} ) {
-    delete $entry->{updated_regex};
-    delete $entry->{updated_selector};
-    delete $entry->{link_attr};
-    delete $entry->{link_selector};
-    delete $entry->{base_url};
-    delete $entry->{feed_url};
+  my $new_entry = {};
+  foreach my $key (ENTRY_KEYS_WHITELIST) {
+    $new_entry->{$key} = $entry->{$key};
   }
 
-  return;
+  return $new_entry;
 }
 
 sub _grouped_entries_categories {
@@ -121,15 +118,17 @@ sub _grouped_entries_categories {
 sub presenter {
   my ($should_rebuild) = @_;
 
+  # get entries
   my ($entries) = cached_newsletters($should_rebuild);
 
+  # process entries
   _remove_empty($entries);
   _sort_newsletters($entries);
   _add_formatted_timestamp($entries);
   _update_with_base_url($entries);
-  _remove_extra_fields($entries);
   my $grouped_entries = _grouped_by_date($entries);
 
+  # categorize entries
   my $categories = _grouped_entries_categories($grouped_entries);
   unshift @{$categories}, 'All';
 
@@ -140,7 +139,8 @@ sub presenter {
     developer       => DEVELOPER,
     title           => TITLE,
     subtitle        => SUBTITLE,
-    source_url      => SOURCE_URL
+    source_url      => SOURCE_URL,
+    api_path        => API_PATH
   };
 
   # print "--- Presenter Output ---\n";

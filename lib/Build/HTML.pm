@@ -9,7 +9,7 @@ our @EXPORT_OK   = qw(write_html_file);
 our %EXPORT_TAGS = ( all => \@EXPORT_OK );
 
 use lib 'lib';
-use Presenter qw(presenter);
+use Build::JSON qw(read_json_file);
 
 use Mojo::Template;
 use HTML::Packer;
@@ -18,22 +18,20 @@ use constant TEMPLATE_FILE => 'private/templates/index.html.ep';
 use constant OUTPUT_FILE   => 'public/index.html';
 
 sub _build_html {
-  my ($should_rebuild) = @_;
-
-  my $presenter = presenter($should_rebuild);
-
-  my $mt = Mojo::Template->new( vars => 1 );
+  my $json = read_json_file();
+  my $mt   = Mojo::Template->new( vars => 1 );
 
   my $html = $mt->render_file(
     TEMPLATE_FILE,
     {
-      categories      => $presenter->{categories},
-      grouped_entries => $presenter->{grouped_entries},
-      year            => $presenter->{year},
-      title           => $presenter->{title},
-      subtitle        => $presenter->{subtitle},
-      developer       => $presenter->{developer},
-      source_url      => $presenter->{source_url}
+      categories      => $json->{categories},
+      grouped_entries => $json->{grouped_entries},
+      year            => $json->{year},
+      title           => $json->{title},
+      subtitle        => $json->{subtitle},
+      developer       => $json->{developer},
+      source_url      => $json->{source_url},
+      api_path        => $json->{api_path}
     }
   );
 
@@ -41,9 +39,11 @@ sub _build_html {
 }
 
 sub write_html_file {
-  my ($should_rebuild) = @_;
 
-  my $html   = _build_html($should_rebuild);
+  # build HTML
+  my $html = _build_html();
+
+  # minify
   my $packer = HTML::Packer->init();
   $packer->minify(
     \$html,
@@ -55,6 +55,7 @@ sub write_html_file {
     }
   );
 
+  # write to file
   open my $fh, '>:encoding(UTF-8)', OUTPUT_FILE;
   print {$fh} $html;
   close $fh;

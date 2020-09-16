@@ -8,6 +8,7 @@ use lib 'lib';
 use Build::HTML qw(write_html_file);
 use Build::CSS qw(write_css_files);
 use Build::JavaScript qw(write_js_files);
+use Build::JSON qw(write_json_file);
 
 use Exporter 'import';
 our @EXPORT_OK   = qw(build);
@@ -18,7 +19,8 @@ use Mojo::Template;
 sub build {
   my ($should_rebuild) = @_;
 
-  write_html_file($should_rebuild);
+  write_json_file($should_rebuild);
+  write_html_file();
   write_css_files();
   write_js_files();
 

@@ -51,5 +51,6 @@ private/newsletters-cache.json
 public/css/*.css
 public/javascript/*.js
 public/*.html
+public/*.json
 
 !/lib/Build

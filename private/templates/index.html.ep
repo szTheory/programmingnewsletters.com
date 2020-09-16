@@ -62,7 +62,7 @@
   <% } %>
 
   <footer>
-    ©<%= $year %> <%= $developer %> :: <a href="<%= $source_url %>">Source code</a>
+    ©<%= $year %> <%= $developer %> :: <a href="<%= $api_path %>">API</a> :: <a href="<%= $source_url %>">Source code</a>
   </footer>
 </body>
 

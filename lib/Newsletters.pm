@@ -57,9 +57,6 @@ sub _newsletter_info_rss {
     die "Could not load XML for $name - $feed_url";
   }
 
-  # print ".... XML ....\n";
-  # use Data::Dumper;
-  # print Dumper($xml);
   my $updated_selector =
     $newsletter_entry->{updated_selector} || RSS_FEED_DEFAULT_UPDATED_SELECTOR;
   my $link_selector =
