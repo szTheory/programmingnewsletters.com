@@ -2,6 +2,18 @@
   "entries": [
     {
       "category": "Frontend",
+      "name": "Frontend Focus",
+      "url": "https://frontendfoc.us/latest",
+      "feed_url": "https://cprss.s3.amazonaws.com/frontendfoc.us.xml"
+    },
+    {
+      "category": "Databases",
+      "name": "DB Weekly",
+      "url": "https://dbweekly.com/issues",
+      "feed_url": "https://dbweekly.com/rss/"
+    },
+    {
+      "category": "Frontend",
       "name": "Frontend Weekly",
       "url": "https://frontendweekly.co/",
       "feed_url": "https://frontendweekly.co/issues.rss"
@@ -257,12 +269,6 @@
       "name": "Postgres Weekly",
       "url": "https://postgresweekly.com/latest",
       "feed_url": "https://postgresweekly.com/rss/"
-    },
-    {
-      "category": "Frontend",
-      "name": "Frontend Focus",
-      "url": "https://frontendfoc.us/latest",
-      "feed_url": "https://cprss.s3.amazonaws.com/frontendfoc.us.xml"
     },
 
     {
