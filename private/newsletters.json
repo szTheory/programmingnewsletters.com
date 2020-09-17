@@ -1,6 +1,12 @@
 {
   "entries": [
     {
+      "category": "Software Engineering",
+      "name": "Software Testing Weekly",
+      "url": "https://softwaretestingweekly.com/",
+      "feed_url": "https://softwaretestingweekly.com/issues.rss"
+    },
+    {
       "category": "Data Science",
       "name": "Machine Learning Engineer Newsletter",
       "url": "https://ethical.institute/mle.html",
