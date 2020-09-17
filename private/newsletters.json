@@ -1,20 +1,20 @@
 {
   "entries": [
     {
-      "category": "Design",
+      "category": "Frontend",
       "name": "Figmalion Biweekly",
       "url": "https://figmalion.com",
       "feed_url": "https://figmalion.com/rss.xml"
     },
     {
-      "category": "Design",
+      "category": "Frontend",
       "name": "Design Toolbox Weekly",
       "url": "https://theprotoolbox.com/weekly/",
       "updated_selector": ".fl-post-feed-date",
       "link_selector": ".fl-post-feed-title a"
     },
     {
-      "category": "Design",
+      "category": "Frontend",
       "name": "The Unicorns Design Newsletter",
       "url": "https://unicornsfeed.substack.com/",
       "feed_url": "https://unicornsfeed.substack.com/feed/"
@@ -588,7 +588,7 @@
       "updated_selector": ".resource--post:first-child date.resource__meta"
     },
     {
-      "category": "Design",
+      "category": "Frontend",
       "name": "Data Visualization Weekly",
       "url": "https://www.dashingd3js.com/data-visualization-and-d3-newsletter",
       "base_url": "https://www.dashingd3js.com",
@@ -639,20 +639,20 @@
       "feed_url": "http://dddweekly.com/index.xml"
     },
     {
-      "category": "Design",
+      "category": "Frontend",
       "name": "Web Design Weekly",
       "url": "https://web-design-weekly.com/",
       "feed_url": "https://web-design-weekly.com/newsletter.xml",
       "updated_selector": "//lastBuildDate"
     },
     {
-      "category": "Design",
+      "category": "Frontend",
       "name": "CSS Weekly",
       "url": "https://css-weekly.com/archives/",
       "feed_url": "https://feeds.feedburner.com/CSS-Weekly"
     },
     {
-      "category": "Design",
+      "category": "Frontend",
       "name": "UX Design Weekly",
       "url": "https://uxdesignweekly.com/",
       "feed_url": "https://uxdesignweekly.com/feed/"
