@@ -43,14 +43,14 @@
       "updated_link_attr": "data-source"
     },
     {
-      "category": "Webdev",
+      "category": "Web Platform",
       "name": "Synk Web Dev Biweekly",
       "url": "https://synk.sh",
       "updated_selector": "#newsletter-list a:first-child span",
       "link_selector": "#newsletter-list a:first-child"
     },
     {
-      "category": "Webdev",
+      "category": "JavaScript",
       "name": "Ten JavaScript",
       "url": "https://tenjs.news",
       "updated_fixed_day": "Saturday"
@@ -155,7 +155,7 @@
       "feed_url": "https://us5.campaign-archive.com/feed?u=ea228d7061e8bbfa8639666ad&id=104d6bcc2d"
     },
     {
-      "category": "Programming Languges",
+      "category": "Programming Languages",
       "name": "PHP Weekly",
       "url": "http://www.phpweekly.com/archive.html",
       "feed_url": "http://www.phpweekly.com/rss.xml"
@@ -239,7 +239,7 @@
       "updated_link_attr": "data-source"
     },
     {
-      "category": "Programming Languages",
+      "category": "Software Engineering",
       "name": "O'Reilly Programming Newsletter",
       "url": "https://www.oreilly.com/emails/newsletters/",
       "updated_selector": "#programming a",
@@ -430,7 +430,7 @@
       "feed_url": "https://thisweekindevops.com/feed/"
     },
     {
-      "category": "JavaScript",
+      "category": "Web Platform",
       "name": "WebAssembly Weekly",
       "url": "https://wasmweekly.news/",
       "feed_url": "https://wasmweekly.news/feed.xml",
@@ -438,7 +438,7 @@
       "link_selector": "entry/id"
     },
     {
-      "category": "JavaScript",
+      "category": "Web Platform",
       "name": "WebAssembly Today",
       "url": "https://webassemblytoday.substack.com/",
       "feed_url": "https://webassemblytoday.substack.com/feed/"
@@ -557,7 +557,7 @@
       "feed_url": "https://ios-goodies.com/rss"
     },
     {
-      "category": "Mac",
+      "category": "Programming Languages",
       "name": "PHP Freek Weekly",
       "url": "https://freek.dev/newsletter/",
       "link_selector": "main a[href^='https://freek.dev/mailcoach/webview/']",
