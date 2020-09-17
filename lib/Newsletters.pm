@@ -198,6 +198,10 @@ sub _newsletter_info_html {
 
   print "----> Parsing HTML\n";
   $html = Mojo::Util::decode( 'UTF-8', $html );
+
+  # use Data::Dumper;
+  # print Dumper($html);
+
   my $dom = Mojo::DOM->new($html);
   if ( !$dom ) {
     die "Could not load DOM for $name - $url";
@@ -241,7 +245,7 @@ sub _newsletter_info_html {
 
       if ( !$updated_element ) {
         die
-"Could not find updated timestamp for $name with selector '$updated_selector' for URL $url";
+"Could not find updated timestamp element with selector: $updated_selector for $name - $url";
       }
 
       if ($updated_regex) {

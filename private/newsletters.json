@@ -1,6 +1,25 @@
 {
   "entries": [
     {
+      "category": "Design",
+      "name": "Figmalion Biweekly",
+      "url": "https://figmalion.com",
+      "feed_url": "https://figmalion.com/rss.xml"
+    },
+    {
+      "category": "Design",
+      "name": "Design Toolbox Weekly",
+      "url": "https://theprotoolbox.com/weekly/",
+      "updated_selector": ".fl-post-feed-date",
+      "link_selector": ".fl-post-feed-title a"
+    },
+    {
+      "category": "Design",
+      "name": "The Unicorns Design Newsletter",
+      "url": "https://unicornsfeed.substack.com/",
+      "feed_url": "https://unicornsfeed.substack.com/feed/"
+    },
+    {
       "category": "Software Engineering",
       "name": "Software Testing Weekly",
       "url": "https://softwaretestingweekly.com/",
