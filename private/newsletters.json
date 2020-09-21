@@ -2,6 +2,12 @@
   "entries": [
     {
       "category": "Data Science",
+      "name": "SF Data Weekly",
+      "url": "http://weekly.sfdata.io/",
+      "feed_url": "http://weekly.sfdata.io/?format=rss"
+    },
+    {
+      "category": "Data Science",
       "name": "Data Science News",
       "url": "https://dataelixir.com/",
       "feed_url": "https://dataelixir.com/issues.rss"
