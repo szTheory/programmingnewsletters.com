@@ -1,7 +1,16 @@
 {
   "entries": [
     {
-      "category": "Data Science",
+      "category": "AI",
+      "name": "Skynet Today",
+      "url": "https://www.skynettoday.com/categories/digests/",
+      "feed_url": "https://www.skynettoday.com/feed.xml",
+      "updated_selector": "entry/published",
+      "link_selector": "entry/link",
+      "link_attr": "href"
+    },
+    {
+      "category": "AI",
       "name": "Deep Learning Weekly",
       "url": "https://us16.campaign-archive.com/home/?u=de53bead690affb8e9a21de8f&id=384567b42",
       "feed_url": "https://us16.campaign-archive.com/feed?u=de53bead690affb8e9a21de8f&id=384567b42d"
@@ -61,7 +70,7 @@
       "feed_url": "http://newsletter.paoloamoroso.com/?format=rss"
     },
     {
-      "category": "Data Science",
+      "category": "AI",
       "name": "H+ AI Newsletter",
       "url": "https://hplusweekly.com/issues/",
       "base_url": "https://hplusweekly.com",
@@ -69,7 +78,7 @@
       "link_selector": "article div:first-child a"
     },
     {
-      "category": "Data Science",
+      "category": "AI",
       "name": "AI Weekly",
       "url": "http://aiweekly.co/",
       "feed_url": "http://aiweekly.co/issues.rss"
@@ -113,7 +122,7 @@
       "feed_url": "https://softwaretestingweekly.com/issues.rss"
     },
     {
-      "category": "Data Science",
+      "category": "AI",
       "name": "Machine Learning Engineer Newsletter",
       "url": "https://ethical.institute/mle.html",
       "base_url": "https://ethical.institute",
@@ -121,7 +130,7 @@
       "updated_fixed_day": "Sunday"
     },
     {
-      "category": "Data Science",
+      "category": "AI",
       "name": "O'Reilly Data & AI Newsletter",
       "url": "https://www.oreilly.com/emails/newsletters/",
       "updated_selector": "#data a",
