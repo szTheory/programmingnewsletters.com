@@ -1,6 +1,12 @@
 {
   "entries": [
     {
+      "category": "Web Platform",
+      "name": "Practicing Google",
+      "url": "newsletter.paoloamoroso.com/#archive",
+      "feed_url": "http://newsletter.paoloamoroso.com/?format=rss"
+    },
+    {
       "category": "Data Science",
       "name": "H+ AI Newsletter",
       "url": "https://hplusweekly.com/issues/",
