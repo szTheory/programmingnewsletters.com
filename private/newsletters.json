@@ -1,6 +1,13 @@
 {
   "entries": [
     {
+      "category": "Linux",
+      "name": "Ubuntu Weekly",
+      "url": "https://wiki.ubuntu.com/UbuntuWeeklyNewsletter/Current",
+      "updated_selector": "#pageinfo",
+      "updated_regex": "last edited (.+) by"
+    },
+    {
       "category": "Programming Languages",
       "name": "Powershell Weekly",
       "url": "https://ridicurious.com/powershell-weekly-newsletter/",
