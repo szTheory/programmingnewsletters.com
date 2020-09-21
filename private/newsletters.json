@@ -2,6 +2,12 @@
   "entries": [
     {
       "category": "Data Science",
+      "name": "Data Science News",
+      "url": "https://dataelixir.com/",
+      "feed_url": "https://dataelixir.com/issues.rss"
+    },
+    {
+      "category": "Data Science",
       "name": "Data News Hotlist",
       "url": "https://www.datainnovation.org/category/blog/weekly-news/",
       "feed_url": "https://www.datainnovation.org/category/blog/weekly-news/feed/"
