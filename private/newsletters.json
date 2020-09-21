@@ -2,6 +2,12 @@
   "entries": [
     {
       "category": "Data Science",
+      "name": "Deep Learning Weekly",
+      "url": "https://us16.campaign-archive.com/home/?u=de53bead690affb8e9a21de8f&id=384567b42",
+      "feed_url": "https://us16.campaign-archive.com/feed?u=de53bead690affb8e9a21de8f&id=384567b42d"
+    },
+    {
+      "category": "Data Science",
       "name": "Data Is Plural - Datasets",
       "url": "https://tinyletter.com/data-is-plural/archive",
       "feed_url": "https://data-is-plural.github.io/newsletter-archive/feeds/dip.rss"
@@ -309,7 +315,6 @@
       "url": "https://nativecloud.dev/",
       "feed_url": "https://blog.nativecloud.dev/rss/"
     },
-
     {
       "category": "DevOps",
       "name": "O'Reilly Infrastructure & Ops Newsletter",
@@ -453,7 +458,6 @@
       "url": "https://postgresweekly.com/latest",
       "feed_url": "https://postgresweekly.com/rss/"
     },
-
     {
       "category": "Security",
       "name": "td;dr sec",
@@ -654,7 +658,6 @@
       "updated_selector": "#newsletter-content-index-page-inner a[href^='/newsletters/data-science-weekly-newsletter-issue-']",
       "updated_regex": "\\((.+)\\)$"
     },
-
     {
       "category": "Mobile",
       "name": "Mobile Dev Weekly",
