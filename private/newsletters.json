@@ -1,6 +1,14 @@
 {
   "entries": [
     {
+      "category": "Security",
+      "name": "API Security Newsletter",
+      "url": "https://apisecurity.io/",
+      "updated_selector": ".upl-post-date",
+      "updated_regex": "^(.+), ",
+      "link_selector": ".upl-post-title a"
+    },
+    {
       "category": "React",
       "name": "React Newsletter",
       "url": "https://ui.dev/newsletters/react/",
@@ -21,13 +29,6 @@
       "name": "React Native Now",
       "url": "https://reactnativenow.com/",
       "feed_url": "https://reactnativenow.com/issues.rss"
-    },
-    {
-      "category": "Security",
-      "name": "API Security Newsletter",
-      "url": "https://apisecurity.io/",
-      "updated_selector": ".upl-post-date",
-      "link_selector": ".upl-post-title a"
     },
     {
       "category": "Security",
