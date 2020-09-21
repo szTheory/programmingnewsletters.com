@@ -1,6 +1,14 @@
 {
   "entries": [
     {
+      "category": "React",
+      "name": "React Newsletter",
+      "url": "https://ui.dev/newsletters/react/",
+      "base_url": "https://ui.dev",
+      "updated_selector": "ul li h4",
+      "link_selector": "ul li h3 a"
+    },
+    {
       "category": "JavaScript",
       "name": "JavaScript Bytes Weekly",
       "url": "https://ui.dev/newsletters/bytes/",
