@@ -2,6 +2,14 @@
   "entries": [
     {
       "category": "Data Science",
+      "name": "H+ AI Newsletter",
+      "url": "https://hplusweekly.com/issues/",
+      "base_url": "https://hplusweekly.com",
+      "updated_selector": "article div:first-child h3 span",
+      "link_selector": "article div:first-child a"
+    },
+    {
+      "category": "Data Science",
       "name": "AI Weekly",
       "url": "http://aiweekly.co/",
       "feed_url": "http://aiweekly.co/issues.rss"
