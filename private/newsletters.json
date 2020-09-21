@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "category": "Security",
+      "name": "SecAlerts",
+      "url": "https://secalerts.co/article/",
+      "updated_selector": ".collection a",
+      "updated_regex": "Week in Cyber Security News, (.+)$",
+      "updated_fixed_day": "Monday"
+    },
+    {
+      "category": "AI",
+      "name": "AI Ethics",
+      "url": "https://aiethics.substack.com/",
+      "feed_url": "https://aiethics.substack.com/feed/"
+    },
+    {
       "category": "AI",
       "name": "Import AI",
       "url": "https://jack-clark.net/",

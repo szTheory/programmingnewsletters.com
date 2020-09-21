@@ -190,8 +190,8 @@ sub _newsletter_info_html {
   my $updated_regex        = $newsletter_entry->{updated_regex};
   my $updated_attr         = $newsletter_entry->{updated_attr};
   my $updated_fixed_day    = $newsletter_entry->{updated_fixed_day};
-  my $link_selector        = $newsletter_entry->{link_selector};
   my $updated_link_attr    = $newsletter_entry->{updated_link_attr};
+  my $link_selector        = $newsletter_entry->{link_selector};
   my $link_constant        = $newsletter_entry->{link_contant};
   my $follow_link          = $newsletter_entry->{follow_link};
   my $european_date_format = $newsletter_entry->{european_date_format};
