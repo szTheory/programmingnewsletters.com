@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "category": "JavaScript",
+      "name": "JavaScript Bytes Weekly",
+      "url": "https://ui.dev/newsletters/bytes/",
+      "base_url": "https://ui.dev",
+      "updated_selector": "ul li h4",
+      "link_selector": "ul li h3 a"
+    },
+    {
+      "category": "React",
+      "name": "React Native Now",
+      "url": "https://reactnativenow.com/",
+      "feed_url": "https://reactnativenow.com/issues.rss"
+    },
+    {
       "category": "Security",
       "name": "API Security Newsletter",
       "url": "https://apisecurity.io/",
@@ -272,7 +286,7 @@
       "updated_selector": "//published"
     },
     {
-      "category": "JavaScript",
+      "category": "React",
       "name": "React Status",
       "url": "https://react.statuscode.com/latest",
       "feed_url": "https://react.statuscode.com/rss/"
@@ -728,7 +742,7 @@
       "feed_url": "https://us17.campaign-archive.com/feed?u=c8d8d18b6e2c6316ddc1d48a0&id=47548a283b"
     },
     {
-      "category": "JavaScript",
+      "category": "React",
       "name": "React Weekly",
       "url": "https://react.statuscode.com/latest",
       "feed_url": "https://react.statuscode.com/rss/"
