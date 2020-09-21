@@ -2,6 +2,12 @@
   "entries": [
     {
       "category": "Security",
+      "name": "Bulletproof TLS Newsletter",
+      "url": "https://www.feistyduck.com/bulletproof-tls-newsletter/",
+      "feed_url": "https://www.feistyduck.com/bulletproof-tls-newsletter/feed"
+    },
+    {
+      "category": "Security",
       "name": "SecAlerts",
       "url": "https://secalerts.co/article/",
       "updated_selector": ".collection a",
