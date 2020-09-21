@@ -1,10 +1,16 @@
 {
   "entries": [
     {
+      "category": "Mobile",
+      "name": "Android Sweets",
+      "url": "https://androidsweets.ongoodbits.com/",
+      "feed_url": "https://androidsweets.ongoodbits.com/feed"
+    },
+    {
       "category": "Web Platform",
       "name": "Practicing Google",
-      "url": "newsletter.paoloamoroso.com/#archive",
-      "feed_url": "http://newsletter.paoloamoroso.com/?format=rss"
+      "url": "https://newsletter.paoloamoroso.com/#archive",
+      "feed_url": "https://newsletter.paoloamoroso.com/?format=rss"
     },
     {
       "category": "Data Science",
