@@ -2,6 +2,12 @@
   "entries": [
     {
       "category": "AI",
+      "name": "Import AI",
+      "url": "https://jack-clark.net/",
+      "feed_url": "https://jack-clark.net/feed/"
+    },
+    {
+      "category": "AI",
       "name": "Skynet Today",
       "url": "https://www.skynettoday.com/categories/digests/",
       "feed_url": "https://www.skynettoday.com/feed.xml",
