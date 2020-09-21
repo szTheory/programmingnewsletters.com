@@ -1,6 +1,12 @@
 {
   "entries": [
     {
+      "category": "Mac",
+      "name": "iOS Cocoa Treats",
+      "url": "https://ioscocoatreats.ongoodbits.com/",
+      "feed_url": "https://ioscocoatreats.ongoodbits.com/feed"
+    },
+    {
       "category": "Mobile",
       "name": "Android Sweets",
       "url": "https://androidsweets.ongoodbits.com/",
