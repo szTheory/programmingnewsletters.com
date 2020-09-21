@@ -2,6 +2,12 @@
   "entries": [
     {
       "category": "Data Science",
+      "name": "Data Is Plural - Datasets",
+      "url": "https://tinyletter.com/data-is-plural/archive",
+      "feed_url": "https://data-is-plural.github.io/newsletter-archive/feeds/dip.rss"
+    },
+    {
+      "category": "Data Science",
       "name": "SF Data Weekly",
       "url": "http://weekly.sfdata.io/",
       "feed_url": "http://weekly.sfdata.io/?format=rss"
