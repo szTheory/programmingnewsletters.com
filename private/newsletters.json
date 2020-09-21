@@ -1,6 +1,24 @@
 {
   "entries": [
     {
+      "category": "Data Science",
+      "name": "Data News Hotlist",
+      "url": "https://www.datainnovation.org/category/blog/weekly-news/",
+      "feed_url": "https://www.datainnovation.org/category/blog/weekly-news/feed/"
+    },
+    {
+      "category": "Data Science",
+      "name": "Data Science Roundup",
+      "url": "http://roundup.fishtownanalytics.com/#archive",
+      "feed_url": "http://roundup.fishtownanalytics.com/?format=rss"
+    },
+    {
+      "category": "Mac",
+      "name": "Swift Weekly",
+      "url": "http://digest.swiftweekly.com/",
+      "feed_url": "http://digest.swiftweekly.com/?format=rss"
+    },
+    {
       "category": "Mac",
       "name": "iOS Cocoa Treats",
       "url": "https://ioscocoatreats.ongoodbits.com/",
@@ -15,8 +33,8 @@
     {
       "category": "Web Platform",
       "name": "Practicing Google",
-      "url": "https://newsletter.paoloamoroso.com/#archive",
-      "feed_url": "https://newsletter.paoloamoroso.com/?format=rss"
+      "url": "http://newsletter.paoloamoroso.com/#archive",
+      "feed_url": "http://newsletter.paoloamoroso.com/?format=rss"
     },
     {
       "category": "Data Science",
