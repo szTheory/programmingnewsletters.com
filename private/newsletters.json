@@ -2,6 +2,13 @@
   "entries": [
     {
       "category": "Security",
+      "name": "API Security Newsletter",
+      "url": "https://apisecurity.io/",
+      "updated_selector": ".upl-post-date",
+      "link_selector": ".upl-post-title a"
+    },
+    {
+      "category": "Security",
       "name": "Bulletproof TLS Newsletter",
       "url": "https://www.feistyduck.com/bulletproof-tls-newsletter/",
       "feed_url": "https://www.feistyduck.com/bulletproof-tls-newsletter/feed"
