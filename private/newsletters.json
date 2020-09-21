@@ -1,6 +1,12 @@
 {
   "entries": [
     {
+      "category": "Programming Languages",
+      "name": "Powershell Weekly",
+      "url": "https://ridicurious.com/powershell-weekly-newsletter/",
+      "feed_url": "https://ridicurious.com/powershell-weekly-newsletter/feed/"
+    },
+    {
       "category": "Frontend",
       "name": "Figmalion Biweekly",
       "url": "https://figmalion.com",
