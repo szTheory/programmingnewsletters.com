@@ -1,6 +1,12 @@
 {
   "entries": [
     {
+      "category": "Data Science",
+      "name": "AI Weekly",
+      "url": "http://aiweekly.co/",
+      "feed_url": "http://aiweekly.co/issues.rss"
+    },
+    {
       "category": "Linux",
       "name": "Ubuntu Weekly",
       "url": "https://wiki.ubuntu.com/UbuntuWeeklyNewsletter/Current",
