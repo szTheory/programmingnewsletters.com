@@ -244,8 +244,9 @@ sub _newsletter_info_html {
       $updated_element = $dom->at($updated_selector);
 
       if ( !$updated_element ) {
-        die
-"Could not find updated timestamp element with selector: $updated_selector for $name - $url";
+        warn
+"Could not find updated timestamp element with selector: $updated_selector for $name - $url\n";
+        return {};
       }
 
       if ($updated_regex) {
