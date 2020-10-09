@@ -1,6 +1,12 @@
 {
   "entries": [
     {
+      "category": "Software Engineering",
+      "name": "Webshit Weekly - Hacker News summary",
+      "url": "http://n-gate.com/",
+      "feed_url": "http://n-gate.com/index.rss"
+    },
+    {
       "category": "Security",
       "name": "API Security Newsletter",
       "url": "https://apisecurity.io/",
