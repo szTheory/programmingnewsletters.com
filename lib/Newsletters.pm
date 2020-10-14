@@ -63,7 +63,8 @@ sub _newsletter_info_rss {
   }
   my $xml = $res->content;
   if ( !$xml ) {
-    die "Could not load XML for $name - $feed_url";
+    warn "Could not load XML for $name - $feed_url";
+    return {};
   }
 
   my $updated_selector =
