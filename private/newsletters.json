@@ -635,7 +635,7 @@
     },
     {
       "category": "Programming Languages",
-      "name": "PyCoder Python Weekly",
+      "name": "PyCoder Weekly",
       "url": "https://pycoders.com/latest",
       "feed_url": "https://pycoders.com/feed",
       "link_selector": "entry/id",
