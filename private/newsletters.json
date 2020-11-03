@@ -2,6 +2,14 @@
   "entries": [
     {
       "category": "Programming Languages",
+      "name": "This Week in Elixir and Erlang",
+      "url": "https://preslav.me/tag/elixir/",
+      "updated_selector": ".story time",
+      "link_selector": ".story-title a",
+      "base_url": "https://preslav.me"
+    },
+    {
+      "category": "Programming Languages",
       "name": "Julia Monthly Newsletter",
       "url": "https://juliacomputing.com/blog/",
       "feed_url": "https://juliacomputing.com/blog/feed.xml",
