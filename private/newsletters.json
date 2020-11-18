@@ -1,6 +1,12 @@
 {
   "entries": [
     {
+      "category": "AI",
+      "name": "The Sequence of AI Knowledge",
+      "url": "https://thesequence.substack.com/",
+      "feed_url": "https://thesequence.substack.com/feed/"
+    },
+    {
       "category": "Programming Languages",
       "name": "This Week in Elixir and Erlang",
       "url": "https://preslav.me/tag/elixir/",
