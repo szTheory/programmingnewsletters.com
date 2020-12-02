@@ -1,6 +1,21 @@
 {
   "entries": [
     {
+      "category": "Programming Languages",
+      "name": "Julia Monthly Newsletter",
+      "url": "https://juliacomputing.com/blog/",
+      "base_url": "https://juliacomputing.com",
+      "link_selector": "[href*=newsletter]",
+      "updated_selector": "[href*=newsletter] ~ .text-gray",
+      "updated_regex": "^(.+) \\|"
+    },
+    {
+      "category": "DevOps",
+      "name": "Kubelist",
+      "url": "https://kubelist.com/issue/latest",
+      "updated_fixed_day": "Wednesday"
+    },
+    {
       "category": "AI",
       "name": "The Sequence of AI Knowledge",
       "url": "https://thesequence.substack.com/",
@@ -13,15 +28,6 @@
       "updated_selector": ".story time",
       "link_selector": ".story-title a",
       "base_url": "https://preslav.me"
-    },
-    {
-      "category": "Programming Languages",
-      "name": "Julia Monthly Newsletter",
-      "url": "https://juliacomputing.com/blog/",
-      "feed_url": "https://juliacomputing.com/blog/feed.xml",
-      "updated_selector": "entry/updated",
-      "link_selector": "entry/link",
-      "link_attr": "href"
     },
     {
       "category": "Software Engineering",
@@ -481,15 +487,6 @@
       "name": "TinyJS Newsletter",
       "url": "https://buttondown.email/tinyjs/archive",
       "feed_url": "https://buttondown.email/tinyjs/rss"
-    },
-    {
-      "category": "DevOps",
-      "name": "Kubelist",
-      "url": "https://kubelist.com/issues",
-      "base_url": "https://kubelist.com",
-      "link_selector": "#__next > div > div:nth-child(2) a:first-child",
-      "updated_selector": "#__next > div > div:nth-child(2) a:first-child",
-      "updated_regex": "^([\\d-]+)"
     },
     {
       "category": "DevOps",
