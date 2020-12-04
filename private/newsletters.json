@@ -2,6 +2,14 @@
   "entries": [
     {
       "category": "Programming Languages",
+      "name": "This Week in Scala",
+      "url": "https://medium.com/disney-streaming/tagged/thisweekinscala",
+      "link_selector": ".postArticle:first-child .postArticle-readMore a",
+      "updated_selector": ".postArticle:first-child .graf--title",
+      "updated_regex": "\\((.+)\\)"
+    },
+    {
+      "category": "Programming Languages",
       "name": "Julia Monthly Newsletter",
       "url": "https://juliacomputing.com/blog/",
       "base_url": "https://juliacomputing.com",
