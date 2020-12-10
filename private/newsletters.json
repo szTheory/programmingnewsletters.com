@@ -2,6 +2,12 @@
   "entries": [
     {
       "category": "Programming Languages",
+      "name": "This Week in Rails",
+      "url": "https://rails-weekly.ongoodbits.com/",
+      "feed_url": "https://rails-weekly.ongoodbits.com/feed"
+    },
+    {
+      "category": "Programming Languages",
       "name": "This Week in Scala",
       "url": "https://medium.com/disney-streaming/tagged/thisweekinscala",
       "link_selector": ".postArticle:first-child .postArticle-readMore a",
