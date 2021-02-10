@@ -11,7 +11,7 @@ our %EXPORT_TAGS = ( all => \@EXPORT_OK );
 use constant NEWSLETTERS_JSON_FILE             => 'private/newsletters.json';
 use constant RSS_FEED_DEFAULT_UPDATED_SELECTOR => 'item/pubDate';
 use constant RSS_FEED_DEFAULT_LINK_SELECTOR    => 'item/link';
-use constant USER_AGENT =>
+use constant USER_AGENT                        =>
 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1';
 use constant GET_TIMEOUT         => 5;
 use constant DATE_COMPARE_PRINTF => '%b %d';
@@ -311,7 +311,8 @@ sub _newsletter_info_html {
     my $datetime =
       DateTime::Format::DateParse->parse_datetime($timestamp_string);
     unless ($datetime) {
-      die "Could not parse datetime for timestamp string: $timestamp_string";
+      warn "Could not parse datetime for timestamp string: $timestamp_string";
+      return {};
     }
 
     $timestamp = $datetime->epoch();
