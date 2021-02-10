@@ -723,12 +723,6 @@
       "updated_fixed_day": "Tuesday"
     },
     {
-      "category": "React",
-      "name": "React Weekly",
-      "url": "https://react.statuscode.com/latest",
-      "feed_url": "https://react.statuscode.com/rss/"
-    },
-    {
       "category": "Embedded",
       "name": "IoT Weekly",
       "url": "https://iotweeklynews.com/",
