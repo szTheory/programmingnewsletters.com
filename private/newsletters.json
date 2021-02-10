@@ -152,12 +152,6 @@
     },
     {
       "category": "Mac",
-      "name": "Swift Weekly",
-      "url": "http://digest.swiftweekly.com/",
-      "feed_url": "http://digest.swiftweekly.com/?format=rss"
-    },
-    {
-      "category": "Mac",
       "name": "iOS Cocoa Treats",
       "url": "https://ioscocoatreats.ongoodbits.com/",
       "feed_url": "https://ioscocoatreats.ongoodbits.com/feed"
@@ -202,19 +196,6 @@
       "feed_url": "https://figmalion.com/rss.xml"
     },
     {
-      "category": "Frontend",
-      "name": "Design Toolbox Weekly",
-      "url": "https://theprotoolbox.com/weekly/",
-      "updated_selector": ".fl-post-feed-date",
-      "link_selector": ".fl-post-feed-title a"
-    },
-    {
-      "category": "Frontend",
-      "name": "The Unicorns Design Newsletter",
-      "url": "https://unicornsfeed.substack.com/",
-      "feed_url": "https://unicornsfeed.substack.com/feed/"
-    },
-    {
       "category": "Software Engineering",
       "name": "Software Testing Weekly",
       "url": "https://softwaretestingweekly.com/",
@@ -236,13 +217,6 @@
       "updated_attr": "data-source",
       "updated_regex": "(\\d+)-share",
       "updated_link_attr": "data-source"
-    },
-    {
-      "category": "Web Platform",
-      "name": "Synk Web Dev Biweekly",
-      "url": "https://synk.sh",
-      "updated_selector": "#newsletter-list a:first-child span",
-      "link_selector": "#newsletter-list a:first-child"
     },
     {
       "category": "JavaScript",
@@ -590,12 +564,6 @@
       "feed_url": "https://us11.campaign-archive.com/feed?u=ab6c02b160780b8e6569144f8&id=a196bfbac7"
     },
     {
-      "category": "DevOps",
-      "name": "This Week in Devops",
-      "url": "https://thisweekindevops.com/",
-      "feed_url": "https://thisweekindevops.com/feed/"
-    },
-    {
       "category": "Web Platform",
       "name": "WebAssembly Weekly",
       "url": "https://wasmweekly.news/",
@@ -697,12 +665,6 @@
       "link_selector": "id"
     },
     {
-      "category": "Programming Languages",
-      "name": "Clojure Weekly",
-      "url": "https://us19.campaign-archive.com/home/?u=f5dea183eae58baf7428a4425&id=ef5512dc35",
-      "feed_url": "https://us19.campaign-archive.com/feed?u=f5dea183eae58baf7428a4425&id=ef5512dc35"
-    },
-    {
       "category": "Mac",
       "name": "iOS Dev Weekly",
       "url": "https://iosdevweekly.com/issues",
@@ -761,12 +723,6 @@
       "updated_fixed_day": "Tuesday"
     },
     {
-      "category": "Mobile",
-      "name": "Flutter Weekly",
-      "url": "https://us17.campaign-archive.com/home/?u=c8d8d18b6e2c6316ddc1d48a0&id=47548a283b",
-      "feed_url": "https://us17.campaign-archive.com/feed?u=c8d8d18b6e2c6316ddc1d48a0&id=47548a283b"
-    },
-    {
       "category": "React",
       "name": "React Weekly",
       "url": "https://react.statuscode.com/latest",
@@ -796,12 +752,6 @@
       "url": "https://meetingcpp.com/blog/blogroll/",
       "feed_url": "https://meetingcpp.com/feed.xml",
       "link_contains_text": "https://www.meetingcpp.com/blog/blogroll/items/Meeting-Cpp-Blogroll-"
-    },
-    {
-      "category": "Software Engineering",
-      "name": "DDD Weekly",
-      "url": "http://dddweekly.com/",
-      "feed_url": "http://dddweekly.com/index.xml"
     },
     {
       "category": "Frontend",
