@@ -1,6 +1,13 @@
 {
   "entries": [
     {
+      "category": "Frontend",
+      "name": "Vue.js News",
+      "url": "https://news.vuejs.org/archive",
+      "feed_url": "https://news.vuejs.org/feed.xml",
+      "updated_selector": "//item/pubDate"
+    },
+    {
       "category": "Programming Languages",
       "name": "This Week in Rails",
       "url": "https://rails-weekly.ongoodbits.com/",
