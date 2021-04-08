@@ -77,6 +77,7 @@ sub _newsletter_info_rss {
   my $link_contains_text = $newsletter_entry->{link_contains_text};
   my $link_base_filter   = $newsletter_entry->{link_base_filter};
   my $link_constant      = $newsletter_entry->{link_constant};
+  my $link_regex         = $newsletter_entry->{link_regex};
 
   print "----> Parsing XML\n";
   my @dates;
@@ -140,6 +141,11 @@ sub _newsletter_info_rss {
     $link = $link_constant;
   }
   $link = $links[$link_index];
+
+  # process the link text
+  if ($link_regex) {
+    ($link) = $link =~ qr{$link_regex};
+  }
 
   my $timestamp;
   my $timestamp_string = $dates[$timestamp_index];

@@ -1,6 +1,21 @@
 {
   "entries": [
     {
+      "category": "DevOps",
+      "name": "Last Week in AWS",
+      "url": "https://www.lastweekinaws.com/newsletter/",
+      "feed_url": "https://www.lastweekinaws.com/newsletter/feed/"
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Haxe Roundup",
+      "url": "https://haxe.io/",
+      "feed_url": "https://blog.skialbainn.com/rss",
+      "link_selector": "//item/description",
+      "link_regex": "(https://haxe.io/roundups/\\d+/)",
+      "updated_selector": "//item/pubDate"
+    },
+    {
       "category": "Frontend",
       "name": "Vue.js News",
       "url": "https://news.vuejs.org/archive",
@@ -449,12 +464,6 @@
       "name": "SRE Weekly",
       "url": "https://sreweekly.com/",
       "feed_url": "https://sreweekly.com/feed/"
-    },
-    {
-      "category": "DevOps",
-      "name": "Last Week in AWS",
-      "url": "https://www.lastweekinaws.com/newsletter/",
-      "feed_url": "https://www.lastweekinaws.com/newsletter/feed/"
     },
     {
       "category": "Databases",

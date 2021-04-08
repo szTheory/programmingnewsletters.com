@@ -1,6 +1,6 @@
 # <img src="private/images/logo.svg" width=25 height=25>ProgrammingNewsletters.com
 
->The best weekly programming newsletters on one website
+> The best weekly programming newsletters on one website
 
 ## Features
 
@@ -38,8 +38,8 @@ carton exec perl Run.pm --rebuild --first-only
 Download the code and start a webserver.
 
 ```bash
-git clone git@github.com:szTheory/easynewsletter.git
-cd easynewsletter
+git clone git@github.com:szTheory/programmingnewsletters.com.git
+cd programmingnewsletters.com
 python3 -m http.server --directory public
 ```
 
