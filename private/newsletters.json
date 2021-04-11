@@ -1,6 +1,12 @@
 {
   "entries": [
     {
+      "category": "Web Frameworks",
+      "name": "Laravel Daily",
+      "url": "https://laraveldaily.com/weekly-laravel-newsletter/",
+      "feed_url": "https://us11.campaign-archive.com/feed?u=a459401212599a54203d036ee&id=91c1337873"
+    },
+    {
       "category": "DevOps",
       "name": "Azure Weekly",
       "url": "https://azureweekly.info/",
@@ -29,7 +35,7 @@
       "updated_selector": "//item/pubDate"
     },
     {
-      "category": "Programming Languages",
+      "category": "Web Frameworks",
       "name": "This Week in Rails",
       "url": "https://rails-weekly.ongoodbits.com/",
       "feed_url": "https://rails-weekly.ongoodbits.com/feed"
@@ -86,7 +92,7 @@
       "link_selector": ".upl-post-title a"
     },
     {
-      "category": "React",
+      "category": "Web Frameworks",
       "name": "React Newsletter",
       "url": "https://ui.dev/newsletters/react/",
       "base_url": "https://ui.dev",
@@ -102,7 +108,7 @@
       "link_selector": "ul li h3 a"
     },
     {
-      "category": "React",
+      "category": "Web Frameworks",
       "name": "React Native Now",
       "url": "https://reactnativenow.com/",
       "feed_url": "https://reactnativenow.com/issues.rss"
@@ -340,7 +346,7 @@
       "updated_selector": "//published"
     },
     {
-      "category": "React",
+      "category": "Web Frameworks",
       "name": "React Status",
       "url": "https://react.statuscode.com/latest",
       "feed_url": "https://react.statuscode.com/rss/"
