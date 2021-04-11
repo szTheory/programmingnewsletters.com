@@ -119,12 +119,6 @@
       "updated_selector": ".mailpoet_archive_date"
     },
     {
-      "category": "Mobile",
-      "name": "Android Sweets",
-      "url": "https://androidsweets.ongoodbits.com/",
-      "feed_url": "https://androidsweets.ongoodbits.com/feed"
-    },
-    {
       "category": "Game Dev",
       "name": "Gamedev.js Weekly",
       "url": "https://newsletterest.com/newsletters/2119/Gamedevjs-Weekly",
