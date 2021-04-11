@@ -6,11 +6,13 @@ Celadon xBluex #457b9d
 Prussian xBluex #1d3557 
 */
 
+/* noscript-specific */
 #noscript-header {
   position: static;
   opacity: 0.5;
 }
 
+/* reset body style */
 body {
   font-family: Garamond;
   max-width: 480px;
@@ -18,20 +20,20 @@ body {
   padding: 48px 18px 0;
 }
 
-#logo {
+.logo {
   padding-bottom: 24px;
 }
-#logo svg {
+.logo__graphic {
   margin-top: -37px;
   display: inline-block;
 }
-#logo path {
+.logo__graphic path {
   fill: #457b9d !important;
 }
-#logo-text {
+.logo__text {
   display: inline-block;
 }
-#logo-text h1 {
+.logo__text__header {
   display: inline-block;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-size: 26px;
@@ -41,6 +43,11 @@ body {
   padding: 0;
   margin: 0;
 }
+.logo__text__subheader {
+  font-style: italic;
+  margin-left: 58px;
+  margin-top: 20px;
+}
 
 .accent {
   color: #e63946;
@@ -48,19 +55,21 @@ body {
   opacity: 0.8;
 }
 
+/* reset anchor style */
 a {
   color: #457b9d;
   text-decoration: underline;
   text-decoration-style: dotted;
 }
 
+/* reset ul style */
 ul {
   list-style-type: none;
   padding-left: 0px;
   margin: 0px 0px;
 }
 
-#nav-links li {
+.navlinks__link {
   cursor: pointer;
   font-size: 10px;
   display: inline-block;
@@ -70,7 +79,7 @@ ul {
   font-weight: 300;
 }
 
-#nav-links li.selected {
+.navlinks__link.selected {
   color: #fefefd;
   background-color: #1d3557;
 }
@@ -96,7 +105,7 @@ ul {
   margin-top: 84px;
 }
 
-.entry a {
+.entry__link {
   font-size: 24px;
 }
 .entry:not(:last-child) {
@@ -107,7 +116,7 @@ ul {
   display: none;
 }
 
-footer {
+.footer {
   color: #1d3557;
   padding: 240px 0 32px;
 }

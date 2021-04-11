@@ -1,7 +1,131 @@
 {
   "entries": [
     {
-      "category": "Web Frameworks",
+      "category": "WordPress",
+      "name": "The WP Weekly",
+      "url": "https://thewpweekly.com/archives/",
+      "feed_url": "https://thewpweekly.com/feed/"
+    },
+    {
+      "category": "Testing",
+      "name": "Automate The Planet",
+      "url": "https://newsletterest.com/newsletters/2249/Automate-The-Planet",
+      "base_url": "https://newsletterest.com",
+      "link_selector": ".timeline-header a",
+      "updated_selector": ".time-label span"
+    },
+    {
+      "category": "Mobile",
+      "name": "WebAIM Accessibility",
+      "url": "https://newsletterest.com/newsletters/2215/WebAIM",
+      "base_url": "https://newsletterest.com",
+      "link_selector": ".timeline-header a",
+      "updated_selector": ".time-label span"
+    },
+    {
+      "category": "Mobile",
+      "name": "Android Developers",
+      "url": "https://newsletterest.com/newsletters/2178/Android-Developers",
+      "base_url": "https://newsletterest.com",
+      "link_selector": ".timeline-header a",
+      "updated_selector": ".time-label span"
+    },
+    {
+      "category": "Frontend",
+      "name": "Vue.js News",
+      "url": "https://news.vuejs.org/archive",
+      "feed_url": "https://news.vuejs.org/feed.xml",
+      "updated_selector": "//item/pubDate"
+    },
+    {
+      "category": "AI",
+      "name": "AI Digest",
+      "url": "https://aidigest.net/",
+      "feed_url": "https://feeds.feedburner.com/digest-ai"
+    },
+    {
+      "category": "Backend Web Frameworks",
+      "name": "ASP.NET Core News",
+      "url": "https://aspnetcore.news/",
+      "feed_url": "https://us7.campaign-archive.com/feed?u=66fdd2122e968863d381a26e1&id=25e58ef874"
+    },
+    {
+      "category": "Frontend Web Frameworks",
+      "name": "React Digest",
+      "url": "https://reactdigest.net/",
+      "feed_url": "https://feeds.feedburner.com/digest-react"
+    },
+    {
+      "category": "Mobile",
+      "name": "iOS Cocoa Treats",
+      "url": "https://ioscocoatreats.ongoodbits.com/",
+      "feed_url": "https://ioscocoatreats.ongoodbits.com/feed"
+    },
+    {
+      "category": "Wordpress",
+      "name": "wpMail",
+      "url": "http://wpmail.me/newsletters/",
+      "feed_url": "http://wpmail.me/newsletters/feed/"
+    },
+    {
+      "category": "Wordpress",
+      "name": "MasterWP Weekly",
+      "url": "https://newsletterest.com/newsletters/2124/MasterWP-Weekly",
+      "base_url": "https://newsletterest.com",
+      "link_selector": ".timeline-header a",
+      "updated_selector": ".time-label span"
+    },
+    {
+      "category": "Wordpress",
+      "name": "The Repository Wordpress Newsletter",
+      "url": "https://www.therepository.email/archive",
+      "link_selector": ".mailpoet_archive_subject a",
+      "updated_selector": ".mailpoet_archive_date"
+    },
+    {
+      "category": "Mobile",
+      "name": "Android Sweets",
+      "url": "https://androidsweets.ongoodbits.com/",
+      "feed_url": "https://androidsweets.ongoodbits.com/feed"
+    },
+    {
+      "category": "Game Dev",
+      "name": "Gamedev.js Weekly",
+      "url": "https://newsletterest.com/newsletters/2119/Gamedevjs-Weekly",
+      "base_url": "https://newsletterest.com",
+      "link_selector": ".timeline-header a",
+      "updated_selector": ".time-label span"
+    },
+    {
+      "category": "Devops",
+      "name": "Google Cloud Weekly",
+      "url": "https://newsletterest.com/newsletters/1015/Google-Cloud-Weekly",
+      "base_url": "https://newsletterest.com",
+      "link_selector": ".timeline-header a",
+      "updated_selector": ".time-label span"
+    },
+    {
+      "category": "Backend Web Frameworks",
+      "name": "Laravel News",
+      "url": "https://newsletterest.com/newsletters/2085/Laravel-News",
+      "base_url": "https://newsletterest.com",
+      "link_selector": ".timeline-header a",
+      "updated_selector": ".time-label span"
+    },
+    {
+      "category": "Software Engineering",
+      "name": "Better Dev Link",
+      "url": "https://betterdev.link/issues",
+      "feed_url": "https://betterdev.link/rss.xml"
+    },
+    {
+      "category": "Frontend Web Frameworks",
+      "name": "Alpine.js Weekly",
+      "url": "https://alpinejs.codewithhugo.com/newsletter/",
+      "feed_url": "https://buttondown.email/alpinejs/rss"
+    },
+    {
+      "category": "Backend Web Frameworks",
       "name": "Laravel Daily",
       "url": "https://laraveldaily.com/weekly-laravel-newsletter/",
       "feed_url": "https://us11.campaign-archive.com/feed?u=a459401212599a54203d036ee&id=91c1337873"
@@ -28,14 +152,7 @@
       "updated_selector": "//item/pubDate"
     },
     {
-      "category": "Frontend",
-      "name": "Vue.js News",
-      "url": "https://news.vuejs.org/archive",
-      "feed_url": "https://news.vuejs.org/feed.xml",
-      "updated_selector": "//item/pubDate"
-    },
-    {
-      "category": "Web Frameworks",
+      "category": "Backend Web Frameworks",
       "name": "This Week in Rails",
       "url": "https://rails-weekly.ongoodbits.com/",
       "feed_url": "https://rails-weekly.ongoodbits.com/feed"
@@ -92,7 +209,7 @@
       "link_selector": ".upl-post-title a"
     },
     {
-      "category": "Web Frameworks",
+      "category": "Frontend Web Frameworks",
       "name": "React Newsletter",
       "url": "https://ui.dev/newsletters/react/",
       "base_url": "https://ui.dev",
@@ -108,7 +225,7 @@
       "link_selector": "ul li h3 a"
     },
     {
-      "category": "Web Frameworks",
+      "category": "Mobile",
       "name": "React Native Now",
       "url": "https://reactnativenow.com/",
       "feed_url": "https://reactnativenow.com/issues.rss"
@@ -230,7 +347,7 @@
       "feed_url": "https://figmalion.com/rss.xml"
     },
     {
-      "category": "Software Engineering",
+      "category": "Testing",
       "name": "Software Testing Weekly",
       "url": "https://softwaretestingweekly.com/",
       "feed_url": "https://softwaretestingweekly.com/issues.rss"
@@ -346,7 +463,7 @@
       "updated_selector": "//published"
     },
     {
-      "category": "Web Frameworks",
+      "category": "Frontend Web Frameworks",
       "name": "React Status",
       "url": "https://react.statuscode.com/latest",
       "feed_url": "https://react.statuscode.com/rss/"
