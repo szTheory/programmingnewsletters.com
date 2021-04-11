@@ -2,13 +2,6 @@
   "entries": [
     {
       "category": "DevOps",
-      "name": "GCP Weekly",
-      "url": "https://www.gcpweekly.com/newsletter/",
-      "link_selector": "article:nth-child(2) a",
-      "updated_selector": "article:nth-child(2) div"
-    },
-    {
-      "category": "DevOps",
       "name": "Azure Weekly",
       "url": "https://azureweekly.info/",
       "feed_url": "https://azureweekly.info/rss.xml"
