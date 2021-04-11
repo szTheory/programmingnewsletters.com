@@ -98,13 +98,13 @@
       "feed_url": "https://ioscocoatreats.ongoodbits.com/feed"
     },
     {
-      "category": "Wordpress",
+      "category": "WordPress",
       "name": "wpMail",
       "url": "http://wpmail.me/newsletters/",
       "feed_url": "http://wpmail.me/newsletters/feed/"
     },
     {
-      "category": "Wordpress",
+      "category": "WordPress",
       "name": "MasterWP Weekly",
       "url": "https://newsletterest.com/newsletters/2124/MasterWP-Weekly",
       "base_url": "https://newsletterest.com",
@@ -112,7 +112,7 @@
       "updated_selector": ".time-label span"
     },
     {
-      "category": "Wordpress",
+      "category": "WordPress",
       "name": "The Repository Wordpress Newsletter",
       "url": "https://www.therepository.email/archive",
       "link_selector": ".mailpoet_archive_subject a",
