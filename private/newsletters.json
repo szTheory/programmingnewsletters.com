@@ -1,6 +1,14 @@
 {
   "entries": [
     {
+      "category": "Programming Languages",
+      "name": "Python Weekly",
+      "url": "https://newsletterest.com/newsletters/2388/Python-Weekly",
+      "base_url": "https://newsletterest.com",
+      "link_selector": ".timeline-header a",
+      "updated_selector": ".time-label span"
+    },
+    {
       "category": "WordPress",
       "name": "The WP Weekly",
       "url": "https://thewpweekly.com/archives/",
