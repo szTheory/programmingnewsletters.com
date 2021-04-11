@@ -1,6 +1,34 @@
 {
   "entries": [
     {
+      "category": "DevOps",
+      "name": "Kube Weekly",
+      "url": "https://kubeweekly.io/#templateBody",
+      "link_selector": ".kubeweekly-box:first-child a",
+      "updated_selector": ".kubeweekly-box:first-child .sent"
+    },
+    {
+      "category": "AI",
+      "name": "AI Weekly",
+      "url": "https://aiweekly.co/",
+      "feed_url": "http://aiweekly.co/issues.rss"
+    },
+    {
+      "category": "Data Science",
+      "name": "Data Science News",
+      "url": "https://dataelixir.com/",
+      "link_selector": ".item__list--issues a",
+      "updated_selector": ".item__list--issues time span"
+    },
+    {
+      "category": "Programming Languages",
+      "name": "This Week in Elixir and Erlang",
+      "url": "https://preslav.me/tag/elixir/",
+      "link_selector": ".post-card-content a:first-child",
+      "updated_selector": ".post-card-byline-date time",
+      "base_url": "https://preslav.me"
+    },
+    {
       "category": "Programming Languages",
       "name": "Python Weekly",
       "url": "https://newsletterest.com/newsletters/2388/Python-Weekly",
@@ -195,14 +223,6 @@
       "feed_url": "https://thesequence.substack.com/feed/"
     },
     {
-      "category": "Programming Languages",
-      "name": "This Week in Elixir and Erlang",
-      "url": "https://preslav.me/tag/elixir/",
-      "updated_selector": ".story time",
-      "link_selector": ".story-title a",
-      "base_url": "https://preslav.me"
-    },
-    {
       "category": "Software Engineering",
       "name": "Webshit Weekly - Hacker News summary",
       "url": "http://n-gate.com/",
@@ -293,12 +313,6 @@
     },
     {
       "category": "Data Science",
-      "name": "Data Science News",
-      "url": "https://dataelixir.com/",
-      "feed_url": "https://dataelixir.com/issues.rss"
-    },
-    {
-      "category": "Data Science",
       "name": "Data News Hotlist",
       "url": "https://www.datainnovation.org/category/blog/weekly-news/",
       "feed_url": "https://www.datainnovation.org/category/blog/weekly-news/feed/"
@@ -328,12 +342,6 @@
       "base_url": "https://hplusweekly.com",
       "updated_selector": "article div:first-child h3 span",
       "link_selector": "article div:first-child a"
-    },
-    {
-      "category": "AI",
-      "name": "AI Weekly",
-      "url": "http://aiweekly.co/",
-      "feed_url": "http://aiweekly.co/issues.rss"
     },
     {
       "category": "Linux",
@@ -495,12 +503,6 @@
       "feed_url": "https://us2.campaign-archive1.com/feed?u=887caf4f48db76fd91e20a06d&id=4eb677ad19"
     },
     {
-      "category": "JavaScript",
-      "name": "Best of JavaScript Weekly Rankings",
-      "url": "https://weekly.bestofjs.org/",
-      "updated_selector": ".content table:last-child a:first-child"
-    },
-    {
       "category": "Programming Languages",
       "name": "dotNET Weekly",
       "url": "https://www.dotnetweekly.com/",
@@ -628,13 +630,6 @@
       "name": "TinyJS Newsletter",
       "url": "https://buttondown.email/tinyjs/archive",
       "feed_url": "https://buttondown.email/tinyjs/rss"
-    },
-    {
-      "category": "DevOps",
-      "name": "Kube Weekly",
-      "url": "https://kubeweekly.io/#templateBody",
-      "updated_selector": ".mcnTextContent strong",
-      "updated_regex": ": (.+)$"
     },
     {
       "category": "Programming Languages",
