@@ -1,6 +1,12 @@
 {
   "entries": [
     {
+      "category": "Software Engineering",
+      "name": "Le courrier du hacker (FR)",
+      "url": "https://lecourrierduhacker.com/archives",
+      "feed_url": "https://lecourrierduhacker.com/rss.xml"
+    },
+    {
       "category": "DevOps",
       "name": "Kube Weekly",
       "url": "https://kubeweekly.io/#templateBody",
