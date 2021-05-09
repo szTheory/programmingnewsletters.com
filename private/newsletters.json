@@ -350,12 +350,6 @@
       "updated_link_attr": "data-source"
     },
     {
-      "category": "JavaScript",
-      "name": "Ten JavaScript",
-      "url": "https://tenjs.news",
-      "updated_fixed_day": "Saturday"
-    },
-    {
       "category": "Mac",
       "name": "AppCoda Weekly Swift & iOS",
       "url": "https://digest.appcoda.com/",
