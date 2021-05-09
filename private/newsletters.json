@@ -117,14 +117,6 @@
     },
     {
       "category": "WordPress",
-      "name": "MasterWP Weekly",
-      "url": "https://newsletterest.com/newsletters/2124/MasterWP-Weekly",
-      "base_url": "https://newsletterest.com",
-      "link_selector": ".timeline-header a",
-      "updated_selector": ".time-label span"
-    },
-    {
-      "category": "WordPress",
       "name": "The Repository Wordpress Newsletter",
       "url": "https://www.therepository.email/archive",
       "link_selector": ".mailpoet_archive_subject a",
@@ -192,12 +184,6 @@
       "link_selector": "//item/description",
       "link_regex": "(https://haxe.io/roundups/\\d+/)",
       "updated_selector": "//item/pubDate"
-    },
-    {
-      "category": "Backend Web Frameworks",
-      "name": "This Week in Rails",
-      "url": "https://rails-weekly.ongoodbits.com/",
-      "feed_url": "https://rails-weekly.ongoodbits.com/feed"
     },
     {
       "category": "Programming Languages",
@@ -333,12 +319,6 @@
       "url": "https://wiki.ubuntu.com/UbuntuWeeklyNewsletter/Current",
       "updated_selector": "#pageinfo",
       "updated_regex": "last edited (.+) by"
-    },
-    {
-      "category": "Programming Languages",
-      "name": "Powershell Weekly",
-      "url": "https://ridicurious.com/powershell-weekly-newsletter/",
-      "feed_url": "https://ridicurious.com/powershell-weekly-newsletter/feed/"
     },
     {
       "category": "Frontend",
@@ -493,18 +473,6 @@
       "feed_url": "https://www.dotnetweekly.com/feed/",
       "updated_selector": "lastBuildDate",
       "link_constant": "https://www.dotnetweekly.com/"
-    },
-    {
-      "category": "Programming Languages",
-      "name": "Lisp Weekly",
-      "url": "https://lisp-weekly.com/",
-      "feed_url": "https://us7.campaign-archive.com/feed?u=fe027ef3ceef000bae715f75a&id=191a01df12"
-    },
-    {
-      "category": "Programming Languages",
-      "name": "Elm Bits",
-      "url": "https://elmbits.com/",
-      "feed_url": "https://elmbits.com/rss/"
     },
     {
       "category": "Programming Languages",
@@ -676,12 +644,6 @@
       "url": "https://distrowatch.com/weekly.php",
       "feed_url": "https://distrowatch.com/news/dww.xml",
       "updated_selector": "item/dc:date"
-    },
-    {
-      "category": "DevOps",
-      "name": "cron.weekly",
-      "url": "https://ma.ttias.be/cronweekly/",
-      "feed_url": "https://ma.ttias.be/cronweekly/index.xml"
     },
     {
       "category": "DevOps",
@@ -878,13 +840,6 @@
       "url": "https://meetingcpp.com/blog/blogroll/",
       "feed_url": "https://meetingcpp.com/feed.xml",
       "link_contains_text": "https://www.meetingcpp.com/blog/blogroll/items/Meeting-Cpp-Blogroll-"
-    },
-    {
-      "category": "Frontend",
-      "name": "Web Design Weekly",
-      "url": "https://web-design-weekly.com/",
-      "feed_url": "https://web-design-weekly.com/newsletter.xml",
-      "updated_selector": "//lastBuildDate"
     },
     {
       "category": "Frontend",
