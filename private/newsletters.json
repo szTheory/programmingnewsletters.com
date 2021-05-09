@@ -1,6 +1,26 @@
 {
   "entries": [
     {
+      "category": "Frontend Web Frameworks",
+      "name": "React Newsletter",
+      "url": "https://reactnewsletter.com/issues",
+      "base_url": "https://reactnewsletter.com",
+      "updated_selector": ".masonry-column li:first-child p.text-gray-300",
+      "link_selector": ".masonry-column li:first-child a"
+    },
+    {
+      "category": "AI",
+      "name": "AI Weekly",
+      "url": "https://aiweekly.co/",
+      "feed_url": "https://aiweekly.co/issues.rss"
+    },
+    {
+      "category": "Programming Languages",
+      "name": "This Week in Elixir and Erlang",
+      "url": "https://preslav.me/tag/elixir/",
+      "feed_url": "https://www.getrevue.co/profile/this-week-in-elixir-and-erlang?format=rss"
+    },
+    {
       "category": "Software Engineering",
       "name": "Le courrier du hacker (FR)",
       "url": "https://lecourrierduhacker.com/archives",
@@ -14,25 +34,11 @@
       "updated_selector": ".kubeweekly-box:first-child .sent"
     },
     {
-      "category": "AI",
-      "name": "AI Weekly",
-      "url": "https://aiweekly.co/",
-      "feed_url": "http://aiweekly.co/issues.rss"
-    },
-    {
       "category": "Data Science",
       "name": "Data Science News",
       "url": "https://dataelixir.com/",
       "link_selector": ".item__list--issues a",
       "updated_selector": ".item__list--issues time span"
-    },
-    {
-      "category": "Programming Languages",
-      "name": "This Week in Elixir and Erlang",
-      "url": "https://preslav.me/tag/elixir/",
-      "link_selector": ".post-card-content a:first-child",
-      "updated_selector": ".post-card-byline-date time",
-      "base_url": "https://preslav.me"
     },
     {
       "category": "Programming Languages",
@@ -235,22 +241,6 @@
       "updated_selector": ".upl-post-date",
       "updated_regex": "^(.+), ",
       "link_selector": ".upl-post-title a"
-    },
-    {
-      "category": "Frontend Web Frameworks",
-      "name": "React Newsletter",
-      "url": "https://ui.dev/newsletters/react/",
-      "base_url": "https://ui.dev",
-      "updated_selector": "ul li h4",
-      "link_selector": "ul li h3 a"
-    },
-    {
-      "category": "JavaScript",
-      "name": "JavaScript Bytes Weekly",
-      "url": "https://ui.dev/newsletters/bytes/",
-      "base_url": "https://ui.dev",
-      "updated_selector": "ul li h4",
-      "link_selector": "ul li h3 a"
     },
     {
       "category": "Mobile",
