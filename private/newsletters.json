@@ -1,6 +1,16 @@
 {
   "entries": [
     {
+      "category": "Programming Languages",
+      "name": "This Week in Scala",
+      "feed_url": "https://medium.com/feed/disney-streaming/tagged/thisweekinscala"
+    },
+    {
+      "category": "Programming Languages",
+      "name": "High-Performance Java Persistence Newsletter",
+      "feed_url": "https://vladmihalcea.com/category/newsletter/feed"
+    },
+    {
       "category": "Frontend Web Frameworks",
       "name": "React Newsletter",
       "url": "https://reactnewsletter.com/issues",
