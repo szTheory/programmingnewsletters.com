@@ -2,6 +2,12 @@
   "entries": [
     {
       "category": "Programming Languages",
+      "name": "Clojure Deref",
+      "url": "https://clojure.org/news/",
+      "feed_url": "https://clojure.org/feed.xml"
+    },
+    {
+      "category": "Programming Languages",
       "name": "This Week in Scala",
       "feed_url": "https://medium.com/feed/disney-streaming/tagged/thisweekinscala"
     },
@@ -194,14 +200,6 @@
       "link_selector": "//item/description",
       "link_regex": "(https://haxe.io/roundups/\\d+/)",
       "updated_selector": "//item/pubDate"
-    },
-    {
-      "category": "Programming Languages",
-      "name": "This Week in Scala",
-      "url": "https://medium.com/disney-streaming/tagged/thisweekinscala",
-      "link_selector": ".postArticle:first-child .postArticle-readMore a",
-      "updated_selector": ".postArticle:first-child .graf--title",
-      "updated_regex": "\\((.+)\\)"
     },
     {
       "category": "Programming Languages",
