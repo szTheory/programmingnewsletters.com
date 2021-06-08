@@ -811,14 +811,6 @@
       "updated_selector": ".resource--post:first-child date.resource__meta"
     },
     {
-      "category": "Frontend",
-      "name": "Data Visualization Weekly",
-      "url": "https://www.dashingd3js.com/data-visualization-and-d3-newsletter",
-      "base_url": "https://www.dashingd3js.com",
-      "link_selector": "a[href^='/data-visualization-and-d3-newsletter/data-visualization-and-d3-newsletter-issue-']",
-      "updated_fixed_day": "Tuesday"
-    },
-    {
       "category": "Embedded",
       "name": "IoT Weekly",
       "url": "https://iotweeklynews.com/",
