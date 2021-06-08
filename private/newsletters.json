@@ -2,6 +2,20 @@
   "entries": [
     {
       "category": "Programming Languages",
+      "name": ".NET News Roundup",
+      "url": "https://www.infoq.com/dotnet/news/",
+      "feed_url": "https://feed.infoq.com/dotnet/news/",
+      "link_contains_text": "roundup"
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Java News Roundup",
+      "url": "https://www.infoq.com/java/news/",
+      "feed_url": "https://feed.infoq.com/java/news/",
+      "link_contains_text": "roundup"
+    },
+    {
+      "category": "Programming Languages",
       "name": "Clojure Deref",
       "url": "https://clojure.org/news/",
       "feed_url": "https://clojure.org/feed.xml"
