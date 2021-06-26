@@ -1,6 +1,12 @@
 {
   "entries": [
     {
+      "category": "JavaScript",
+      "name": "TypeScript Weekly",
+      "url": "https://us14.campaign-archive.com/home?u=809daf9442ece0a92a3d65f99&id=5693c0ed42",
+      "feed_url": "https://us14.campaign-archive.com/feed?u=809daf9442ece0a92a3d65f99&id=5693c0ed42"
+    },
+    {
       "category": "Programming Languages",
       "name": ".NET News Roundup",
       "url": "https://www.infoq.com/dotnet/news/",
@@ -433,12 +439,6 @@
       "feed_url": "https://cprss.s3.amazonaws.com/frontendfoc.us.xml"
     },
     {
-      "category": "Databases",
-      "name": "DB Weekly",
-      "url": "https://dbweekly.com/issues",
-      "feed_url": "https://dbweekly.com/rss/"
-    },
-    {
       "category": "Frontend",
       "name": "Frontend Weekly",
       "url": "https://frontendweekly.co/",
@@ -687,12 +687,7 @@
       "url": "https://webassemblytoday.substack.com/",
       "feed_url": "https://webassemblytoday.substack.com/feed/"
     },
-    {
-      "category": "JavaScript",
-      "name": "TypeScript Weekly",
-      "url": "https://us14.campaign-archive.com/home?u=809daf9442ece0a92a3d65f99&id=5693c0ed42",
-      "feed_url": "https://us14.campaign-archive.com/feed?u=809daf9442ece0a92a3d65f99&id=5693c0ed42"
-    },
+
     {
       "category": "JavaScript",
       "name": "Deno Weekly",
