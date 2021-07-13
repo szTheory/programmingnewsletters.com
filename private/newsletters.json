@@ -1,6 +1,14 @@
 {
   "entries": [
     {
+      "category": "Software Engineering",
+      "name": "Neovim News",
+      "url": "https://neovim.io/news/",
+      "feed_url": "https://neovim.io/news.xml",
+      "link_selector": "//entry/link",
+      "updated_selector": "//entry/updated"
+    },
+    {
       "category": "Programming Languages",
       "name": "Clojure Morsels",
       "url": "https://us6.campaign-archive.com/home/?u=7b10f480a6da2974db7723f78&id=ec890e4784",
