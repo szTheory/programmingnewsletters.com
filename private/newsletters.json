@@ -2,6 +2,12 @@
   "entries": [
     {
       "category": "Software Engineering",
+      "name": "API Developer Weekly",
+      "url": "https://us2.campaign-archive.com/home/?u=5005148108dfbac726f74e31e&id=239e48d26e",
+      "feed_url": "https://us2.campaign-archive.com/feed/?u=5005148108dfbac726f74e31e&id=239e48d26e"
+    },
+    {
+      "category": "Software Engineering",
       "name": "Neovim News",
       "url": "https://neovim.io/news/",
       "feed_url": "https://neovim.io/news.xml",
