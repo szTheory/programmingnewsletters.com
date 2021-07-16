@@ -318,12 +318,6 @@
       "link_attr": "href"
     },
     {
-      "category": "AI",
-      "name": "Deep Learning Weekly",
-      "url": "https://us16.campaign-archive.com/home/?u=de53bead690affb8e9a21de8f&id=384567b42",
-      "feed_url": "https://us16.campaign-archive.com/feed?u=de53bead690affb8e9a21de8f&id=384567b42d"
-    },
-    {
       "category": "Data Science",
       "name": "Data Is Plural - Datasets",
       "url": "https://tinyletter.com/data-is-plural/archive",
@@ -504,14 +498,6 @@
     },
     {
       "category": "Programming Languages",
-      "name": "dotNET Weekly",
-      "url": "https://www.dotnetweekly.com/",
-      "feed_url": "https://www.dotnetweekly.com/feed/",
-      "updated_selector": "lastBuildDate",
-      "link_constant": "https://www.dotnetweekly.com/"
-    },
-    {
-      "category": "Programming Languages",
       "name": "Elm Weekly",
       "url": "https://sergeytihon.com/category/f-weekly/",
       "feed_url": "https://www.elmweekly.nl/?format=rss"
@@ -600,12 +586,6 @@
       "link_selector": "#content > div:first-child > a",
       "updated_selector": "#content > div:first-child > a > span",
       "updated_regex": " (\\w+ \\d+, \\d+)$"
-    },
-    {
-      "category": "Databases",
-      "name": "MongoDB Memo",
-      "url": "https://mongodb.email/issues",
-      "feed_url": "https://mongodb.email/rss/"
     },
     {
       "category": "Programming Languages",
@@ -701,13 +681,6 @@
       "updated_selector": "entry/published",
       "link_selector": "entry/id"
     },
-    {
-      "category": "Web Platform",
-      "name": "WebAssembly Today",
-      "url": "https://webassemblytoday.substack.com/",
-      "feed_url": "https://webassemblytoday.substack.com/feed/"
-    },
-
     {
       "category": "JavaScript",
       "name": "Deno Weekly",
