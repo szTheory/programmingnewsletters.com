@@ -2,6 +2,13 @@
   "entries": [
     {
       "category": "Security",
+      "name": "Bug Bytes",
+      "url": "https://blog.intigriti.com/category/bugbytes/",
+      "updated_selector": ".post-meta a:last-child",
+      "link_selector": ".post-meta a:last-child"
+    },
+    {
+      "category": "Security",
       "name": "API Security Weekly",
       "url": "https://dzone.com/application-web-network-security",
       "feed_url": "http://feeds.dzone.com/security",
