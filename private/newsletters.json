@@ -1,6 +1,13 @@
 {
   "entries": [
     {
+      "category": "Security",
+      "name": "API Security Weekly",
+      "url": "https://dzone.com/application-web-network-security",
+      "feed_url": "http://feeds.dzone.com/security",
+      "link_contains_text": "api-security-weekly-issue"
+    },
+    {
       "category": "Software Engineering",
       "name": "API Developer Weekly",
       "url": "https://us2.campaign-archive.com/home/?u=5005148108dfbac726f74e31e&id=239e48d26e",
