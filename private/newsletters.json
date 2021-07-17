@@ -1,6 +1,12 @@
 {
   "entries": [
     {
+      "category": "Mobile",
+      "name": "Weekly Xamarin",
+      "url": "https://weeklyxamarin.com/issues",
+      "feed_url": "https://weeklyxamarin.com/issues.rss"
+    },
+    {
       "category": "Security",
       "name": "Bug Bytes",
       "url": "https://blog.intigriti.com/category/bugbytes/",
