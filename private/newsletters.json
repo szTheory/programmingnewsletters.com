@@ -27,20 +27,6 @@
       "feed_url": "https://us2.campaign-archive.com/feed/?u=5005148108dfbac726f74e31e&id=239e48d26e"
     },
     {
-      "category": "Software Engineering",
-      "name": "Neovim News",
-      "url": "https://neovim.io/news/",
-      "feed_url": "https://neovim.io/news.xml",
-      "link_selector": "//entry/link",
-      "updated_selector": "//entry/updated"
-    },
-    {
-      "category": "Programming Languages",
-      "name": "Clojure Morsels",
-      "url": "https://us6.campaign-archive.com/home/?u=7b10f480a6da2974db7723f78&id=ec890e4784",
-      "feed_url": "https://us6.campaign-archive.com/feed/?u=7b10f480a6da2974db7723f78&id=ec890e4784"
-    },
-    {
       "category": "JavaScript",
       "name": "TypeScript Weekly",
       "url": "https://us14.campaign-archive.com/home?u=809daf9442ece0a92a3d65f99&id=5693c0ed42",
@@ -91,12 +77,6 @@
       "feed_url": "https://aiweekly.co/issues.rss"
     },
     {
-      "category": "Programming Languages",
-      "name": "This Week in Elixir and Erlang",
-      "url": "https://preslav.me/tag/elixir/",
-      "feed_url": "https://www.getrevue.co/profile/this-week-in-elixir-and-erlang?format=rss"
-    },
-    {
       "category": "Software Engineering",
       "name": "Le courrier du hacker (FR)",
       "url": "https://lecourrierduhacker.com/archives",
@@ -145,21 +125,6 @@
       "base_url": "https://newsletterest.com",
       "link_selector": ".timeline-header a",
       "updated_selector": ".time-label span"
-    },
-    {
-      "category": "Mobile",
-      "name": "Android Developers",
-      "url": "https://newsletterest.com/newsletters/2178/Android-Developers",
-      "base_url": "https://newsletterest.com",
-      "link_selector": ".timeline-header a",
-      "updated_selector": ".time-label span"
-    },
-    {
-      "category": "Frontend",
-      "name": "Vue.js News",
-      "url": "https://news.vuejs.org/archive",
-      "feed_url": "https://news.vuejs.org/feed.xml",
-      "updated_selector": "//item/pubDate"
     },
     {
       "category": "AI",
@@ -281,12 +246,6 @@
       "name": "The Sequence of AI Knowledge",
       "url": "https://thesequence.substack.com/",
       "feed_url": "https://thesequence.substack.com/feed/"
-    },
-    {
-      "category": "Software Engineering",
-      "name": "Webshit Weekly - Hacker News summary",
-      "url": "http://n-gate.com/",
-      "feed_url": "http://n-gate.com/index.rss"
     },
     {
       "category": "Security",
@@ -579,21 +538,6 @@
     },
     {
       "category": "DevOps",
-      "name": "DevOps Industry Updates",
-      "url": "https://corey.tech/",
-      "feed_url": "https://corey.tech/feed.xml",
-      "updated_selector": "entry/published",
-      "link_selector": "entry/link",
-      "link_attr": "href"
-    },
-    {
-      "category": "Software Engineering",
-      "name": "StatusCode Weekly",
-      "url": "https://weekly.statuscode.com/latest",
-      "feed_url": "https://weekly.statuscode.com/rss/"
-    },
-    {
-      "category": "DevOps",
       "name": "SRE Weekly",
       "url": "https://sreweekly.com/",
       "feed_url": "https://sreweekly.com/feed/"
@@ -612,12 +556,6 @@
       "name": "Rakudo Weekly News",
       "url": "https://rakudoweekly.blog/blog-feed/",
       "feed_url": "https://rakudoweekly.blog/feed/"
-    },
-    {
-      "category": "JavaScript",
-      "name": "TinyJS Newsletter",
-      "url": "https://buttondown.email/tinyjs/archive",
-      "feed_url": "https://buttondown.email/tinyjs/rss"
     },
     {
       "category": "Programming Languages",
@@ -809,15 +747,6 @@
       "link_selector": "main a[href^='https://freek.dev/mailcoach/webview/']",
       "updated_selector": "main div .text-gray-700",
       "updated_regex": "sent on (.+)$"
-    },
-    {
-      "category": "Data Science",
-      "name": "Data Science Weekly",
-      "url": "https://www.datascienceweekly.org/newsletters",
-      "base_url": "https://www.datascienceweekly.org",
-      "updated_link_attr": "href",
-      "updated_selector": "#newsletter-content-index-page-inner a[href^='/newsletters/data-science-weekly-newsletter-issue-']",
-      "updated_regex": "\\((.+)\\)$"
     },
     {
       "category": "Mobile",
