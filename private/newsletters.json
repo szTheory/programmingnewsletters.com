@@ -1,6 +1,12 @@
 {
   "entries": [
     {
+      "category": "Security",
+      "name": "Cyber Defence News for Blue & Purple Teams",
+      "url": "https://bluepurple.substack.com/",
+      "feed_url": "https://bluepurple.substack.com/feed"
+    },
+    {
       "category": "Software Engineering",
       "name": "Hacker Newsletter Daily",
       "url": "https://us1.campaign-archive.com/home/?u=faa8eb4ef3a111cef92c4f3d4&id=e505c88a2e",
