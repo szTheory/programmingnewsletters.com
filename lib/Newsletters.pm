@@ -11,10 +11,11 @@ our %EXPORT_TAGS = ( all => \@EXPORT_OK );
 use constant NEWSLETTERS_JSON_FILE             => 'private/newsletters.json';
 use constant RSS_FEED_DEFAULT_UPDATED_SELECTOR => 'item/pubDate';
 use constant RSS_FEED_DEFAULT_LINK_SELECTOR    => 'item/link';
-use constant USER_AGENT                        =>
+use constant USER_AGENT =>
 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1';
-use constant GET_TIMEOUT         => 5;
-use constant DATE_COMPARE_PRINTF => '%b %d';
+use constant GET_TIMEOUT               => 5;
+use constant DATE_COMPARE_PRINTF       => '%b %d';
+use constant TIMESTAMP_MISSING_CENTURY => qr/^(\d+) (\w+), (\d{2})$/;
 
 use JSON::MaybeXS qw(decode_json);
 use LWP::UserAgent;
@@ -311,6 +312,11 @@ sub _newsletter_info_html {
     if ($european_date_format) {
       $timestamp_string =~ /^(\d+)-(\d+)-(\d+)$/;
       $timestamp_string = "$2-$1-$3";
+    }
+
+    # add century if the year is only two digits
+    if ( $timestamp_string =~ TIMESTAMP_MISSING_CENTURY ) {
+      $timestamp_string = "$1 $2, 20$3";
     }
 
     # parse the updated timestamp

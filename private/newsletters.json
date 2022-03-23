@@ -1,6 +1,13 @@
 {
   "entries": [
     {
+      "category": "Security",
+      "name": "API Security Weekly",
+      "url": "https://apisecurity.io/",
+      "updated_selector": ".upl-list li:first-child .upl-post-date",
+      "link_selector": ".upl-list li:first-child a"
+    },
+    {
       "category": "Mobile",
       "name": "Responsive Web Design Weekly",
       "url": "https://responsivedesign.is/articles/",
@@ -47,13 +54,7 @@
       "link_selector": "entry/link",
       "link_attr": "href"
     },
-    {
-      "category": "Security",
-      "name": "API Security Weekly",
-      "url": "https://apisecurity.io/",
-      "updated_selector": ".upl-list li:first-child .upl-post-date",
-      "link_selector": ".upl-list li:first-child a"
-    },
+
     {
       "category": "Security",
       "name": "Cyber Defence News for Blue & Purple Teams",
