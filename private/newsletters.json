@@ -1,6 +1,21 @@
 {
   "entries": [
     {
+      "category": "Mobile",
+      "name": "Android Weekly",
+      "url": "https://androidweekly.net/archive",
+      "updated_selector": ".archive-list li:first-child span",
+      "link_selector": ".archive-list a",
+      "base_url": "https://androidweekly.net"
+    },
+    {
+      "category": "JavaScript",
+      "name": "JavaScript Kicks",
+      "url": "https://javascriptkicks.com/",
+      "updated_selector": ".page-title",
+      "updated_regex": "- (.+)$"
+    },
+    {
       "category": "Frontend",
       "name": "Figmalion Biweekly",
       "url": "https://figmalion.com",
@@ -435,13 +450,7 @@
       "url": "https://frontendweekly.co/",
       "feed_url": "https://frontendweekly.co/issues.rss"
     },
-    {
-      "category": "JavaScript",
-      "name": "JavaScript Kicks",
-      "url": "https://javascriptkicks.com/",
-      "updated_selector": ".page-title",
-      "updated_regex": "- (.+)$"
-    },
+
     {
       "category": "Security",
       "name": "Talos Threat Source",
@@ -467,12 +476,7 @@
       "url": "http://www.phpweekly.com/archive.html",
       "feed_url": "http://www.phpweekly.com/rss.xml"
     },
-    {
-      "category": "Mobile",
-      "name": "Android Weekly",
-      "url": "https://androidweekly.net/archive",
-      "feed_url": "https://us2.campaign-archive1.com/feed?u=887caf4f48db76fd91e20a06d&id=4eb677ad19"
-    },
+
     {
       "category": "Programming Languages",
       "name": "Elm Weekly",
