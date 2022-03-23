@@ -1,6 +1,13 @@
 {
   "entries": [
     {
+      "category": "DevOps",
+      "name": "DevOps'ish",
+      "url": "https://devopsish.com/categories/weekly/",
+      "updated_selector": "article time",
+      "link_selector": "article a"
+    },
+    {
       "category": "Mobile",
       "name": "Android Weekly",
       "url": "https://androidweekly.net/archive",
@@ -531,13 +538,7 @@
       "link_selector": "entry/link",
       "link_attr": "href"
     },
-    {
-      "category": "DevOps",
-      "name": "DevOps'ish",
-      "url": "https://devopsish.com/categories/weekly/",
-      "updated_selector": "article.blog-post time",
-      "link_selector": ".blog-post-title a"
-    },
+
     {
       "category": "DevOps",
       "name": "SRE Weekly",
