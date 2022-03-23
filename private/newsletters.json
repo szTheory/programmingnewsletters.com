@@ -1,6 +1,15 @@
 {
   "entries": [
     {
+      "category": "Programming Languages",
+      "name": "Java Weekly",
+      "url": "https://www.baeldung.com/",
+      "feed_url": "https://feeds.feedblitz.com/baeldung&x=1",
+      "updated_selector": "//item/pubDate",
+      "link_selector": "//item/link",
+      "link_contains_text": "Java-Weekly-Issue"
+    },
+    {
       "category": "DevOps",
       "name": "DevOps'ish",
       "url": "https://devopsish.com/categories/weekly/",
@@ -699,16 +708,7 @@
       "url": "https://this-week-in-rust.org/blog/archives/index.html",
       "feed_url": "https://this-week-in-rust.org/rss.xml"
     },
-    {
-      "category": "Programming Languages",
-      "name": "Java Weekly",
-      "url": "https://www.baeldung.com/",
-      "feed_url": "https://feeds.feedburner.com/Baeldung",
-      "updated_selector": "//item/pubDate",
-      "link_selector": "//item/feedburner:origLink",
-      "link_contains_text": "java-weekly",
-      "link_base_filter": "baeldung.com"
-    },
+
     {
       "category": "Programming Languages",
       "name": "C# Digest",
