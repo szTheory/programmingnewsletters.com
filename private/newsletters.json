@@ -1,6 +1,15 @@
 {
   "entries": [
     {
+      "category": "Frontend",
+      "name": "Figmalion Biweekly",
+      "url": "https://figmalion.com",
+      "feed_url": "https://figmalion.com/rss.xml",
+      "updated_selector": "entry/published",
+      "link_selector": "entry/link",
+      "link_attr": "href"
+    },
+    {
       "category": "Security",
       "name": "API Security Weekly",
       "url": "https://apisecurity.io/",
@@ -32,7 +41,6 @@
       "updated_selector": ".post-meta a:last-child",
       "link_selector": ".post-meta a:last-child"
     },
-
     {
       "category": "Software Engineering",
       "name": "API Developer Weekly",
@@ -44,13 +52,6 @@
       "name": "TypeScript Weekly",
       "url": "https://us14.campaign-archive.com/home?u=809daf9442ece0a92a3d65f99&id=5693c0ed42",
       "feed_url": "https://us14.campaign-archive.com/feed?u=809daf9442ece0a92a3d65f99&id=5693c0ed42"
-    },
-    {
-      "category": "Programming Languages",
-      "name": ".NET News Roundup",
-      "url": "https://www.infoq.com/dotnet/news/",
-      "feed_url": "https://feed.infoq.com/dotnet/news/",
-      "link_contains_text": "roundup"
     },
     {
       "category": "Programming Languages",
@@ -327,18 +328,7 @@
       "url": "https://www.datainnovation.org/category/blog/weekly-news/",
       "feed_url": "https://www.datainnovation.org/category/blog/weekly-news/feed/"
     },
-    {
-      "category": "Data Science",
-      "name": "Data Science Roundup",
-      "url": "http://roundup.fishtownanalytics.com/#archive",
-      "feed_url": "http://roundup.fishtownanalytics.com/?format=rss"
-    },
-    {
-      "category": "Mobile",
-      "name": "Android Sweets",
-      "url": "https://androidsweets.ongoodbits.com/",
-      "feed_url": "https://androidsweets.ongoodbits.com/feed"
-    },
+
     {
       "category": "AI",
       "name": "H+ AI Newsletter",
@@ -354,12 +344,7 @@
       "updated_selector": "#pageinfo",
       "updated_regex": "last edited (.+) by"
     },
-    {
-      "category": "Frontend",
-      "name": "Figmalion Biweekly",
-      "url": "https://figmalion.com",
-      "feed_url": "https://figmalion.com/rss.xml"
-    },
+
     {
       "category": "Testing",
       "name": "Software Testing Weekly",
