@@ -1,6 +1,13 @@
 {
   "entries": [
     {
+      "category": "Mobile",
+      "name": "Responsive Web Design Weekly",
+      "url": "https://responsivedesign.is/articles/",
+      "link_selector": ".resource--post:first-child a",
+      "updated_selector": ".resource--post:first-child date.resource__meta"
+    },
+    {
       "category": "Programming Languages",
       "name": "Java Weekly",
       "url": "https://www.baeldung.com/",
@@ -170,12 +177,6 @@
       "base_url": "https://newsletterest.com",
       "link_selector": ".timeline-header a",
       "updated_selector": ".time-label span"
-    },
-    {
-      "category": "AI",
-      "name": "AI Digest",
-      "url": "https://aidigest.net/",
-      "feed_url": "https://feeds.feedburner.com/digest-ai"
     },
     {
       "category": "Backend Web Frameworks",
@@ -516,12 +517,6 @@
     },
     {
       "category": "DevOps",
-      "name": "Cloud Native News",
-      "url": "https://nativecloud.dev/",
-      "feed_url": "https://blog.nativecloud.dev/rss/"
-    },
-    {
-      "category": "DevOps",
       "name": "O'Reilly Infrastructure & Ops Newsletter",
       "url": "https://www.oreilly.com/emails/newsletters/",
       "updated_selector": "#ops a",
@@ -653,12 +648,6 @@
     },
     {
       "category": "JavaScript",
-      "name": "Deno Weekly",
-      "url": "https://denoweekly.com/latest",
-      "feed_url": "https://denoweekly.com/rss/"
-    },
-    {
-      "category": "JavaScript",
       "name": "ESNext News",
       "url": "http://esnextnews.com/archive.html",
       "updated_selector": "#archive section a",
@@ -673,12 +662,6 @@
       "url": "https://elixirweekly.net/",
       "updated_fixed_day": "Thursday",
       "link_selector": "a[href^=http://elixirweekly.net/issues]"
-    },
-    {
-      "category": "Programming Languages",
-      "name": "Elixir Digest",
-      "url": "https://elixirdigest.net/digests",
-      "feed_url": "https://feeds.feedburner.com/digest-elixir"
     },
     {
       "category": "Programming Languages",
@@ -730,45 +713,12 @@
       "feed_url": "https://iosdevweekly.com/issues.rss"
     },
     {
-      "category": "Mac",
-      "name": "Swift Weekly Brief",
-      "url": "https://swiftweekly.github.io/",
-      "feed_url": "https://swiftweekly.github.io/feed.xml",
-      "updated_selector": "//entry/updated",
-      "link_selector": "//entry/id"
-    },
-    {
-      "category": "Mac",
-      "name": "iOS Goodies",
-      "url": "https://ios-goodies.com/",
-      "feed_url": "https://ios-goodies.com/rss"
-    },
-    {
       "category": "Programming Languages",
       "name": "PHP Freek Weekly",
       "url": "https://freek.dev/newsletter/",
       "link_selector": "main a[href^='https://freek.dev/mailcoach/webview/']",
       "updated_selector": "main div .text-gray-700",
       "updated_regex": "sent on (.+)$"
-    },
-    {
-      "category": "Mobile",
-      "name": "Mobile Dev Weekly",
-      "url": "https://mobiledevweekly.com/latest",
-      "feed_url": "https://mobiledevweekly.com/rss/"
-    },
-    {
-      "category": "Mobile",
-      "name": "Responsive Web Design Weekly",
-      "url": "https://responsivedesign.is/articles/",
-      "link_selector": ".resource--post:first-child a",
-      "updated_selector": ".resource--post:first-child date.resource__meta"
-    },
-    {
-      "category": "Embedded",
-      "name": "IoT Weekly",
-      "url": "https://iotweeklynews.com/",
-      "feed_url": "https://iotweeklynews.com/issues.rss"
     },
     {
       "category": "JavaScript",
