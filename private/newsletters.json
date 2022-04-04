@@ -2,6 +2,12 @@
   "entries": [
     {
       "category": "Security",
+      "name": "DevOps Bulletin",
+      "url": "https://www.devopsbulletin.com/issues",
+      "feed_url": "https://us7.campaign-archive.com/feed?u=ca406201f7348cc8c327bf0fc&id=6751c258e1"
+    },
+    {
+      "category": "Security",
       "name": "API Security Weekly",
       "url": "https://apisecurity.io/",
       "updated_selector": ".upl-list li:first-child .upl-post-date",
