@@ -1,6 +1,40 @@
 {
   "entries": [
     {
+      "category": "Security",
+      "name": "Signals and Space",
+      "url": "https://thecyberwire.com/newsletters/signals-and-space",
+      "updated_selector": ".meta-text",
+      "updated_regex": "(\\d+.\\d+.\\d+)",
+      "link_selector": ".newsletter a"
+    },
+    {
+      "category": "Security",
+      "name": "Week That Was",
+      "url": "https://thecyberwire.com/newsletters/week-that-was",
+      "updated_selector": ".meta-text",
+      "updated_regex": "(\\d+.\\d+.\\d+)",
+      "link_selector": ".newsletter a"
+    },
+    {
+      "category": "Security",
+      "name": "NCAS Alerts",
+      "url": "https://www.cisa.gov/uscert/ncas/alerts",
+      "feed_url": "https://www.cisa.gov/uscert/ncas/alerts.xml",
+      "updated_selector": "//item/description",
+      "updated_regex": "(\\w+ \\d{1,2}, \\d{4})",
+      "link_selector": "//item/link"
+    },
+    {
+      "category": "Security",
+      "name": "NCAS Vulnerability Summary",
+      "url": "https://www.cisa.gov/uscert/ncas/bulletins",
+      "feed_url": "https://www.cisa.gov/uscert/ncas/bulletins.xml",
+      "updated_selector": "//item/title",
+      "updated_regex": "(\\w+ \\d{1,2}, \\d{4})",
+      "link_selector": "//item/link"
+    },
+    {
       "category": "Networking",
       "name": "Packet Pushers",
       "url": "https://packetpushers.net/newsletter/",
