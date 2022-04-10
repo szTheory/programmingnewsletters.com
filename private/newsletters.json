@@ -1,6 +1,14 @@
 {
   "entries": [
     {
+      "category": "Databases",
+      "name": "MySQL Newsletter ",
+      "url": "https://www.mysql.com/news-and-events/newsletter/",
+      "updated_selector": "#content ul li a",
+      "updated_regex": "(\\w+ \\d{4})",
+      "link_selector": "#content ul li a"
+    },
+    {
       "category": "Security",
       "name": "Signals and Space",
       "url": "https://thecyberwire.com/newsletters/signals-and-space",

@@ -16,6 +16,7 @@ use constant USER_AGENT =>
 use constant GET_TIMEOUT               => 5;
 use constant DATE_COMPARE_PRINTF       => '%b %d';
 use constant TIMESTAMP_MISSING_CENTURY => qr/^(\d+) (\w+), (\d{2})$/;
+use constant TIMESTAMP_MISSING_DAY     => qr/^(\w+) (\d{4})$/;
 
 use JSON::MaybeXS qw(decode_json);
 use LWP::UserAgent;
@@ -317,6 +318,28 @@ sub _newsletter_info_html {
     # add century if the year is only two digits
     if ( $timestamp_string =~ TIMESTAMP_MISSING_CENTURY ) {
       $timestamp_string = "$1 $2, 20$3";
+    }
+
+    # add day if the date is only a month and a year
+    if ( $timestamp_string =~ TIMESTAMP_MISSING_DAY ) {
+      my $day = 31;
+
+      if ( $1 eq "Feb" || $1 eq "February" ) {
+        $day = 28;
+      }
+      elsif ( $1 eq "Apr"
+        || $1 eq "April"
+        || $1 eq "Jun"
+        || $1 eq "June"
+        || $1 eq "Sep"
+        || $1 eq "September"
+        || $1 eq "Nov"
+        || $1 eq "November" )
+      {
+        $day = 30;
+      }
+
+      $timestamp_string = "$1 $day, $2";
     }
 
     # parse the updated timestamp
