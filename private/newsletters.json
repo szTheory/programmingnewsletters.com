@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "category": "Networking",
+      "name": "Packet Pushers",
+      "url": "https://packetpushers.net/newsletter/",
+      "updated_selector": ".entry-content p:nth-child(11)",
+      "updated_regex": "(\\w+ \\d{1,2}, \\d{4})",
+      "link_selector": ".entry-content p:nth-child(11) a"
+    },
+    {
+      "category": "Networking",
+      "name": "Serve The Home",
+      "url": "https://us13.campaign-archive.com/home/?u=45c4ca50425f376ea593dcd22&id=c344a80940",
+      "feed_url": "https://us13.campaign-archive.com/feed?u=45c4ca50425f376ea593dcd22&id=c344a80940"
+    },
+    {
       "category": "Security",
       "name": "DevOps Bulletin",
       "url": "https://www.devopsbulletin.com/issues",
