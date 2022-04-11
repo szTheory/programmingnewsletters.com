@@ -26,6 +26,8 @@ use Date::Manip::Date;
 use Mojo::DOM;
 use List::SomeUtils qw(indexes);
 
+use Translate qw(timestamp_string_normalize_french);
+
 sub _newsletters_file_json {
   my ($first_only) = @_;
 
@@ -204,6 +206,8 @@ sub _newsletter_info_html {
   my $link_constant        = $newsletter_entry->{link_contant};
   my $follow_link          = $newsletter_entry->{follow_link};
   my $european_date_format = $newsletter_entry->{european_date_format};
+  my $translate_french_timestamp =
+    $newsletter_entry->{translate_french_timestamp};
 
   print "----> Parsing HTML\n";
   $html = Mojo::Util::decode( 'UTF-8', $html );
@@ -340,6 +344,11 @@ sub _newsletter_info_html {
       }
 
       $timestamp_string = "$1 $day, $2";
+    }
+
+    # translate from french
+    if ($translate_french_timestamp) {
+      $timestamp_string = timestamp_string_normalize_french($timestamp_string);
     }
 
     # parse the updated timestamp

@@ -1,6 +1,22 @@
 {
   "entries": [
     {
+      "category": "Mobile",
+      "name": "Android Croissants (FR)",
+      "url": "https://archives.android-croissants.com/",
+      "updated_selector": ".inner-timeline-second .title-sec-timeline:nth-child(2)",
+      "link_selector": ".inner-timeline-second a",
+      "translate_french_timestamp": true
+    },
+    {
+      "category": "Frontend Web Frameworks",
+      "name": "Flutter Digest (FR)",
+      "url": "https://archives.flutter-digest.com/",
+      "updated_selector": ".inner-timeline-second .title-sec-timeline:nth-child(2)",
+      "link_selector": ".inner-timeline-second a",
+      "translate_french_timestamp": true
+    },
+    {
       "category": "Databases",
       "name": "MySQL Newsletter ",
       "url": "https://www.mysql.com/news-and-events/newsletter/",
