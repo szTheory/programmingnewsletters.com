@@ -1,6 +1,15 @@
 {
   "entries": [
     {
+      "category": "Cryptocurrency",
+      "name": "CryptoWeekly",
+      "url": "https://cryptoweekly.co/newsletter",
+      "updated_selector": ".text-container span",
+      "updated_regex": "(\\w+ \\d{1,2}, \\d{4})",
+      "link_selector": ".newsletter-container a",
+      "follow_link": true
+    },
+    {
       "category": "Mobile",
       "name": "Android Croissants (FR)",
       "url": "https://archives.android-croissants.com/",

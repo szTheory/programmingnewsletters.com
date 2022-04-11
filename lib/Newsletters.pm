@@ -212,6 +212,7 @@ sub _newsletter_info_html {
   print "----> Parsing HTML\n";
   $html = Mojo::Util::decode( 'UTF-8', $html );
 
+  # DEBUG
   # use Data::Dumper;
   # print Dumper($html);
 
