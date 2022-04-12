@@ -1,6 +1,12 @@
 {
   "entries": [
     {
+      "category": "Security",
+      "name": "Advisory Week",
+      "url": "https://stack.watch/advisoryweek/latest/",
+      "updated_fixed_day": "Monday"
+    },
+    {
       "category": "Embedded",
       "name": "Weekly Robotics",
       "url": "https://www.weeklyrobotics.com/archive",
