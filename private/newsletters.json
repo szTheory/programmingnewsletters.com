@@ -1,6 +1,14 @@
 {
   "entries": [
     {
+      "category": "UI/Frontend",
+      "name": "Collective",
+      "url": "https://tympanus.net/codrops/collective/",
+      "feed_url": "https://tympanus.net/codrops/collective/feed/",
+      "updated_selector": "//item/pubDate",
+      "link_selector": "//item/link"
+    },
+    {
       "category": "Security",
       "name": "Advisory Week",
       "url": "https://stack.watch/advisoryweek/latest/",
@@ -155,7 +163,7 @@
       "updated_regex": "- (.+)$"
     },
     {
-      "category": "Frontend",
+      "category": "UI/Frontend",
       "name": "Figmalion Biweekly",
       "url": "https://figmalion.com",
       "feed_url": "https://figmalion.com/rss.xml",
