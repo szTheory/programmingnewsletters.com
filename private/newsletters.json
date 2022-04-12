@@ -1,6 +1,23 @@
 {
   "entries": [
     {
+      "category": "Open Source",
+      "name": "BSD Weekly",
+      "url": "https://bsdweekly.com/issues",
+      "base_url": "https://bsdweekly.com/",
+      "updated_selector": "main .leading-relaxed .pb-2",
+      "updated_regex": "(\\w+ \\d{1,2}, \\d{4})",
+      "link_selector": "main .leading-relaxed a"
+    },
+    {
+      "category": "UI/Frontend",
+      "name": "Tailwind Weekly",
+      "url": "https://tailwindweekly.com/",
+      "feed_url": "https://tailwindweekly.com/rss/",
+      "updated_selector": "//item/pubDate",
+      "link_selector": "//item/link"
+    },
+    {
       "category": "UI/Frontend",
       "name": "Collective",
       "url": "https://tympanus.net/codrops/collective/",
