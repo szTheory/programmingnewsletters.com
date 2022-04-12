@@ -1,6 +1,14 @@
 {
   "entries": [
     {
+      "category": "Embedded",
+      "name": "Weekly Robotics",
+      "url": "https://www.weeklyrobotics.com/archive",
+      "feed_url": "https://www.weeklyrobotics.com/atom.xml",
+      "updated_selector": "//entry/updated",
+      "link_selector": "//entry/id"
+    },
+    {
       "category": "Frontend Web Frameworks",
       "name": "Angular Weekly",
       "url": "https://www.getrevue.co/profile/angular-newsletter",
