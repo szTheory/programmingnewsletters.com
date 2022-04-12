@@ -1,6 +1,14 @@
 {
   "entries": [
     {
+      "category": "Frontend Web Frameworks",
+      "name": "Angular Weekly",
+      "url": "https://www.getrevue.co/profile/angular-newsletter",
+      "feed_url": "https://www.getrevue.co/profile/angular-newsletter?format=rss",
+      "updated_selector": "//item/pubDate",
+      "link_selector": "//item/link"
+    },
+    {
       "category": "Cryptocurrency",
       "name": "CryptoWeekly",
       "url": "https://cryptoweekly.co/newsletter",
