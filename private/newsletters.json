@@ -19,7 +19,7 @@
     },
     {
       "category": "UI/Frontend",
-      "name": "Collective",
+      "name": "Collective Web Design",
       "url": "https://tympanus.net/codrops/collective/",
       "feed_url": "https://tympanus.net/codrops/collective/feed/",
       "updated_selector": "//item/pubDate",
