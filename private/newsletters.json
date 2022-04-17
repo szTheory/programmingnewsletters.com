@@ -1,6 +1,15 @@
 {
   "entries": [
     {
+      "category": "Networking",
+      "name": "Self Hosted Weekly Roundup",
+      "url": "https://noted.lol/",
+      "feed_url": "https://noted.lol/rss/",
+      "link_selector": "//item/link",
+      "link_contains_text": "weekly-roundup",
+      "updated_selector": "//item/pubDate"
+    },
+    {
       "category": "Open Source",
       "name": "BSD Weekly",
       "url": "https://bsdweekly.com/issues",
