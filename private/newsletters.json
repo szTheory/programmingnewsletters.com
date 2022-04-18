@@ -2,7 +2,7 @@
   "entries": [
     {
       "category": "DevOps",
-      "name": "Weekly Terraform",
+      "name": "Terraform Weekly",
       "url": "https://weekly.tf/",
       "feed_url": "https://weekly.tf/?format=rss",
       "link_selector": "//item/link",
