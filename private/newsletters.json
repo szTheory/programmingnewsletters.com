@@ -1,6 +1,14 @@
 {
   "entries": [
     {
+      "category": "DevOps",
+      "name": "Weekly Terraform",
+      "url": "https://weekly.tf/",
+      "feed_url": "https://weekly.tf/?format=rss",
+      "link_selector": "//item/link",
+      "updated_selector": "//item/pubDate"
+    },
+    {
       "category": "Networking",
       "name": "Self Hosted Weekly Roundup",
       "url": "https://noted.lol/",
