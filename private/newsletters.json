@@ -1,6 +1,14 @@
 {
   "entries": [
     {
+      "category": "Linux",
+      "name": "CentOS Community Newsletter",
+      "url": "https://blog.centos.org/",
+      "link_selector": "section .entry a",
+      "updated_selector": "section .entry span",
+      "updated_regex": "(\\d{1,2}, \\w+ \\d{4})"
+    },
+    {
       "category": "DevOps",
       "name": "Terraform Weekly",
       "url": "https://weekly.tf/",
