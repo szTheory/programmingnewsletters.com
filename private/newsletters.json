@@ -161,14 +161,6 @@
       "updated_selector": "//item/pubDate"
     },
     {
-      "category": "Mobile",
-      "name": "Awesome Android",
-      "url": "https://android.libhunt.com/newsletter/archive",
-      "feed_url": "https://android.libhunt.com/newsletter/feed",
-      "link_selector": "//item/link",
-      "updated_selector": "//item/pubDate"
-    },
-    {
       "category": "Programming Languages",
       "name": "Awesome Python",
       "url": "https://python.libhunt.com/newsletter/archive",
