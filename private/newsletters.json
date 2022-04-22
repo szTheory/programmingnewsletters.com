@@ -1,6 +1,182 @@
 {
   "entries": [
     {
+      "category": "DevOps",
+      "name": "Awesome SysAdmin",
+      "url": "https://sysadmin.libhunt.com/newsletter/archive",
+      "feed_url": "https://sysadmin.libhunt.com/newsletter/feed",
+      "link_selector": "//item/link",
+      "updated_selector": "//item/pubDate"
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Awesome Swift",
+      "url": "https://swift.libhunt.com/newsletter/archive",
+      "feed_url": "https://swift.libhunt.com/newsletter/feed",
+      "link_selector": "//item/link",
+      "updated_selector": "//item/pubDate"
+    },
+    {
+      "category": "Networking",
+      "name": "Awesome Self Hosted",
+      "url": "https://selfhosted.libhunt.com/newsletter/archive",
+      "feed_url": "https://selfhosted.libhunt.com/newsletter/feed",
+      "link_selector": "//item/link",
+      "updated_selector": "//item/pubDate"
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Awesome Scala",
+      "url": "https://scala.libhunt.com/newsletter/archive",
+      "feed_url": "https://scala.libhunt.com/newsletter/feed",
+      "link_selector": "//item/link",
+      "updated_selector": "//item/pubDate"
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Awesome Rust",
+      "url": "https://rust.libhunt.com/newsletter/archive",
+      "feed_url": "https://rust.libhunt.com/newsletter/feed",
+      "link_selector": "//item/link",
+      "updated_selector": "//item/pubDate"
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Awesome Ruby",
+      "url": "https://ruby.libhunt.com/newsletter/archive",
+      "feed_url": "https://ruby.libhunt.com/newsletter/feed",
+      "link_selector": "//item/link",
+      "updated_selector": "//item/pubDate"
+    },
+    {
+      "category": "Frontend Web Frameworks",
+      "name": "Awesome React",
+      "url": "https://react.libhunt.com/newsletter/archive",
+      "feed_url": "https://react.libhunt.com/newsletter/feed",
+      "link_selector": "//item/link",
+      "updated_selector": "//item/pubDate"
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Awesome PHP",
+      "url": "https://php.libhunt.com/newsletter/archive",
+      "feed_url": "https://php.libhunt.com/newsletter/feed",
+      "link_selector": "//item/link",
+      "updated_selector": "//item/pubDate"
+    },
+    {
+      "category": "JavaScript",
+      "name": "Awesome NodeJS",
+      "url": "https://nodejs.libhunt.com/newsletter/archive",
+      "feed_url": "https://nodejs.libhunt.com/newsletter/feed",
+      "link_selector": "//item/link",
+      "updated_selector": "//item/pubDate"
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Awesome .NET",
+      "url": "https://dotnet.libhunt.com/newsletter/archive",
+      "feed_url": "https://dotnet.libhunt.com/newsletter/feed",
+      "link_selector": "//item/link",
+      "updated_selector": "//item/pubDate"
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Awesome Kotlin",
+      "url": "https://kotlin.libhunt.com/newsletter/archive",
+      "feed_url": "https://kotlin.libhunt.com/newsletter/feed",
+      "link_selector": "//item/link",
+      "updated_selector": "//item/pubDate"
+    },
+    {
+      "category": "JavaScript",
+      "name": "Awesome JavaScript",
+      "url": "https://js.libhunt.com/newsletter/archive",
+      "feed_url": "https://js.libhunt.com/newsletter/feed",
+      "link_selector": "//item/link",
+      "updated_selector": "//item/pubDate"
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Awesome Java",
+      "url": "https://java.libhunt.com/newsletter/archive",
+      "feed_url": "https://java.libhunt.com/newsletter/feed",
+      "link_selector": "//item/link",
+      "updated_selector": "//item/pubDate"
+    },
+    {
+      "category": "Mobile",
+      "name": "Awesome iOS",
+      "url": "https://ios.libhunt.com/newsletter/archive",
+      "feed_url": "https://ios.libhunt.com/newsletter/feed",
+      "link_selector": "//item/link",
+      "updated_selector": "//item/pubDate"
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Awesome Haskell",
+      "url": "https://haskell.libhunt.com/newsletter/archive",
+      "feed_url": "https://haskell.libhunt.com/newsletter/feed",
+      "link_selector": "//item/link",
+      "updated_selector": "//item/pubDate"
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Awesome Go",
+      "url": "https://go.libhunt.com/newsletter/archive",
+      "feed_url": "https://go.libhunt.com/newsletter/feed",
+      "link_selector": "//item/link",
+      "updated_selector": "//item/pubDate"
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Awesome Crystal",
+      "url": "https://crystal.libhunt.com/newsletter/archive",
+      "feed_url": "https://crystal.libhunt.com/newsletter/feed",
+      "link_selector": "//item/link",
+      "updated_selector": "//item/pubDate"
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Awesome Elixir",
+      "url": "https://elixir.libhunt.com/newsletter/archive",
+      "feed_url": "https://elixir.libhunt.com/newsletter/feed",
+      "link_selector": "//item/link",
+      "updated_selector": "//item/pubDate"
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Awesome C++",
+      "url": "https://cpp.libhunt.com/newsletter/archive",
+      "feed_url": "https://cpp.libhunt.com/newsletter/feed",
+      "link_selector": "//item/link",
+      "updated_selector": "//item/pubDate"
+    },
+    {
+      "category": "Mobile",
+      "name": "Awesome Android",
+      "url": "https://android.libhunt.com/newsletter/archive",
+      "feed_url": "https://android.libhunt.com/newsletter/feed",
+      "link_selector": "//item/link",
+      "updated_selector": "//item/pubDate"
+    },
+    {
+      "category": "Mobile",
+      "name": "Awesome Android",
+      "url": "https://android.libhunt.com/newsletter/archive",
+      "feed_url": "https://android.libhunt.com/newsletter/feed",
+      "link_selector": "//item/link",
+      "updated_selector": "//item/pubDate"
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Awesome Python",
+      "url": "https://python.libhunt.com/newsletter/archive",
+      "feed_url": "https://python.libhunt.com/newsletter/feed",
+      "link_selector": "//item/link",
+      "updated_selector": "//item/pubDate"
+    },
+    {
       "category": "Linux",
       "name": "CentOS Community Newsletter",
       "url": "https://blog.centos.org/",
@@ -616,13 +792,13 @@
       "link_selector": "article li:first-child a"
     },
     {
-      "category": "Frontend",
+      "category": "UI/Frontend",
       "name": "Frontend Focus",
       "url": "https://frontendfoc.us/latest",
       "feed_url": "https://cprss.s3.amazonaws.com/frontendfoc.us.xml"
     },
     {
-      "category": "Frontend",
+      "category": "UI/Frontend",
       "name": "Frontend Weekly",
       "url": "https://frontendweekly.co/",
       "feed_url": "https://frontendweekly.co/issues.rss"
@@ -642,7 +818,7 @@
       "feed_url": "https://react.statuscode.com/rss/"
     },
     {
-      "category": "Frontend",
+      "category": "UI/Frontend",
       "name": "Web Tools Weekly",
       "url": "https://webtoolsweekly.com/?view=archive",
       "feed_url": "https://us5.campaign-archive.com/feed?u=ea228d7061e8bbfa8639666ad&id=104d6bcc2d"
@@ -881,7 +1057,7 @@
       "updated_regex": "sent on (.+)$"
     },
     {
-      "category": "JavaScript",
+      "category": "UI/Frontend",
       "name": "JAMstacked Weekly",
       "url": "https://jamstack.email/issues/11",
       "feed_url": "https://jamstack.email/rss/"
@@ -900,13 +1076,13 @@
       "link_contains_text": "https://www.meetingcpp.com/blog/blogroll/items/Meeting-Cpp-Blogroll-"
     },
     {
-      "category": "Frontend",
+      "category": "UI/Frontend",
       "name": "CSS Weekly",
       "url": "https://css-weekly.com/archives/",
       "feed_url": "https://feeds.feedburner.com/CSS-Weekly"
     },
     {
-      "category": "Frontend",
+      "category": "UI/Frontend",
       "name": "UX Design Weekly",
       "url": "https://uxdesignweekly.com/",
       "feed_url": "https://uxdesignweekly.com/feed/"
