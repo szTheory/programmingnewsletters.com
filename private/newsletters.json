@@ -1,6 +1,34 @@
 {
   "entries": [
     {
+      "category": "Security",
+      "name": "Cloud Security Reading List",
+      "url": "https://cloudseclist.com/past-issues/",
+      "feed_url": "https://cloudseclist.com/feed.xml",
+      "link_selector": "//entry/id",
+      "updated_selector": "//entry/published"
+    },
+    {
+      "category": "AI",
+      "name": "Emerging Tech Brew",
+      "url": "https://www.emergingtechbrew.com/issues/latest",
+      "updated_selector": ".pcard .f-size-12.ff-arial",
+      "updated_fixed_day": "Thursday"
+    },
+    {
+      "category": "IT",
+      "name": "Unsupervised Learning",
+      "url": "https://us8.campaign-archive.com/home/?u=6a9e465ab1570df8aaecb2292&id=49fdb7d723",
+      "feed_url": "https://us8.campaign-archive.com/feed?u=6a9e465ab1570df8aaecb2292&id=49fdb7d723"
+    },
+    {
+      "category": "IT",
+      "name": "IT Brew",
+      "url": "https://www.itbrew.com/issues/latest",
+      "updated_selector": ".pcard .f-size-12.ff-arial",
+      "updated_fixed_day": "Thursday"
+    },
+    {
       "category": "DevOps",
       "name": "Awesome SysAdmin",
       "url": "https://sysadmin.libhunt.com/newsletter/archive",
