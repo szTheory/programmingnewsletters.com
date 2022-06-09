@@ -1,6 +1,53 @@
 {
   "entries": [
     {
+      "category": "DevOps",
+      "name": "Kube Weekly",
+      "url": "https://kubeweekly.io/#templateBody",
+      "link_selector": ".kubeweekly-item:first-child a",
+      "updated_selector": ".kubeweekly-item:first-child .kubeweekly-item__date"
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Java Weekly",
+      "url": "https://www.baeldung.com/category/weekly-review/",
+      "link_selector": ".post-title a",
+      "follow_link": true,
+      "updated_selector": ".updated"
+    },
+    {
+      "category": "Security",
+      "name": "Week That Was",
+      "url": "https://thecyberwire.com/newsletters/week-that-was",
+      "updated_selector": ".meta-text",
+      "updated_regex": "(\\d+.\\d+.\\d+)",
+      "link_selector": ".newsletter a"
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Scala Times",
+      "url": "https://scalatimes.com/",
+      "updated_selector": ".issue-info",
+      "updated_regex": "^(.+), ISSUE"
+    },
+    {
+      "category": "Security",
+      "name": "Signals and Space",
+      "url": "https://thecyberwire.com/newsletters/signals-and-space",
+      "updated_selector": ".meta-text",
+      "updated_regex": "(\\d+.\\d+.\\d+)",
+      "link_selector": ".newsletter a"
+    },
+    {
+      "category": "Networking",
+      "name": "Self Hosted Weekly Roundup",
+      "url": "https://noted.lol/",
+      "feed_url": "https://noted.lol/rss/",
+      "link_selector": "//item/link",
+      "link_contains_text": "-roundup",
+      "updated_selector": "//item/pubDate"
+    },
+    {
       "category": "Programming Languages",
       "name": "Java Annotated Monthly",
       "url": "https://blog.jetbrains.com/idea/tag/java-annotated/",
@@ -220,15 +267,7 @@
       "link_selector": "//item/link",
       "updated_selector": "//item/pubDate"
     },
-    {
-      "category": "Networking",
-      "name": "Self Hosted Weekly Roundup",
-      "url": "https://noted.lol/",
-      "feed_url": "https://noted.lol/rss/",
-      "link_selector": "//item/link",
-      "link_contains_text": "weekly-roundup",
-      "updated_selector": "//item/pubDate"
-    },
+
     {
       "category": "Open Source",
       "name": "BSD Weekly",
@@ -309,22 +348,7 @@
       "updated_regex": "(\\w+ \\d{4})",
       "link_selector": "#content ul li a"
     },
-    {
-      "category": "Security",
-      "name": "Signals and Space",
-      "url": "https://thecyberwire.com/newsletters/signals-and-space",
-      "updated_selector": ".meta-text",
-      "updated_regex": "(\\d+.\\d+.\\d+)",
-      "link_selector": ".newsletter a"
-    },
-    {
-      "category": "Security",
-      "name": "Week That Was",
-      "url": "https://thecyberwire.com/newsletters/week-that-was",
-      "updated_selector": ".meta-text",
-      "updated_regex": "(\\d+.\\d+.\\d+)",
-      "link_selector": ".newsletter a"
-    },
+
     {
       "category": "Security",
       "name": "NCAS Alerts",
@@ -370,22 +394,7 @@
       "updated_selector": ".upl-list li:first-child .upl-post-date",
       "link_selector": ".upl-list li:first-child a"
     },
-    {
-      "category": "Mobile",
-      "name": "Responsive Web Design Weekly",
-      "url": "https://responsivedesign.is/articles/",
-      "link_selector": ".resource--post:first-child a",
-      "updated_selector": ".resource--post:first-child date.resource__meta"
-    },
-    {
-      "category": "Programming Languages",
-      "name": "Java Weekly",
-      "url": "https://www.baeldung.com/",
-      "feed_url": "https://feeds.feedblitz.com/baeldung&x=1",
-      "updated_selector": "//item/pubDate",
-      "link_selector": "//item/link",
-      "link_contains_text": "Java-Weekly-Issue"
-    },
+
     {
       "category": "DevOps",
       "name": "DevOps'ish",
@@ -498,13 +507,7 @@
       "url": "https://lecourrierduhacker.com/archives",
       "feed_url": "https://lecourrierduhacker.com/rss.xml"
     },
-    {
-      "category": "DevOps",
-      "name": "Kube Weekly",
-      "url": "https://kubeweekly.io/#templateBody",
-      "link_selector": ".kubeweekly-box:first-child a",
-      "updated_selector": ".kubeweekly-box:first-child .sent"
-    },
+
     {
       "category": "Data Science",
       "name": "Data Science News",
@@ -791,13 +794,7 @@
       "updated_selector": "td.top td",
       "updated_regex": "In this issue, (.+)$"
     },
-    {
-      "category": "Programming Languages",
-      "name": "Scala Times",
-      "url": "https://scalatimes.com/",
-      "updated_selector": ".issue-info",
-      "updated_regex": "^(.+), ISSUE"
-    },
+
     {
       "category": "Programming Languages",
       "name": "Java Performance Tuning",
