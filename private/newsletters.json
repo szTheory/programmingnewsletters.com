@@ -1,6 +1,12 @@
 {
   "entries": [
     {
+      "category": "Networking",
+      "name": "Packet Pushers",
+      "url": "https://us2.campaign-archive.com/home/?u=5e5640dc2e2a939f35bf54df2&id=485084dd79",
+      "feed_url": "https://us2.campaign-archive.com/feed?u=5e5640dc2e2a939f35bf54df2&id=485084dd79"
+    },
+    {
       "category": "DevOps",
       "name": "Kube Weekly",
       "url": "https://kubeweekly.io/#templateBody",
@@ -367,14 +373,7 @@
       "updated_regex": "(\\w+ \\d{1,2}, \\d{4})",
       "link_selector": "//item/link"
     },
-    {
-      "category": "Networking",
-      "name": "Packet Pushers",
-      "url": "https://packetpushers.net/newsletter/",
-      "updated_selector": ".entry-content p:nth-child(11)",
-      "updated_regex": "(\\w+ \\d{1,2}, \\d{4})",
-      "link_selector": ".entry-content p:nth-child(11) a"
-    },
+
     {
       "category": "Networking",
       "name": "Serve The Home",
