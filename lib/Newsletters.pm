@@ -263,19 +263,17 @@ sub _newsletter_info_html {
         return {};
       }
 
+      # get timestamp from an attribute or the underlying element text
+      my $updated_text =
+          $updated_attr
+        ? $updated_element->attr($updated_attr)
+        : $updated_element->text;
+
+      $timestamp_string = $updated_text;
+
+      # filter timestamp with regular expression
       if ($updated_regex) {
-
-        # get timestamp from an attribute or the underlying element text
-        my $updated_text =
-            $updated_attr
-          ? $updated_element->attr($updated_attr)
-          : $updated_element->text;
-
-        # filter timestamp with regular expression
         ($timestamp_string) = $updated_text =~ qr{$updated_regex};
-      }
-      else {
-        $timestamp_string = $updated_element->text;
       }
     }
   }

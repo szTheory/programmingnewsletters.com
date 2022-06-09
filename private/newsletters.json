@@ -1,6 +1,14 @@
 {
   "entries": [
     {
+      "category": "Programming Languages",
+      "name": "Java Annotated Monthly",
+      "url": "https://blog.jetbrains.com/idea/tag/java-annotated/",
+      "link_selector": "a.card",
+      "updated_selector": "a.card time",
+      "updated_attr": "datetime"
+    },
+    {
       "category": "Security",
       "name": "Cloud Security Reading List",
       "url": "https://cloudseclist.com/past-issues/",
