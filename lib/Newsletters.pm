@@ -318,7 +318,7 @@ sub _newsletter_info_html {
 
     # swap month and day for european date formats
     if ($european_date_format) {
-      $timestamp_string =~ /^(\d+)-(\d+)-(\d+)$/;
+      $timestamp_string =~ /^(\d+)[-\/.](\d+)[-\/.](\d+)$/;
       $timestamp_string = "$2-$1-$3";
     }
 

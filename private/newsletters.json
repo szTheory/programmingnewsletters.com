@@ -1,6 +1,186 @@
 {
   "entries": [
     {
+      "category": "Software Engineering",
+      "name": "Software Development Weekly Newsletter",
+      "url": "https://discu.eu/weekly/programming/",
+      "base_url": "https://discu.eu",
+      "link_selector": ".weekly li a",
+      "updated_selector": ".weekly li span",
+      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4})$",
+      "european_date_format": true
+    },
+    {
+      "category": "Web Platform",
+      "name": "Web Development Weekly Newsletter",
+      "url": "https://discu.eu/weekly/webdev/",
+      "base_url": "https://discu.eu",
+      "link_selector": ".weekly li a",
+      "updated_selector": ".weekly li span",
+      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4})$",
+      "european_date_format": true
+    },
+    {
+      "category": "DevOps",
+      "name": "DevOps Weekly Newsletter",
+      "url": "https://discu.eu/weekly/devops/",
+      "base_url": "https://discu.eu",
+      "link_selector": ".weekly li a",
+      "updated_selector": ".weekly li span",
+      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4})$",
+      "european_date_format": true
+    },
+    {
+      "category": "Computer Science",
+      "name": "Computer Science Weekly Newsletter",
+      "url": "https://discu.eu/weekly/compsci/",
+      "base_url": "https://discu.eu",
+      "link_selector": ".weekly li a",
+      "updated_selector": ".weekly li span",
+      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4})$",
+      "european_date_format": true
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Python Weekly Newsletter",
+      "url": "https://discu.eu/weekly/python/",
+      "base_url": "https://discu.eu",
+      "link_selector": ".weekly li a",
+      "updated_selector": ".weekly li span",
+      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4})$",
+      "european_date_format": true
+    },
+    {
+      "category": "Linux",
+      "name": "Unix Weekly Newsletter",
+      "url": "https://discu.eu/weekly/unix/",
+      "base_url": "https://discu.eu",
+      "link_selector": ".weekly li a",
+      "updated_selector": ".weekly li span",
+      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4})$",
+      "european_date_format": true
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Ruby Weekly Newsletter",
+      "url": "https://discu.eu/weekly/ruby/",
+      "base_url": "https://discu.eu",
+      "link_selector": ".weekly li a",
+      "updated_selector": ".weekly li span",
+      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4})$",
+      "european_date_format": true
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Erlang Weekly Newsletter",
+      "url": "https://discu.eu/weekly/erlang/",
+      "base_url": "https://discu.eu",
+      "link_selector": ".weekly li a",
+      "updated_selector": ".weekly li span",
+      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4})$",
+      "european_date_format": true
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Lisp & Scheme Weekly Newsletter",
+      "url": "https://discu.eu/weekly/lisp/",
+      "base_url": "https://discu.eu",
+      "link_selector": ".weekly li a",
+      "updated_selector": ".weekly li span",
+      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4})$",
+      "european_date_format": true
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Haskell Weekly Newsletter",
+      "url": "https://discu.eu/weekly/haskell/",
+      "base_url": "https://discu.eu",
+      "link_selector": ".weekly li a",
+      "updated_selector": ".weekly li span",
+      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4})$",
+      "european_date_format": true
+    },
+    {
+      "category": "Programming Languages",
+      "name": "C & C++ Weekly Newsletter",
+      "url": "https://discu.eu/weekly/candcpp/",
+      "base_url": "https://discu.eu",
+      "link_selector": ".weekly li a",
+      "updated_selector": ".weekly li span",
+      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4})$",
+      "european_date_format": true
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Python Weekly Newsletter",
+      "url": "https://discu.eu/weekly/python/",
+      "base_url": "https://discu.eu",
+      "link_selector": ".weekly li a",
+      "updated_selector": ".weekly li span",
+      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4})$",
+      "european_date_format": true
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Golang Weekly Newsletter",
+      "url": "https://discu.eu/weekly/golang/",
+      "base_url": "https://discu.eu",
+      "link_selector": ".weekly li a",
+      "updated_selector": ".weekly li span",
+      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4})$",
+      "european_date_format": true
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Rust Weekly Newsletter",
+      "url": "https://discu.eu/weekly/rust/",
+      "base_url": "https://discu.eu",
+      "link_selector": ".weekly li a",
+      "updated_selector": ".weekly li span",
+      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4})$",
+      "european_date_format": true
+    },
+    {
+      "category": "Programming Languages",
+      "name": "PHP Weekly Newsletter",
+      "url": "https://discu.eu/weekly/php/",
+      "base_url": "https://discu.eu",
+      "link_selector": ".weekly li a",
+      "updated_selector": ".weekly li span",
+      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4})$",
+      "european_date_format": true
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Java Weekly Newsletter",
+      "url": "https://discu.eu/weekly/java/",
+      "base_url": "https://discu.eu",
+      "link_selector": ".weekly li a",
+      "updated_selector": ".weekly li span",
+      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4})$",
+      "european_date_format": true
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Nim Weekly Newsletter",
+      "url": "https://discu.eu/weekly/nim/",
+      "base_url": "https://discu.eu",
+      "link_selector": ".weekly li a",
+      "updated_selector": ".weekly li span",
+      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4})$",
+      "european_date_format": true
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Zig Weekly Newsletter",
+      "url": "https://discu.eu/weekly/zig/",
+      "base_url": "https://discu.eu",
+      "link_selector": ".weekly li a",
+      "updated_selector": ".weekly li span",
+      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4})$",
+      "european_date_format": true
+    },
+    {
       "category": "Networking",
       "name": "Packet Pushers",
       "url": "https://us2.campaign-archive.com/home/?u=5e5640dc2e2a939f35bf54df2&id=485084dd79",
