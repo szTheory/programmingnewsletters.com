@@ -1,6 +1,14 @@
 {
   "entries": [
     {
+      "category": "IT",
+      "name": "Radar Trends",
+      "url": "https://www.oreilly.com/radar/topics/radar-trends/",
+      "feed_url": "https://www.oreilly.com/radar/topics/radar-trends/feed/index.xml",
+      "link_selector": "//item/link",
+      "updated_selector": "//item/pubDate"
+    },
+    {
       "category": "Software Engineering",
       "name": "Software Development Weekly Newsletter",
       "url": "https://discu.eu/weekly/programming/",
