@@ -80,7 +80,7 @@
     },
     {
       "category": "Programming Languages",
-      "name": "Erlang Weekly Newsletter",
+      "name": "Erlang & Elixir Weekly Newsletter",
       "url": "https://discu.eu/weekly/erlang/",
       "base_url": "https://discu.eu",
       "link_selector": ".weekly li a",
