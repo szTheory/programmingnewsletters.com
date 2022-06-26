@@ -1,6 +1,14 @@
 {
   "entries": [
     {
+      "category": "Security",
+      "name": "Tor Newsletter",
+      "url": "https://newsletter.torproject.org/",
+      "base_url": "https://newsletter.torproject.org/",
+      "link_selector": ".page:not(.bg-light) .row a",
+      "updated_selector": ".page:not(.bg-light) .row p"
+    },
+    {
       "category": "IT",
       "name": "Radar Trends",
       "url": "https://www.oreilly.com/radar/topics/radar-trends/",
