@@ -1,6 +1,15 @@
 {
   "entries": [
     {
+      "category": "Game Dev",
+      "name": "Game Dev Digest",
+      "url": "https://gamedevdigest.com/digests.html",
+      "feed_url": "https://feeds.feedburner.com/GameDevDigest",
+      "link_selector": "//entry/link",
+      "updated_selector": "//entry/published",
+      "link_attr": "href"
+    },
+    {
       "category": "Security",
       "name": "Tor Newsletter",
       "url": "https://newsletter.torproject.org/",
