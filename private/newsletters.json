@@ -2,6 +2,14 @@
   "entries": [
     {
       "category": "Game Dev",
+      "name": "GameDiscoverCo",
+      "url": "https://newsletter.gamediscover.co/",
+      "feed_url": "https://newsletter.gamediscover.co/feed",
+      "link_selector": "//item/link",
+      "updated_selector": "//item/pubDate"
+    },
+    {
+      "category": "Game Dev",
       "name": "Game Dev Digest",
       "url": "https://gamedevdigest.com/digests.html",
       "feed_url": "https://feeds.feedburner.com/GameDevDigest",
