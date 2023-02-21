@@ -313,6 +313,9 @@ sub _newsletter_info_html {
     # trim surrounding whitespace
     $timestamp_string =~ s/(^\s+|\s+$)//g;
 
+    # replace Feburary (typo) with February
+    $timestamp_string =~ s/Feburary/February/g;
+
     # replace dots with dashes
     $timestamp_string =~ s/\./-/g;
 

@@ -1,6 +1,224 @@
 {
   "entries": [
     {
+      "category": "Compilers",
+      "name": "LLVM Weekly",
+      "url": "http://llvmweekly.org/",
+      "feed_url": "https://llvmweekly.org/rss.xml",
+      "updated_selector": "//item/title",
+      "updated_regex": "(\\w+ \\d{1,2}\\w+ \\d{4})"
+    },
+    {
+      "category": "Programming Languages",
+      "name": "PHP Freek Weekly",
+      "url": "https://freek-dev.mailcoach.app/archive",
+      "link_selector": ".index a",
+      "updated_selector": ".index time",
+      "updated_regex": "(\\w+ \\d{1,2}, \\d{4})"
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Elm Weekly",
+      "url": "https://www.elmweekly.nl/archive",
+      "feed_url": "https://www.elmweekly.nl/feed"
+    },
+    {
+      "category": "WordPress",
+      "name": "The WP Weekly",
+      "url": "https://thewpweekly.com/archives/",
+      "feed_url": "https://thewpweekly.com/feed/"
+    },
+    {
+      "category": "Security",
+      "name": "NCAS Alerts",
+      "url": "https://www.cisa.gov/uscert/ncas/alerts",
+      "feed_url": "https://www.cisa.gov/uscert/ncas/alerts.xml",
+      "updated_selector": "//item/description",
+      "updated_regex": "(\\w+ \\d{1,2}, \\d{4})",
+      "link_selector": "//item/link"
+    },
+    {
+      "category": "Software Engineering",
+      "name": "Software Development Weekly Newsletter",
+      "url": "https://discu.eu/weekly/programming/",
+      "base_url": "https://discu.eu",
+      "link_selector": "li a",
+      "updated_selector": "li .smaller-font-3",
+      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4}) to",
+      "european_date_format": true
+    },
+
+    {
+      "category": "Web Platform",
+      "name": "Web Development Weekly Newsletter",
+      "url": "https://discu.eu/weekly/webdev/",
+      "base_url": "https://discu.eu",
+      "link_selector": "li a",
+      "updated_selector": "li .smaller-font-3",
+      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4}) to",
+      "european_date_format": true
+    },
+    {
+      "category": "DevOps",
+      "name": "DevOps Weekly Newsletter",
+      "url": "https://discu.eu/weekly/devops/",
+      "base_url": "https://discu.eu",
+      "link_selector": "li a",
+      "updated_selector": "li .smaller-font-3",
+      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4}) to",
+      "european_date_format": true
+    },
+    {
+      "category": "Computer Science",
+      "name": "Computer Science Weekly Newsletter",
+      "url": "https://discu.eu/weekly/compsci/",
+      "base_url": "https://discu.eu",
+      "link_selector": "li a",
+      "updated_selector": "li .smaller-font-3",
+      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4}) to",
+      "european_date_format": true
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Python Weekly Newsletter",
+      "url": "https://discu.eu/weekly/python/",
+      "base_url": "https://discu.eu",
+      "link_selector": "li a",
+      "updated_selector": "li .smaller-font-3",
+      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4}) to",
+      "european_date_format": true
+    },
+    {
+      "category": "Linux",
+      "name": "Unix Weekly Newsletter",
+      "url": "https://discu.eu/weekly/unix/",
+      "base_url": "https://discu.eu",
+      "link_selector": "li a",
+      "updated_selector": "li .smaller-font-3",
+      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4}) to",
+      "european_date_format": true
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Ruby Weekly Newsletter",
+      "url": "https://discu.eu/weekly/ruby/",
+      "base_url": "https://discu.eu",
+      "link_selector": "li a",
+      "updated_selector": "li .smaller-font-3",
+      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4}) to",
+      "european_date_format": true
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Erlang & Elixir Weekly Newsletter",
+      "url": "https://discu.eu/weekly/erlang/",
+      "base_url": "https://discu.eu",
+      "link_selector": "li a",
+      "updated_selector": "li .smaller-font-3",
+      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4}) to",
+      "european_date_format": true
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Lisp & Scheme Weekly Newsletter",
+      "url": "https://discu.eu/weekly/lisp/",
+      "base_url": "https://discu.eu",
+      "link_selector": "li a",
+      "updated_selector": "li .smaller-font-3",
+      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4}) to",
+      "european_date_format": true
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Haskell Weekly Newsletter",
+      "url": "https://discu.eu/weekly/haskell/",
+      "base_url": "https://discu.eu",
+      "link_selector": "li a",
+      "updated_selector": "li .smaller-font-3",
+      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4}) to",
+      "european_date_format": true
+    },
+    {
+      "category": "Programming Languages",
+      "name": "C & C++ Weekly Newsletter",
+      "url": "https://discu.eu/weekly/candcpp/",
+      "base_url": "https://discu.eu",
+      "link_selector": "li a",
+      "updated_selector": "li .smaller-font-3",
+      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4}) to",
+      "european_date_format": true
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Python Weekly Newsletter",
+      "url": "https://discu.eu/weekly/python/",
+      "base_url": "https://discu.eu",
+      "link_selector": "li a",
+      "updated_selector": "li .smaller-font-3",
+      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4}) to",
+      "european_date_format": true
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Golang Weekly Newsletter",
+      "url": "https://discu.eu/weekly/golang/",
+      "base_url": "https://discu.eu",
+      "link_selector": "li a",
+      "updated_selector": "li .smaller-font-3",
+      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4}) to",
+      "european_date_format": true
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Rust Weekly Newsletter",
+      "url": "https://discu.eu/weekly/rust/",
+      "base_url": "https://discu.eu",
+      "link_selector": "li a",
+      "updated_selector": "li .smaller-font-3",
+      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4}) to",
+      "european_date_format": true
+    },
+    {
+      "category": "Programming Languages",
+      "name": "PHP Weekly Newsletter",
+      "url": "https://discu.eu/weekly/php/",
+      "base_url": "https://discu.eu",
+      "link_selector": "li a",
+      "updated_selector": "li .smaller-font-3",
+      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4}) to",
+      "european_date_format": true
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Java Weekly Newsletter",
+      "url": "https://discu.eu/weekly/java/",
+      "base_url": "https://discu.eu",
+      "link_selector": "li a",
+      "updated_selector": "li .smaller-font-3",
+      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4}) to",
+      "european_date_format": true
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Nim Weekly Newsletter",
+      "url": "https://discu.eu/weekly/nim/",
+      "base_url": "https://discu.eu",
+      "link_selector": "li a",
+      "updated_selector": "li .smaller-font-3",
+      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4}) to",
+      "european_date_format": true
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Zig Weekly Newsletter",
+      "url": "https://discu.eu/weekly/zig/",
+      "base_url": "https://discu.eu",
+      "link_selector": "li a",
+      "updated_selector": "li .smaller-font-3",
+      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4}) to",
+      "european_date_format": true
+    },
+    {
       "category": "Game Dev",
       "name": "GameDiscoverCo",
       "url": "https://newsletter.gamediscover.co/",
@@ -33,186 +251,7 @@
       "link_selector": "//item/link",
       "updated_selector": "//item/pubDate"
     },
-    {
-      "category": "Software Engineering",
-      "name": "Software Development Weekly Newsletter",
-      "url": "https://discu.eu/weekly/programming/",
-      "base_url": "https://discu.eu",
-      "link_selector": ".weekly li a",
-      "updated_selector": ".weekly li span",
-      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4})$",
-      "european_date_format": true
-    },
-    {
-      "category": "Web Platform",
-      "name": "Web Development Weekly Newsletter",
-      "url": "https://discu.eu/weekly/webdev/",
-      "base_url": "https://discu.eu",
-      "link_selector": ".weekly li a",
-      "updated_selector": ".weekly li span",
-      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4})$",
-      "european_date_format": true
-    },
-    {
-      "category": "DevOps",
-      "name": "DevOps Weekly Newsletter",
-      "url": "https://discu.eu/weekly/devops/",
-      "base_url": "https://discu.eu",
-      "link_selector": ".weekly li a",
-      "updated_selector": ".weekly li span",
-      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4})$",
-      "european_date_format": true
-    },
-    {
-      "category": "Computer Science",
-      "name": "Computer Science Weekly Newsletter",
-      "url": "https://discu.eu/weekly/compsci/",
-      "base_url": "https://discu.eu",
-      "link_selector": ".weekly li a",
-      "updated_selector": ".weekly li span",
-      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4})$",
-      "european_date_format": true
-    },
-    {
-      "category": "Programming Languages",
-      "name": "Python Weekly Newsletter",
-      "url": "https://discu.eu/weekly/python/",
-      "base_url": "https://discu.eu",
-      "link_selector": ".weekly li a",
-      "updated_selector": ".weekly li span",
-      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4})$",
-      "european_date_format": true
-    },
-    {
-      "category": "Linux",
-      "name": "Unix Weekly Newsletter",
-      "url": "https://discu.eu/weekly/unix/",
-      "base_url": "https://discu.eu",
-      "link_selector": ".weekly li a",
-      "updated_selector": ".weekly li span",
-      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4})$",
-      "european_date_format": true
-    },
-    {
-      "category": "Programming Languages",
-      "name": "Ruby Weekly Newsletter",
-      "url": "https://discu.eu/weekly/ruby/",
-      "base_url": "https://discu.eu",
-      "link_selector": ".weekly li a",
-      "updated_selector": ".weekly li span",
-      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4})$",
-      "european_date_format": true
-    },
-    {
-      "category": "Programming Languages",
-      "name": "Erlang & Elixir Weekly Newsletter",
-      "url": "https://discu.eu/weekly/erlang/",
-      "base_url": "https://discu.eu",
-      "link_selector": ".weekly li a",
-      "updated_selector": ".weekly li span",
-      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4})$",
-      "european_date_format": true
-    },
-    {
-      "category": "Programming Languages",
-      "name": "Lisp & Scheme Weekly Newsletter",
-      "url": "https://discu.eu/weekly/lisp/",
-      "base_url": "https://discu.eu",
-      "link_selector": ".weekly li a",
-      "updated_selector": ".weekly li span",
-      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4})$",
-      "european_date_format": true
-    },
-    {
-      "category": "Programming Languages",
-      "name": "Haskell Weekly Newsletter",
-      "url": "https://discu.eu/weekly/haskell/",
-      "base_url": "https://discu.eu",
-      "link_selector": ".weekly li a",
-      "updated_selector": ".weekly li span",
-      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4})$",
-      "european_date_format": true
-    },
-    {
-      "category": "Programming Languages",
-      "name": "C & C++ Weekly Newsletter",
-      "url": "https://discu.eu/weekly/candcpp/",
-      "base_url": "https://discu.eu",
-      "link_selector": ".weekly li a",
-      "updated_selector": ".weekly li span",
-      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4})$",
-      "european_date_format": true
-    },
-    {
-      "category": "Programming Languages",
-      "name": "Python Weekly Newsletter",
-      "url": "https://discu.eu/weekly/python/",
-      "base_url": "https://discu.eu",
-      "link_selector": ".weekly li a",
-      "updated_selector": ".weekly li span",
-      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4})$",
-      "european_date_format": true
-    },
-    {
-      "category": "Programming Languages",
-      "name": "Golang Weekly Newsletter",
-      "url": "https://discu.eu/weekly/golang/",
-      "base_url": "https://discu.eu",
-      "link_selector": ".weekly li a",
-      "updated_selector": ".weekly li span",
-      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4})$",
-      "european_date_format": true
-    },
-    {
-      "category": "Programming Languages",
-      "name": "Rust Weekly Newsletter",
-      "url": "https://discu.eu/weekly/rust/",
-      "base_url": "https://discu.eu",
-      "link_selector": ".weekly li a",
-      "updated_selector": ".weekly li span",
-      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4})$",
-      "european_date_format": true
-    },
-    {
-      "category": "Programming Languages",
-      "name": "PHP Weekly Newsletter",
-      "url": "https://discu.eu/weekly/php/",
-      "base_url": "https://discu.eu",
-      "link_selector": ".weekly li a",
-      "updated_selector": ".weekly li span",
-      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4})$",
-      "european_date_format": true
-    },
-    {
-      "category": "Programming Languages",
-      "name": "Java Weekly Newsletter",
-      "url": "https://discu.eu/weekly/java/",
-      "base_url": "https://discu.eu",
-      "link_selector": ".weekly li a",
-      "updated_selector": ".weekly li span",
-      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4})$",
-      "european_date_format": true
-    },
-    {
-      "category": "Programming Languages",
-      "name": "Nim Weekly Newsletter",
-      "url": "https://discu.eu/weekly/nim/",
-      "base_url": "https://discu.eu",
-      "link_selector": ".weekly li a",
-      "updated_selector": ".weekly li span",
-      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4})$",
-      "european_date_format": true
-    },
-    {
-      "category": "Programming Languages",
-      "name": "Zig Weekly Newsletter",
-      "url": "https://discu.eu/weekly/zig/",
-      "base_url": "https://discu.eu",
-      "link_selector": ".weekly li a",
-      "updated_selector": ".weekly li span",
-      "updated_regex": "(\\d{1,2}/\\d{1,2}/\\d{4})$",
-      "european_date_format": true
-    },
+
     {
       "category": "Networking",
       "name": "Packet Pushers",
@@ -526,14 +565,7 @@
       "updated_selector": "//entry/updated",
       "link_selector": "//entry/id"
     },
-    {
-      "category": "Frontend Web Frameworks",
-      "name": "Angular Weekly",
-      "url": "https://www.getrevue.co/profile/angular-newsletter",
-      "feed_url": "https://www.getrevue.co/profile/angular-newsletter?format=rss",
-      "updated_selector": "//item/pubDate",
-      "link_selector": "//item/link"
-    },
+
     {
       "category": "Cryptocurrency",
       "name": "CryptoWeekly",
@@ -543,40 +575,7 @@
       "link_selector": ".newsletter-container a",
       "follow_link": true
     },
-    {
-      "category": "Mobile",
-      "name": "Android Croissants (FR)",
-      "url": "https://archives.android-croissants.com/",
-      "updated_selector": ".inner-timeline-second .title-sec-timeline:nth-child(2)",
-      "link_selector": ".inner-timeline-second a",
-      "translate_french_timestamp": true
-    },
-    {
-      "category": "Frontend Web Frameworks",
-      "name": "Flutter Digest (FR)",
-      "url": "https://archives.flutter-digest.com/",
-      "updated_selector": ".inner-timeline-second .title-sec-timeline:nth-child(2)",
-      "link_selector": ".inner-timeline-second a",
-      "translate_french_timestamp": true
-    },
-    {
-      "category": "Databases",
-      "name": "MySQL Newsletter ",
-      "url": "https://www.mysql.com/news-and-events/newsletter/",
-      "updated_selector": "#content ul li a",
-      "updated_regex": "(\\w+ \\d{4})",
-      "link_selector": "#content ul li a"
-    },
 
-    {
-      "category": "Security",
-      "name": "NCAS Alerts",
-      "url": "https://www.cisa.gov/uscert/ncas/alerts",
-      "feed_url": "https://www.cisa.gov/uscert/ncas/alerts.xml",
-      "updated_selector": "//item/description",
-      "updated_regex": "(\\w+ \\d{1,2}, \\d{4})",
-      "link_selector": "//item/link"
-    },
     {
       "category": "Security",
       "name": "NCAS Vulnerability Summary",
@@ -735,12 +734,7 @@
       "link_selector": ".timeline-header a",
       "updated_selector": ".time-label span"
     },
-    {
-      "category": "WordPress",
-      "name": "The WP Weekly",
-      "url": "https://thewpweekly.com/archives/",
-      "feed_url": "https://thewpweekly.com/feed/"
-    },
+
     {
       "category": "Testing",
       "name": "Automate The Planet",
@@ -880,12 +874,7 @@
       "updated_regex": "^(.+), ",
       "link_selector": ".upl-post-title a"
     },
-    {
-      "category": "Mobile",
-      "name": "React Native Now",
-      "url": "https://reactnativenow.com/",
-      "feed_url": "https://reactnativenow.com/issues.rss"
-    },
+
     {
       "category": "Security",
       "name": "Bulletproof TLS Newsletter",
@@ -929,12 +918,6 @@
     },
     {
       "category": "Data Science",
-      "name": "SF Data Weekly",
-      "url": "http://weekly.sfdata.io/",
-      "feed_url": "http://weekly.sfdata.io/?format=rss"
-    },
-    {
-      "category": "Data Science",
       "name": "Data News Hotlist",
       "url": "https://www.datainnovation.org/category/blog/weekly-news/",
       "feed_url": "https://www.datainnovation.org/category/blog/weekly-news/feed/"
@@ -969,21 +952,6 @@
       "base_url": "https://ethical.institute",
       "link_selector": ".issues-container a.issue-container:first-child",
       "updated_fixed_day": "Sunday"
-    },
-    {
-      "category": "AI",
-      "name": "O'Reilly Data & AI Newsletter",
-      "url": "https://www.oreilly.com/emails/newsletters/",
-      "updated_selector": "#data a",
-      "updated_attr": "data-source",
-      "updated_regex": "(\\d+)-share",
-      "updated_link_attr": "data-source"
-    },
-    {
-      "category": "Mac",
-      "name": "AppCoda Weekly Swift & iOS",
-      "url": "https://digest.appcoda.com/",
-      "feed_url": "http://digest.appcoda.com/?format=rss"
     },
     {
       "category": "Blockchain",
@@ -1069,12 +1037,6 @@
 
     {
       "category": "Programming Languages",
-      "name": "Elm Weekly",
-      "url": "https://sergeytihon.com/category/f-weekly/",
-      "feed_url": "https://www.elmweekly.nl/?format=rss"
-    },
-    {
-      "category": "Programming Languages",
       "name": "F# Weekly",
       "url": "https://sergeytihon.com/category/f-weekly/",
       "feed_url": "https://sergeytihon.com/category/f-weekly/feed/"
@@ -1087,24 +1049,6 @@
       "updated_selector": "entry/updated",
       "link_selector": "entry/link",
       "link_attr": "href"
-    },
-    {
-      "category": "DevOps",
-      "name": "O'Reilly Infrastructure & Ops Newsletter",
-      "url": "https://www.oreilly.com/emails/newsletters/",
-      "updated_selector": "#ops a",
-      "updated_attr": "data-source",
-      "updated_regex": "(\\d+)-share",
-      "updated_link_attr": "data-source"
-    },
-    {
-      "category": "Software Engineering",
-      "name": "O'Reilly Programming Newsletter",
-      "url": "https://www.oreilly.com/emails/newsletters/",
-      "updated_selector": "#programming a",
-      "updated_attr": "data-source",
-      "updated_regex": "(\\d+)-share",
-      "updated_link_attr": "data-source"
     },
     {
       "category": "DevOps",
@@ -1285,26 +1229,14 @@
       "url": "https://iosdevweekly.com/issues",
       "feed_url": "https://iosdevweekly.com/issues.rss"
     },
-    {
-      "category": "Programming Languages",
-      "name": "PHP Freek Weekly",
-      "url": "https://freek.dev/newsletter/",
-      "link_selector": "main a[href^='https://freek.dev/mailcoach/webview/']",
-      "updated_selector": "main div .text-gray-700",
-      "updated_regex": "sent on (.+)$"
-    },
+
     {
       "category": "UI/Frontend",
       "name": "JAMstacked Weekly",
       "url": "https://jamstack.email/issues/11",
       "feed_url": "https://jamstack.email/rss/"
     },
-    {
-      "category": "Compilers",
-      "name": "LLVM Weekly",
-      "url": "http://llvmweekly.org/",
-      "feed_url": "http://llvmweekly.org/rss.xml"
-    },
+
     {
       "category": "Programming Languages",
       "name": "Meeting C++ Weekly",
