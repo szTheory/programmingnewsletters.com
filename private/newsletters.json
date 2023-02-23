@@ -1,6 +1,16 @@
 {
   "entries": [
     {
+      "category": "DevOps",
+      "name": "Learn Kubernetes Weekly",
+      "url": "https://learnk8s.io/issues",
+      "base_url": "https://learnk8s.io",
+      "link_selector": "ul.pl4 li:last-child a",
+      "follow_link": true,
+      "updated_selector": "p.f6",
+      "updated_regex": "(\\d{1,2} \\w+ \\d{4})"
+    },
+    {
       "category": "Compilers",
       "name": "LLVM Weekly",
       "url": "http://llvmweekly.org/",

@@ -401,8 +401,24 @@ sub _newsletter_info {
     if ( $newsletter_entry->{follow_link} ) {
       my $start_info = _newsletter_info_html($newsletter_entry);
 
+      # build the URL where the updated timestamp lives
+      my $timestamp_page_url = $start_info->{url};
+
+      # is there a base URL?
+      if ( $newsletter_entry->{base_url} ) {
+
+# then build the full URL by concatenating the base URL and the timestamp page URL
+# and get the string value of the URI object
+        $timestamp_page_url =
+          URI->new_abs( $timestamp_page_url, $newsletter_entry->{base_url} )
+          ->as_string;
+
+        # don't need to a base URL for the next pass
+        delete $newsletter_entry->{base_url};
+      }
+
       # get the URL where the updated timestamp lives
-      $newsletter_entry->{url} = $start_info->{url};
+      $newsletter_entry->{url} = $timestamp_page_url;
 
       # don't need to follow links for the next pass
       # because we have enough info to get the updated timestamp now
