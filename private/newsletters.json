@@ -1077,14 +1077,6 @@
       "url": "https://iosdevweekly.com/issues",
       "feed_url": "https://iosdevweekly.com/issues.rss"
     },
-
-    {
-      "category": "UI/Frontend",
-      "name": "JAMstacked Weekly",
-      "url": "https://jamstack.email/issues/11",
-      "feed_url": "https://jamstack.email/rss/"
-    },
-
     {
       "category": "Programming Languages",
       "name": "Meeting C++ Weekly",
