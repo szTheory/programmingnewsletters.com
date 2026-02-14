@@ -1,6 +1,6 @@
 {
-  "short_name": "PN",
-  "name": "ProgrammingNews.com",
+  "short_name": "ProgNews",
+  "name": "ProgrammingNewsletters.com",
   "icons": [
     {
       "src": "icon.png",
@@ -9,6 +9,7 @@
     }
   ],
   "start_url": "/?utm_source=homescreen",
-  "background_color": "#f1faee",
-  "theme_color": "#457b9d"
+  "background_color": "#FFFFFF",
+  "theme_color": "#0D9488",
+  "display": "standalone"
 }

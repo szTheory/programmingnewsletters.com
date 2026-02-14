@@ -9,10 +9,13 @@ use Build 'build';
 
 use Getopt::Long;
 
-my $rebuild;
-my $first_only;
-GetOptions( 'rebuild' => \$rebuild, 'first-only' => \$first_only );
+my ( $rebuild, $first_only, $assets_only );
+GetOptions(
+  'rebuild'     => \$rebuild,
+  'first-only'  => \$first_only,
+  'assets-only' => \$assets_only,
+);
 
-build( $rebuild, $first_only );
+build( $rebuild, $first_only, $assets_only );
 
 1;

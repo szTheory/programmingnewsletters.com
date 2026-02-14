@@ -84,36 +84,11 @@
       "updated_selector": ".updated"
     },
     {
-      "category": "Security",
-      "name": "Week That Was",
-      "url": "https://thecyberwire.com/newsletters/week-that-was",
-      "updated_selector": ".meta-text",
-      "updated_regex": "(\\d+.\\d+.\\d+)",
-      "link_selector": ".newsletter a"
-    },
-    {
       "category": "Programming Languages",
       "name": "Scala Times",
       "url": "https://scalatimes.com/",
       "updated_selector": ".issue-info",
       "updated_regex": "^(.+), ISSUE"
-    },
-    {
-      "category": "Security",
-      "name": "Signals and Space",
-      "url": "https://thecyberwire.com/newsletters/signals-and-space",
-      "updated_selector": ".meta-text",
-      "updated_regex": "(\\d+.\\d+.\\d+)",
-      "link_selector": ".newsletter a"
-    },
-    {
-      "category": "Networking",
-      "name": "Self Hosted Weekly Roundup",
-      "url": "https://noted.lol/",
-      "feed_url": "https://noted.lol/rss/",
-      "link_selector": "//item/link",
-      "link_contains_text": "-roundup",
-      "updated_selector": "//item/pubDate"
     },
     {
       "category": "Programming Languages",
@@ -128,8 +103,8 @@
       "name": "Cloud Security Reading List",
       "url": "https://cloudseclist.com/past-issues/",
       "feed_url": "https://cloudseclist.com/feed.xml",
-      "link_selector": "//entry/id",
-      "updated_selector": "//entry/published"
+      "link_selector": "//item/link",
+      "updated_selector": "//item/pubDate"
     },
     {
       "category": "AI",
@@ -144,182 +119,6 @@
       "url": "https://www.itbrew.com/issues/latest",
       "updated_selector": ".pcard .f-size-12.ff-arial",
       "updated_fixed_day": "Thursday"
-    },
-    {
-      "category": "DevOps",
-      "name": "Awesome SysAdmin",
-      "url": "https://sysadmin.libhunt.com/newsletter/archive",
-      "feed_url": "https://sysadmin.libhunt.com/newsletter/feed",
-      "link_selector": "//item/link",
-      "updated_selector": "//item/pubDate"
-    },
-    {
-      "category": "Programming Languages",
-      "name": "Awesome Swift",
-      "url": "https://swift.libhunt.com/newsletter/archive",
-      "feed_url": "https://swift.libhunt.com/newsletter/feed",
-      "link_selector": "//item/link",
-      "updated_selector": "//item/pubDate"
-    },
-    {
-      "category": "Networking",
-      "name": "Awesome Self Hosted",
-      "url": "https://selfhosted.libhunt.com/newsletter/archive",
-      "feed_url": "https://selfhosted.libhunt.com/newsletter/feed",
-      "link_selector": "//item/link",
-      "updated_selector": "//item/pubDate"
-    },
-    {
-      "category": "Programming Languages",
-      "name": "Awesome Scala",
-      "url": "https://scala.libhunt.com/newsletter/archive",
-      "feed_url": "https://scala.libhunt.com/newsletter/feed",
-      "link_selector": "//item/link",
-      "updated_selector": "//item/pubDate"
-    },
-    {
-      "category": "Programming Languages",
-      "name": "Awesome Rust",
-      "url": "https://rust.libhunt.com/newsletter/archive",
-      "feed_url": "https://rust.libhunt.com/newsletter/feed",
-      "link_selector": "//item/link",
-      "updated_selector": "//item/pubDate"
-    },
-    {
-      "category": "Programming Languages",
-      "name": "Awesome Ruby",
-      "url": "https://ruby.libhunt.com/newsletter/archive",
-      "feed_url": "https://ruby.libhunt.com/newsletter/feed",
-      "link_selector": "//item/link",
-      "updated_selector": "//item/pubDate"
-    },
-    {
-      "category": "Frontend Web Frameworks",
-      "name": "Awesome React",
-      "url": "https://react.libhunt.com/newsletter/archive",
-      "feed_url": "https://react.libhunt.com/newsletter/feed",
-      "link_selector": "//item/link",
-      "updated_selector": "//item/pubDate"
-    },
-    {
-      "category": "Programming Languages",
-      "name": "Awesome PHP",
-      "url": "https://php.libhunt.com/newsletter/archive",
-      "feed_url": "https://php.libhunt.com/newsletter/feed",
-      "link_selector": "//item/link",
-      "updated_selector": "//item/pubDate"
-    },
-    {
-      "category": "JavaScript",
-      "name": "Awesome NodeJS",
-      "url": "https://nodejs.libhunt.com/newsletter/archive",
-      "feed_url": "https://nodejs.libhunt.com/newsletter/feed",
-      "link_selector": "//item/link",
-      "updated_selector": "//item/pubDate"
-    },
-    {
-      "category": "Programming Languages",
-      "name": "Awesome .NET",
-      "url": "https://dotnet.libhunt.com/newsletter/archive",
-      "feed_url": "https://dotnet.libhunt.com/newsletter/feed",
-      "link_selector": "//item/link",
-      "updated_selector": "//item/pubDate"
-    },
-    {
-      "category": "Programming Languages",
-      "name": "Awesome Kotlin",
-      "url": "https://kotlin.libhunt.com/newsletter/archive",
-      "feed_url": "https://kotlin.libhunt.com/newsletter/feed",
-      "link_selector": "//item/link",
-      "updated_selector": "//item/pubDate"
-    },
-    {
-      "category": "JavaScript",
-      "name": "Awesome JavaScript",
-      "url": "https://js.libhunt.com/newsletter/archive",
-      "feed_url": "https://js.libhunt.com/newsletter/feed",
-      "link_selector": "//item/link",
-      "updated_selector": "//item/pubDate"
-    },
-    {
-      "category": "Programming Languages",
-      "name": "Awesome Java",
-      "url": "https://java.libhunt.com/newsletter/archive",
-      "feed_url": "https://java.libhunt.com/newsletter/feed",
-      "link_selector": "//item/link",
-      "updated_selector": "//item/pubDate"
-    },
-    {
-      "category": "Mobile",
-      "name": "Awesome iOS",
-      "url": "https://ios.libhunt.com/newsletter/archive",
-      "feed_url": "https://ios.libhunt.com/newsletter/feed",
-      "link_selector": "//item/link",
-      "updated_selector": "//item/pubDate"
-    },
-    {
-      "category": "Programming Languages",
-      "name": "Awesome Haskell",
-      "url": "https://haskell.libhunt.com/newsletter/archive",
-      "feed_url": "https://haskell.libhunt.com/newsletter/feed",
-      "link_selector": "//item/link",
-      "updated_selector": "//item/pubDate"
-    },
-    {
-      "category": "Programming Languages",
-      "name": "Awesome Go",
-      "url": "https://go.libhunt.com/newsletter/archive",
-      "feed_url": "https://go.libhunt.com/newsletter/feed",
-      "link_selector": "//item/link",
-      "updated_selector": "//item/pubDate"
-    },
-    {
-      "category": "Programming Languages",
-      "name": "Awesome Crystal",
-      "url": "https://crystal.libhunt.com/newsletter/archive",
-      "feed_url": "https://crystal.libhunt.com/newsletter/feed",
-      "link_selector": "//item/link",
-      "updated_selector": "//item/pubDate"
-    },
-    {
-      "category": "Programming Languages",
-      "name": "Awesome Elixir",
-      "url": "https://elixir.libhunt.com/newsletter/archive",
-      "feed_url": "https://elixir.libhunt.com/newsletter/feed",
-      "link_selector": "//item/link",
-      "updated_selector": "//item/pubDate"
-    },
-    {
-      "category": "Programming Languages",
-      "name": "Awesome C++",
-      "url": "https://cpp.libhunt.com/newsletter/archive",
-      "feed_url": "https://cpp.libhunt.com/newsletter/feed",
-      "link_selector": "//item/link",
-      "updated_selector": "//item/pubDate"
-    },
-    {
-      "category": "Mobile",
-      "name": "Awesome Android",
-      "url": "https://android.libhunt.com/newsletter/archive",
-      "feed_url": "https://android.libhunt.com/newsletter/feed",
-      "link_selector": "//item/link",
-      "updated_selector": "//item/pubDate"
-    },
-    {
-      "category": "Programming Languages",
-      "name": "Awesome Python",
-      "url": "https://python.libhunt.com/newsletter/archive",
-      "feed_url": "https://python.libhunt.com/newsletter/feed",
-      "link_selector": "//item/link",
-      "updated_selector": "//item/pubDate"
-    },
-    {
-      "category": "Linux",
-      "name": "CentOS Community Newsletter",
-      "url": "https://blog.centos.org/",
-      "link_selector": "section .entry a",
-      "updated_selector": "section .entry span",
-      "updated_regex": "(\\d{1,2}, \\w+ \\d{4})"
     },
     {
       "category": "DevOps",
@@ -348,21 +147,6 @@
     },
     {
       "category": "Security",
-      "name": "Advisory Week",
-      "url": "https://stack.watch/advisoryweek/latest/",
-      "updated_fixed_day": "Monday"
-    },
-    {
-      "category": "Cryptocurrency",
-      "name": "CryptoWeekly",
-      "url": "https://cryptoweekly.co/newsletter",
-      "updated_selector": ".text-container span",
-      "updated_regex": "(\\w+ \\d{1,2}, \\d{4})",
-      "link_selector": ".newsletter-container a",
-      "follow_link": true
-    },
-    {
-      "category": "Security",
       "name": "NCAS Vulnerability Summary",
       "url": "https://www.cisa.gov/uscert/ncas/bulletins",
       "feed_url": "https://www.cisa.gov/uscert/ncas/bulletins.xml",
@@ -377,17 +161,10 @@
       "feed_url": "https://us13.campaign-archive.com/feed?u=45c4ca50425f376ea593dcd22&id=c344a80940"
     },
     {
-      "category": "Security",
+      "category": "DevOps",
       "name": "DevOps Bulletin",
-      "url": "https://www.devopsbulletin.com/issues",
-      "feed_url": "https://us7.campaign-archive.com/feed?u=ca406201f7348cc8c327bf0fc&id=6751c258e1"
-    },
-    {
-      "category": "Security",
-      "name": "API Security Weekly",
-      "url": "https://apisecurity.io/",
-      "updated_selector": ".upl-list li:first-child .upl-post-date",
-      "link_selector": ".upl-list li:first-child a"
+      "url": "https://www.devopsbulletin.com/",
+      "feed_url": "https://www.devopsbulletin.com/feed"
     },
     {
       "category": "Mobile",
@@ -407,17 +184,13 @@
       "link_attr": "href"
     },
     {
-      "category": "Mobile",
-      "name": "Weekly Xamarin",
-      "url": "https://weeklyxamarin.com/issues",
-      "feed_url": "https://weeklyxamarin.com/issues.rss"
-    },
-    {
       "category": "Security",
       "name": "Bug Bytes",
-      "url": "https://blog.intigriti.com/category/bugbytes/",
-      "updated_selector": ".post-meta a:last-child",
-      "link_selector": ".post-meta a:last-child"
+      "url": "https://www.intigriti.com/researchers/blog/bug-bytes",
+      "base_url": "https://www.intigriti.com",
+      "link_selector": "a[href*=bug-bytes]",
+      "updated_selector": ".uppercase p:last-child",
+      "updated_regex": "(\\w+ \\d{1,2}, \\d{4})"
     },
     {
       "category": "Software Engineering",
@@ -445,35 +218,6 @@
       "feed_url": "https://aiweekly.co/issues.rss"
     },
     {
-      "category": "Software Engineering",
-      "name": "Le courrier du hacker (FR)",
-      "url": "https://lecourrierduhacker.com/archives",
-      "feed_url": "https://lecourrierduhacker.com/rss.xml"
-    },
-    {
-      "category": "Data Science",
-      "name": "Data Science News",
-      "url": "https://dataelixir.com/",
-      "link_selector": ".item__list--issues a",
-      "updated_selector": ".item__list--issues time span"
-    },
-    {
-      "category": "Programming Languages",
-      "name": "Python Weekly",
-      "url": "https://newsletterest.com/newsletters/2388/Python-Weekly",
-      "base_url": "https://newsletterest.com",
-      "link_selector": ".timeline-header a",
-      "updated_selector": ".time-label span"
-    },
-    {
-      "category": "Mobile",
-      "name": "WebAIM Accessibility",
-      "url": "https://newsletterest.com/newsletters/2215/WebAIM",
-      "base_url": "https://newsletterest.com",
-      "link_selector": ".timeline-header a",
-      "updated_selector": ".time-label span"
-    },
-    {
       "category": "Backend Web Frameworks",
       "name": "ASP.NET Core News",
       "url": "https://aspnetcore.news/",
@@ -491,36 +235,6 @@
       "url": "https://www.therepository.email/archive",
       "link_selector": ".mailpoet_archive_subject a",
       "updated_selector": ".mailpoet_archive_date"
-    },
-    {
-      "category": "Game Dev",
-      "name": "Gamedev.js Weekly",
-      "url": "https://newsletterest.com/newsletters/2119/Gamedevjs-Weekly",
-      "base_url": "https://newsletterest.com",
-      "link_selector": ".timeline-header a",
-      "updated_selector": ".time-label span"
-    },
-    {
-      "category": "DevOps",
-      "name": "Google Cloud Weekly",
-      "url": "https://newsletterest.com/newsletters/1015/Google-Cloud-Weekly",
-      "base_url": "https://newsletterest.com",
-      "link_selector": ".timeline-header a",
-      "updated_selector": ".time-label span"
-    },
-    {
-      "category": "Backend Web Frameworks",
-      "name": "Laravel News",
-      "url": "https://newsletterest.com/newsletters/2085/Laravel-News",
-      "base_url": "https://newsletterest.com",
-      "link_selector": ".timeline-header a",
-      "updated_selector": ".time-label span"
-    },
-    {
-      "category": "Software Engineering",
-      "name": "Better Dev Link",
-      "url": "https://betterdev.link/issues",
-      "feed_url": "https://betterdev.link/rss.xml"
     },
     {
       "category": "Backend Web Frameworks",
@@ -550,27 +264,6 @@
       "updated_selector": "//item/pubDate"
     },
     {
-      "category": "Programming Languages",
-      "name": "Julia Monthly Newsletter",
-      "url": "https://juliacomputing.com/blog/",
-      "base_url": "https://juliacomputing.com",
-      "link_selector": "[href*=newsletter]",
-      "updated_selector": "[href*=newsletter] ~ .text-gray",
-      "updated_regex": "^(.+) \\|"
-    },
-    {
-      "category": "DevOps",
-      "name": "Kubelist",
-      "url": "https://kubelist.com/issue/latest",
-      "updated_fixed_day": "Wednesday"
-    },
-    {
-      "category": "AI",
-      "name": "The Sequence of AI Knowledge",
-      "url": "https://thesequence.substack.com/",
-      "feed_url": "https://thesequence.substack.com/feed/"
-    },
-    {
       "category": "Security",
       "name": "API Security Newsletter",
       "url": "https://apisecurity.io/",
@@ -585,14 +278,6 @@
       "feed_url": "https://www.feistyduck.com/bulletproof-tls-newsletter/feed"
     },
     {
-      "category": "Security",
-      "name": "SecAlerts",
-      "url": "https://secalerts.co/article/",
-      "updated_selector": ".collection a",
-      "updated_regex": "Week in Cyber Security News, (.+)$",
-      "updated_fixed_day": "Monday"
-    },
-    {
       "category": "AI",
       "name": "AI Ethics",
       "url": "https://aiethics.substack.com/",
@@ -605,15 +290,6 @@
       "feed_url": "https://jack-clark.net/feed/"
     },
     {
-      "category": "AI",
-      "name": "Skynet Today",
-      "url": "https://www.skynettoday.com/categories/digests/",
-      "feed_url": "https://www.skynettoday.com/feed.xml",
-      "updated_selector": "entry/published",
-      "link_selector": "entry/link",
-      "link_attr": "href"
-    },
-    {
       "category": "Data Science",
       "name": "Data News Hotlist",
       "url": "https://www.datainnovation.org/category/blog/weekly-news/",
@@ -622,10 +298,9 @@
     {
       "category": "AI",
       "name": "H+ AI Newsletter",
-      "url": "https://hplusweekly.com/issues/",
-      "base_url": "https://hplusweekly.com",
-      "updated_selector": "article div:first-child h3 span",
-      "link_selector": "article div:first-child a"
+      "url": "https://www.humanityredefined.com/",
+      "feed_url": "https://www.humanityredefined.com/feed",
+      "link_contains_text": "/p/sync-"
     },
     {
       "category": "Testing",
@@ -666,22 +341,14 @@
     {
       "category": "Software Engineering",
       "name": "Changelog Weekly",
-      "url": "https://changelog.com/weekly/archive",
-      "updated_selector": "article li:first-child",
-      "updated_regex": "(\\w+ \\d+, \\d+)$",
-      "link_selector": "article li:first-child a"
+      "url": "https://changelog.com/news/archive",
+      "feed_url": "https://changelog.com/news/feed"
     },
     {
       "category": "UI/Frontend",
       "name": "Frontend Focus",
       "url": "https://frontendfoc.us/latest",
       "feed_url": "https://cprss.s3.amazonaws.com/frontendfoc.us.xml"
-    },
-    {
-      "category": "UI/Frontend",
-      "name": "Frontend Weekly",
-      "url": "https://frontendweekly.co/",
-      "feed_url": "https://frontendweekly.co/issues.rss"
     },
     {
       "category": "Frontend Web Frameworks",
@@ -730,9 +397,9 @@
       "name": "GraphQL Weekly",
       "url": "https://www.graphqlweekly.com/",
       "base_url": "https://www.graphqlweekly.com",
-      "link_selector": "#content > div:first-child > a",
-      "updated_selector": "#content > div:first-child > a > span",
-      "updated_regex": " (\\w+ \\d+, \\d+)$"
+      "link_selector": "a[href*=\"/issues/\"]",
+      "updated_selector": "a[href*=\"/issues/\"] span",
+      "updated_regex": "(\\w+ \\d+, \\d+)"
     },
     {
       "category": "Programming Languages",
