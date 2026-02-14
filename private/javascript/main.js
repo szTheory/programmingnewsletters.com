@@ -1,34 +1,32 @@
-const CATEGORY_FILTER_CLASS = "category-filter";
-const CATEGORY_FILTER_ATTR = "data-category";
-const ENTRIES_SELECTOR = ".entry";
-const CATEGORY_NAME_ALL = "All";
-const CATEGORY_FILTER_SELECTED_CLASS = "selected";
-const HIDDEN_CLASS = "hidden";
-const ENTRIES_CATEGORY_ATTR = "data-category";
-const ENTRY_GROUPS_SELECTOR = ".entry-group";
+const FILTER_CLASS = "filters__chip";
+const FILTER_ACTIVE_CLASS = "filters__chip--active";
+const ITEM_SELECTOR = ".feed__item";
+const GROUP_SELECTOR = ".feed__group";
+const HIDDEN_CLASS = "u-hidden";
+const CATEGORY_ATTR = "data-category";
+const CATEGORY_ALL = "All";
 
 function filterCategory(filterElem) {
-  if (filterElem.classList.contains(CATEGORY_FILTER_SELECTED_CLASS)) {
-    // already selected so don't bother
+  if (filterElem.classList.contains(FILTER_ACTIVE_CLASS)) {
     return;
   }
 
-  const filterElems = document.querySelectorAll(`.${CATEGORY_FILTER_CLASS}`);
-  filterElems.forEach((filterElem) => {
-    filterElem.classList.remove(CATEGORY_FILTER_SELECTED_CLASS);
+  const filterElems = document.querySelectorAll(`.${FILTER_CLASS}`);
+  filterElems.forEach((elem) => {
+    elem.classList.remove(FILTER_ACTIVE_CLASS);
   });
-  filterElem.classList.add(CATEGORY_FILTER_SELECTED_CLASS);
+  filterElem.classList.add(FILTER_ACTIVE_CLASS);
 
-  const categoryName = event.target.getAttribute(CATEGORY_FILTER_ATTR);
+  const categoryName = filterElem.getAttribute(CATEGORY_ATTR);
 
-  if (categoryName == CATEGORY_NAME_ALL) {
+  if (categoryName == CATEGORY_ALL) {
     showAllEntries();
     return;
   }
 
-  const entries = document.querySelectorAll(ENTRIES_SELECTOR);
+  const entries = document.querySelectorAll(ITEM_SELECTOR);
   entries.forEach((entry) => {
-    const category = entry.getAttribute(ENTRIES_CATEGORY_ATTR);
+    const category = entry.getAttribute(CATEGORY_ATTR);
     if (category == categoryName) {
       entry.classList.remove(HIDDEN_CLASS);
     } else {
@@ -36,10 +34,10 @@ function filterCategory(filterElem) {
     }
   });
 
-  const entryGroups = document.querySelectorAll(ENTRY_GROUPS_SELECTOR);
+  const entryGroups = document.querySelectorAll(GROUP_SELECTOR);
   entryGroups.forEach((entryGroup) => {
     if (
-      entryGroup.querySelectorAll(`${ENTRIES_SELECTOR}:not(.${HIDDEN_CLASS})`)
+      entryGroup.querySelectorAll(`${ITEM_SELECTOR}:not(.${HIDDEN_CLASS})`)
         .length == 0
     ) {
       entryGroup.classList.add(HIDDEN_CLASS);
@@ -50,18 +48,17 @@ function filterCategory(filterElem) {
 }
 
 function showAllEntries() {
-  const entries = document.querySelectorAll(ENTRIES_SELECTOR);
+  const entries = document.querySelectorAll(ITEM_SELECTOR);
   entries.forEach((entry) => entry.classList.remove(HIDDEN_CLASS));
 
-  const entryGroups = document.querySelectorAll(ENTRY_GROUPS_SELECTOR);
+  const entryGroups = document.querySelectorAll(GROUP_SELECTOR);
   entryGroups.forEach((entryGroup) => {
     entryGroup.classList.remove(HIDDEN_CLASS);
   });
 }
 
 document.addEventListener("click", (event) => {
-  if (event.target.classList.contains(CATEGORY_FILTER_CLASS)) {
-    const filterElem = event.target;
-    filterCategory(filterElem);
+  if (event.target.classList.contains(FILTER_CLASS)) {
+    filterCategory(event.target);
   }
 });

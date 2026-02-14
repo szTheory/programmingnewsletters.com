@@ -1,0 +1,15 @@
+services:
+  dev:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+      - carton_deps:/app/local
+    command: >
+      bash -c "carton install --deployment
+      && carton exec perl Run.pm --rebuild --first-only
+      && cd public && python3 -m http.server 8000"
+
+volumes:
+  carton_deps:

@@ -18,7 +18,7 @@ use constant SOURCE_DIR      => 'private/css';
 use constant OUTPUT_DIR      => 'public/css';
 use constant OUTPUT_FILENAME => 'index.css';
 use constant SOURCE_CSS_FILENAMES =>
-  ( 'normalize.css', 'default.css', 'main.css' );
+  ( 'normalize.css', 'main.css' );
 
 sub _compress_css_file {
   my ($filename) = @_;

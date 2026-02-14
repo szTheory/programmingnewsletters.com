@@ -156,6 +156,9 @@ sub _newsletter_info_rss {
   if ($updated_regex) {
     ($timestamp_string) = $timestamp_string =~ qr{$updated_regex};
   }
+  # fix common typos before parsing
+  $timestamp_string =~ s/Feburary/February/g;
+
   my $datetime = DateTime::Format::DateParse->parse_datetime($timestamp_string);
   if ($datetime) {
     $timestamp = $datetime->epoch();
