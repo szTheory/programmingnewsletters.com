@@ -1,91 +1,134 @@
-# <img src="private/images/logo.svg" width=25 height=25>ProgrammingNewsletters.com
+# Programming Newsletters
 
-> The best weekly programming newsletters on one website
+Read the latest programming newsletter issues. No email needed.
 
-## Features
+[programmingnewsletters.com](https://programmingnewsletters.com)
 
-- Ordered by last update
-- Filter by category
-- No email needed
-- No CloudFlare
-- No analytics
-- Free
+---
 
-## Development
+## How it works
 
-[![Trigger Netlify Build](https://github.com/szTheory/programmingnewsletters.com/actions/workflows/main.yml/badge.svg)](https://github.com/szTheory/programmingnewsletters.com/actions/workflows/main.yml)
+A Perl static site generator that scrapes 74 newsletter feeds daily, groups them by date, and outputs a single-page site. No backend at runtime — just HTML served from Netlify.
 
-### Installing Perl and Carton deps
-
-Perl
-
-```bash
-asdf plugin add perl https://github.com/ouest/asdf-perl.git #Install Perl plugin for asdf
-asdf install perl 5.22.1 #Install latest Perl version at time of writing
-asdf global perl 5.22.1 #Use as default Perl
-perl --version #Confirm latest version is installed properly
+```text
+private/newsletters.json       <- newsletter definitions (name, URL, selectors)
+        |
+   Newsletters.pm              <- scrapes RSS feeds + HTML pages
+        |
+     Cache.pm                  <- caches results to avoid re-scraping
+        |
+   Presenter.pm                <- sorts by date, groups, extracts categories
+        |
+   Build::JSON.pm              <- writes public/index.json (also the API)
+        |
+   +----+------------+
+   |    |             |
+ HTML  CSS           JS         <- minified via Packer modules
+   |    |             |
+   +----+------------+
+        |
+    public/                     <- static output, deployed to Netlify
 ```
 
-cpanminus module installer (needed for Carton)
+The site auto-detects light/dark mode, filters by category client-side, and works without JavaScript (filters just hide).
 
-```bash
-curl -L https://cpanmin.us > cpanm_setup.pl #Download cpanm setup script
-perl cpanm_setup.pl App::cpanminus #Run cpanm setup
-```
-
-Perl deps needed before Carton
-
-```bash
-cpanm XML::Parser
-cpanm DateTime
-```
-
-Carton (Perl lib dependencies)
-
-```bash
-cpanm Carton #Install Carton
-asdf reshim perl #Set up binary "shim" (command line shortcut)
-carton install #Install module deps for project from the cpanfile
-```
-
-### Building the site
-
-To build the site:
-
-```bash
-carton exec perl Run.pm
-```
-
-To force a rebuild, overriding newsletters cache:
-
-```bash
-carton exec perl Run.pm --rebuild
-```
-
-To build just the first item from `newsletter.json` (when adding new newsletters):
-
-```bash
-carton exec perl Run.pm --rebuild --first-only
-```
-
-### Viewing the site locally
-
-Download the code and start a webserver.
+## Get running
 
 ```bash
 git clone git@github.com:szTheory/programmingnewsletters.com.git
 cd programmingnewsletters.com
-python3 -m http.server --directory public
+docker compose up
+# -> localhost:8000
 ```
 
-Now visit `localhost:8000` to view the website.
+That's it. Docker handles Perl 5.38, Carton deps, building, and serving.
 
-### Netlify deploy command
+## Build commands
+
+All commands run inside Docker:
 
 ```bash
-export PERL5LIB=/opt/buildhome/perl5/lib/perl5 && curl -L https://cpanmin.us | perl - App::cpanminus && /opt/buildhome/perl5/bin/cpanm Carton && /opt/buildhome/perl5/bin/carton install && /opt/buildhome/perl5/bin/carton exec perl Run.pm
+# Full rebuild -- scrape all newsletters, regenerate everything
+docker compose exec dev carton exec perl Run.pm --rebuild
+
+# Use cache -- only scrape if no cache exists
+docker compose exec dev carton exec perl Run.pm
+
+# Test a single newsletter -- scrape only the first entry in newsletters.json
+docker compose exec dev carton exec perl Run.pm --rebuild --first-only
+
+# Assets only -- regenerate HTML/CSS/JS from existing JSON (instant, no network)
+docker compose exec dev carton exec perl Run.pm --assets-only
 ```
 
-## Credits
+`--assets-only` is useful when iterating on templates or CSS. It skips scraping entirely and rebuilds the frontend from `public/index.json`.
 
-Logo icon made by [Freepik](https://www.flaticon.com/authors/freepik)
+## Add a newsletter
+
+1. Add an entry to `private/newsletters.json` (put it first in the array for testing):
+
+```json
+{
+  "category": "JavaScript",
+  "name": "Node Weekly",
+  "url": "https://nodeweekly.com/latest",
+  "feed_url": "https://nodeweekly.com/rss/"
+}
+```
+
+1. Test it:
+
+```bash
+docker compose exec dev carton exec perl Run.pm --rebuild --first-only
+```
+
+1. If it works, move the entry to its alphabetical position. If it fails, check `private/broken-newsletters.md` for common fixes.
+
+Most newsletters work with just `feed_url` (RSS). For sites without RSS, use CSS/XPath selectors:
+
+```json
+{
+  "category": "Security",
+  "name": "Bug Bytes",
+  "url": "https://www.intigriti.com/researchers/blog/bug-bytes",
+  "link_selector": "a[href*='bug-bytes']",
+  "updated_selector": "time",
+  "updated_attr": "datetime"
+}
+```
+
+See existing entries in `newsletters.json` for more selector patterns.
+
+## Project structure
+
+```text
+Run.pm                          <- entry point (CLI flags)
+lib/
+  Build.pm                      <- orchestrator
+  Build/HTML.pm                 <- template -> public/index.html
+  Build/CSS.pm                  <- normalize + main -> public/css/index.css
+  Build/JavaScript.pm           <- minify -> public/javascript/main.js
+  Build/JSON.pm                 <- presenter data -> public/index.json
+  Newsletters.pm                <- RSS + HTML scraper
+  Cache.pm                      <- read/write newsletters-cache.json
+  Presenter.pm                  <- sort, group, format
+private/
+  newsletters.json              <- newsletter definitions (the source of truth)
+  templates/index.html.ep       <- Mojo::Template HTML template
+  css/main.css                  <- design system (CSS custom properties, BEM)
+  javascript/main.js            <- client-side category filtering
+  DESIGN.md                     <- brand guide and design tokens
+public/                         <- generated output (do not edit)
+```
+
+## Deploy
+
+Pushes to `master` trigger a Netlify build. The build command is in `netlify.toml` — it installs Perl deps and runs the full scrape + generate pipeline.
+
+## API
+
+`public/index.json` is the API. It contains every newsletter entry grouped by date, plus the category list. It's the same data the HTML is built from.
+
+```bash
+curl https://programmingnewsletters.com/index.json
+```
