@@ -1,0 +1,9 @@
+.git
+vendor/
+local/
+public/index.html
+public/index.json
+public/css/index.css
+public/javascript/main.js
+private/newsletters-cache.json
+.claude/
