@@ -54,3 +54,5 @@ public/*.html
 public/*.json
 
 !/lib/Build
+# Local Netlify folder
+.netlify
