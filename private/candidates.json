@@ -1,0 +1,20 @@
+{
+  "entries": [
+    {
+      "name": "Console.dev",
+      "category": "Developer Tools",
+      "url": "https://console.dev/",
+      "expected_cadence_days": 7,
+      "status": "research",
+      "notes": "Public weekly devtools newsletter with an advertised RSS feed; validate direct issue URL and feed before admission."
+    },
+    {
+      "name": "The System Design Newsletter",
+      "category": "Software Engineering",
+      "url": "https://newsletter.systemdesign.one/archive",
+      "expected_cadence_days": 14,
+      "status": "research",
+      "notes": "Strong systems/AI fit; admit only a public direct-issue feed and exclude paywalled-only issues."
+    }
+  ]
+}

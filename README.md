@@ -8,7 +8,7 @@ Read the latest programming newsletter issues. No email needed.
 
 ## How it works
 
-A Perl static site generator that scrapes 74 newsletter feeds daily, groups them by date, and outputs a single-page site. No backend at runtime — just HTML served from Netlify.
+A Perl static site generator that scrapes programming newsletter feeds daily, groups current issues by date, and outputs a single-page site. No backend at runtime — just HTML served from Netlify.
 
 ```text
 private/newsletters.json       <- newsletter definitions (name, URL, selectors)
@@ -19,7 +19,7 @@ private/newsletters.json       <- newsletter definitions (name, URL, selectors)
         |
    Presenter.pm                <- sorts by date, groups, extracts categories
         |
-   Build::JSON.pm              <- writes public/index.json (also the API)
+   Build::JSON.pm              <- writes public/index.json + source-health.json
         |
    +----+------------+
    |    |             |
@@ -62,6 +62,17 @@ docker compose exec dev carton exec perl Run.pm --assets-only
 ```
 
 `--assets-only` is useful when iterating on templates or CSS. It skips scraping entirely and rebuilds the frontend from `public/index.json`.
+
+## Quality checks
+
+Run the high-value regression checks in the same container used for development and CI:
+
+```bash
+docker compose run --rm --no-deps dev carton exec prove -lv t
+docker compose run --rm --no-deps dev carton exec perl -c Run.pm
+```
+
+The checks cover URL normalization and scheme validation, freshness boundaries, and low-confidence source dates. GitHub Actions runs them for pull requests and pushes to `master`.
 
 ## Add a newsletter
 
@@ -129,6 +140,14 @@ Pushes to `master` trigger a Netlify build. The build command is in `netlify.tom
 
 `public/index.json` is the API. It contains every newsletter entry grouped by date, plus the category list. It's the same data the HTML is built from.
 
+Each entry includes an ISO-8601 `updated_at` timestamp. `public/source-health.json` reports the generated time and each source's `current`, `stale`, `failed`, or `low_confidence` state; raw remote errors are deliberately never published.
+
 ```bash
 curl https://programmingnewsletters.com/index.json
 ```
+
+## Curation policy
+
+Sources must provide public, direct HTTPS issue links. A source is current for three of its configured cadence periods (30 days by default); stale, failed, and fixed-weekday-only sources are quarantined from the primary feed and surfaced in `source-health.json` for review. They are not removed automatically.
+
+Potential additions belong in `private/candidates.json` until their feed/archive, freshness, fit, and extraction are reviewed.

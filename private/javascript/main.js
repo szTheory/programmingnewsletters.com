@@ -14,8 +14,10 @@ function filterCategory(filterElem) {
   const filterElems = document.querySelectorAll(`.${FILTER_CLASS}`);
   filterElems.forEach((elem) => {
     elem.classList.remove(FILTER_ACTIVE_CLASS);
+    elem.setAttribute("aria-pressed", "false");
   });
   filterElem.classList.add(FILTER_ACTIVE_CLASS);
+  filterElem.setAttribute("aria-pressed", "true");
 
   const categoryName = filterElem.getAttribute(CATEGORY_ATTR);
 

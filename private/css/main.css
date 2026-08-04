@@ -173,6 +173,8 @@ a {
 }
 
 .filters__chip {
+  border: 0;
+  font-family: inherit;
   flex-shrink: 0;
   padding: var(--space-2) var(--space-3);
   font-size: var(--text-sm);
@@ -209,6 +211,12 @@ a {
 
 .feed {
   margin-top: var(--space-8);
+}
+
+.feed__status {
+  color: var(--color-text-tertiary);
+  font-size: var(--text-sm);
+  margin: var(--space-6) 0 0;
 }
 
 .feed__group {

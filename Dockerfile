@@ -12,8 +12,9 @@ RUN apt-get update && apt-get install -y \
     python3 \
     && rm -rf /var/lib/apt/lists/*
 
-# Install cpanminus and Carton
-RUN curl -L https://cpanmin.us | perl - App::cpanminus \
+# Bootstrap cpanminus from the reviewed, checked-in installer, then Carton.
+COPY bin/cpanm /usr/local/bin/cpanm-bootstrap
+RUN perl /usr/local/bin/cpanm-bootstrap App::cpanminus \
     && cpanm Carton
 
 WORKDIR /app

@@ -57,6 +57,7 @@
       "name": "Game Dev Digest",
       "url": "https://gamedevdigest.com/digests.html",
       "feed_url": "https://feeds.feedburner.com/GameDevDigest",
+      "cadence_days": 30,
       "link_selector": "//entry/link",
       "updated_selector": "//entry/published",
       "link_attr": "href"
@@ -261,6 +262,7 @@
       "feed_url": "https://blog.skialbainn.com/rss",
       "link_selector": "//item/description",
       "link_regex": "(https://haxe.io/roundups/\\d+/)",
+      "cadence_days": 7,
       "updated_selector": "//item/pubDate"
     },
     {
@@ -269,6 +271,7 @@
       "url": "https://apisecurity.io/",
       "updated_selector": ".upl-post-date",
       "updated_regex": "^(.+), ",
+      "cadence_days": 7,
       "link_selector": ".upl-post-title a"
     },
     {
@@ -342,7 +345,8 @@
       "category": "Software Engineering",
       "name": "Changelog Weekly",
       "url": "https://changelog.com/news/archive",
-      "feed_url": "https://changelog.com/news/feed"
+      "feed_url": "https://changelog.com/news/feed",
+      "cadence_days": 7
     },
     {
       "category": "UI/Frontend",
@@ -511,7 +515,8 @@
       "category": "UI/Frontend",
       "name": "CSS Weekly",
       "url": "https://css-weekly.com/archives/",
-      "feed_url": "https://feeds.feedburner.com/CSS-Weekly"
+      "feed_url": "https://feeds.feedburner.com/CSS-Weekly",
+      "cadence_days": 7
     },
     {
       "category": "UI/Frontend",

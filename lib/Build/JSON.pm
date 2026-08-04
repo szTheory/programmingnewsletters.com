@@ -15,16 +15,26 @@ use lib 'lib';
 use Presenter qw(presenter API_PATH);
 
 use constant JSON_FILE => File::Spec->catfile( 'public/', API_PATH );
+use constant HEALTH_FILE => File::Spec->catfile( 'public/', 'source-health.json' );
 
 sub write_json_file {
   my ( $should_rebuild, $first_only ) = @_;
 
   my $presenter = presenter( $should_rebuild, $first_only );
+  my $health = {
+    generated_at => $presenter->{generated_at},
+    sources      => $presenter->{source_health},
+  };
+  delete $presenter->{source_health};
 
   # write to file
   open my $fh, '>:encoding(UTF-8)', JSON_FILE;
   print {$fh} encode_json($presenter);
   close $fh;
+
+  open my $health_fh, '>:encoding(UTF-8)', HEALTH_FILE;
+  print {$health_fh} encode_json($health);
+  close $health_fh;
 
   return;
 }
