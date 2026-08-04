@@ -27,6 +27,9 @@ use Mojo::DOM;
 use List::SomeUtils qw(indexes);
 
 use Translate qw(timestamp_string_normalize_french);
+use Source qw(classify_source normalize_issue_url same_origin_issue_url);
+
+use constant MAX_RESPONSE_BYTES => 2 * 1024 * 1024;
 
 sub _newsletters_file_json {
   my ($first_only) = @_;
@@ -58,7 +61,11 @@ sub _newsletter_info_rss {
   my $feed_url = $newsletter_entry->{feed_url};
 
   print "\nDownloading $name - $feed_url\n";
-  my $ua = LWP::UserAgent->new( timeout => GET_TIMEOUT );
+  my $ua = LWP::UserAgent->new(
+    timeout  => GET_TIMEOUT,
+    max_size => MAX_RESPONSE_BYTES,
+    max_redirect => 3,
+  );
   $ua->agent(USER_AGENT);
   my $res = $ua->get($feed_url);
   if ( $res->is_error() ) {
@@ -189,9 +196,17 @@ sub _newsletter_info_html {
   my $url  = $newsletter_entry->{url};
 
   print "\nDownloading $name - $url\n";
-  my $ua = LWP::UserAgent->new( timeout => GET_TIMEOUT );
+  my $ua = LWP::UserAgent->new(
+    timeout  => GET_TIMEOUT,
+    max_size => MAX_RESPONSE_BYTES,
+    max_redirect => 3,
+  );
   $ua->agent(USER_AGENT);
   my $res  = $ua->get($url);
+  if ( $res->is_error() ) {
+    warn 'HTML download error: ' . $res->status_line;
+    return {};
+  }
   my $html = $res->content;
 
   # good riddance
@@ -210,7 +225,7 @@ sub _newsletter_info_html {
   my $updated_fixed_day    = $newsletter_entry->{updated_fixed_day};
   my $updated_link_attr    = $newsletter_entry->{updated_link_attr};
   my $link_selector        = $newsletter_entry->{link_selector};
-  my $link_constant        = $newsletter_entry->{link_contant};
+  my $link_constant        = $newsletter_entry->{link_constant};
   my $follow_link          = $newsletter_entry->{follow_link};
   my $european_date_format = $newsletter_entry->{european_date_format};
   my $translate_french_timestamp =
@@ -313,6 +328,8 @@ sub _newsletter_info_html {
   # if we have to follow a link to get that info first
   if ( !$follow_link ) {
 
+    return {} if !defined $timestamp_string;
+
     # trim surrounding whitespace
     $timestamp_string =~ s/(^\s+|\s+$)//g;
 
@@ -403,6 +420,7 @@ sub _newsletter_info {
     # which means parsing HTML before the main scrape
     if ( $newsletter_entry->{follow_link} ) {
       my $start_info = _newsletter_info_html($newsletter_entry);
+      return {} if !$start_info->{url};
 
       # build the URL where the updated timestamp lives
       my $timestamp_page_url = $start_info->{url};
@@ -419,6 +437,12 @@ sub _newsletter_info {
         # don't need to a base URL for the next pass
         delete $newsletter_entry->{base_url};
       }
+
+      $timestamp_page_url = same_origin_issue_url(
+        $timestamp_page_url,
+        $newsletter_entry->{url},
+      );
+      return {} if !$timestamp_page_url;
 
       # get the URL where the updated timestamp lives
       $newsletter_entry->{url} = $timestamp_page_url;
@@ -444,8 +468,18 @@ sub _newsletter_decorate {
   my ($json) = @_;
 
   my $info = _newsletter_info($json);
-  $json->{updated_at} = $info->{updated_at};
-  $json->{url}        = $info->{url};
+  my $issue_url = normalize_issue_url( $info->{url}, $json->{url} );
+
+  if ( $issue_url && $info->{updated_at} ) {
+    $json->{updated_at} = $info->{updated_at};
+    $json->{url}        = $issue_url;
+  }
+  else {
+    warn "Invalid or missing issue URL for $json->{name}\n";
+    delete $json->{updated_at};
+  }
+
+  $json->{health_status} = classify_source($json);
 
   return $json;
 }

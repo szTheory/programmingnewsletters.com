@@ -10,6 +10,7 @@ our %EXPORT_TAGS = ( all => \@EXPORT_OK );
 
 use lib 'lib';
 use Cache qw(cached_newsletters);
+use Source qw(classify_source normalize_issue_url);
 
 use List::SomeUtils qw(uniq);
 
@@ -19,12 +20,13 @@ use constant DEVELOPER => 'szTheory';
 use constant SOURCE_URL =>
   'https://github.com/szTheory/programmingnewsletters.com';
 use constant API_PATH             => "index.json";
-use constant ENTRY_KEYS_WHITELIST => qw(url category name);
+use constant ENTRY_KEYS_WHITELIST => qw(url category name updated_at);
 
 sub _remove_empty {
   my ($entries) = @_;
 
-  @{$entries} = grep { $_->{updated_at} } @{$entries};
+  @{$entries} = grep { ($_->{health_status} || classify_source($_)) eq 'current' }
+    @{$entries};
 
   return;
 }
@@ -43,7 +45,7 @@ sub _update_with_base_url {
 
   foreach my $entry ( @{$entries} ) {
     if ( $entry->{base_url} ) {
-      $entry->{url} = $entry->{base_url} . $entry->{url};
+      $entry->{url} = normalize_issue_url( $entry->{url}, $entry->{base_url} );
     }
   }
 
@@ -86,6 +88,7 @@ sub _add_formatted_timestamp {
   foreach my $entry ( @{$entries} ) {
     my $date = DateTime->from_epoch( epoch => $entry->{updated_at} );
     $entry->{updated_at_formatted} = $date->strftime('%b %d');
+    $entry->{updated_at_iso8601}   = $date->iso8601() . 'Z';
   }
 
   return;
@@ -96,10 +99,30 @@ sub _filter_entry_fields {
 
   my $new_entry = {};
   foreach my $key (ENTRY_KEYS_WHITELIST) {
-    $new_entry->{$key} = $entry->{$key};
+    $new_entry->{$key} = $key eq 'updated_at'
+      ? $entry->{updated_at_iso8601}
+      : $entry->{$key};
   }
 
   return $new_entry;
+}
+
+sub _source_health {
+  my ($entries) = @_;
+
+  return [ map {
+    my $status = $_->{health_status} || classify_source($_);
+    my $updated_at = $_->{updated_at}
+      ? DateTime->from_epoch( epoch => $_->{updated_at} )->iso8601() . 'Z'
+      : undef;
+
+    {
+      name       => $_->{name},
+      category   => $_->{category},
+      status     => $status,
+      updated_at => $updated_at,
+    };
+  } @{$entries} ];
 }
 
 sub _grouped_entries_categories {
@@ -122,6 +145,7 @@ sub presenter {
   my ($entries) = cached_newsletters( $should_rebuild, $first_only );
 
   # process entries
+  my $source_health = _source_health($entries);
   _remove_empty($entries);
   _sort_newsletters($entries);
   _add_formatted_timestamp($entries);
@@ -135,6 +159,9 @@ sub presenter {
   my $presenter = {
     grouped_entries => $grouped_entries,
     categories      => $categories,
+    current_sources => scalar @{$entries},
+    generated_at    => DateTime->now( time_zone => 'UTC' )->iso8601() . 'Z',
+    source_health   => $source_health,
     year            => DateTime->today()->year(),
     developer       => DEVELOPER,
     title           => TITLE,

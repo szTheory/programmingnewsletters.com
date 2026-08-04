@@ -1,5 +1,6 @@
 name: Trigger Netlify Build
 on:
+  workflow_dispatch:
   schedule:
     # At 15:15
     - cron: '15 15 * * *'
@@ -7,6 +8,13 @@ jobs:
   build:
     name: Request Netlify Webhook
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    concurrency:
+      group: netlify-production-build
+      cancel-in-progress: false
     steps:
       - name: Curl request
-        run: curl -X POST -d {} https://api.netlify.com/build_hooks/5f4124469b90397c94d194db
+        env:
+          NETLIFY_BUILD_HOOK_URL: ${{ secrets.NETLIFY_BUILD_HOOK_URL }}
+        run: curl --fail --show-error --silent --request POST --data '{}' "$NETLIFY_BUILD_HOOK_URL"

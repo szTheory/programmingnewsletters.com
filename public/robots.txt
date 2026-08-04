@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://programmingnewsletters.com/sitemap.xml

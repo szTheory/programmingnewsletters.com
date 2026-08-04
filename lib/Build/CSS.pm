@@ -17,6 +17,7 @@ use File::Spec;
 use constant SOURCE_DIR      => 'private/css';
 use constant OUTPUT_DIR      => 'public/css';
 use constant OUTPUT_FILENAME => 'index.css';
+use constant NO_JS_FILENAME  => 'no-js.css';
 use constant SOURCE_CSS_FILENAMES =>
   ( 'normalize.css', 'main.css' );
 
@@ -52,6 +53,17 @@ sub _write_css_file {
   return;
 }
 
+sub _write_no_js_file {
+  my $css = _compress_css_file(NO_JS_FILENAME);
+  my $output_full_path = File::Spec->catfile( OUTPUT_DIR, NO_JS_FILENAME );
+
+  open my $fh, '>:encoding(UTF-8)', $output_full_path;
+  print {$fh} $css;
+  close $fh;
+
+  return;
+}
+
 sub write_css_files {
   my $compressed_css = '';
 
@@ -60,6 +72,7 @@ sub write_css_files {
   }
 
   _write_css_file($compressed_css);
+  _write_no_js_file();
 
   return;
 }

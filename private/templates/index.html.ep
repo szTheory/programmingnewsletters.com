@@ -10,6 +10,7 @@
   <meta property="og:title" content="<%= $title %>">
   <meta property="og:type" content="website">
   <meta property="og:description" content="Read the latest programming newsletter issues. Updated daily. No email needed.">
+  <link rel="canonical" href="https://programmingnewsletters.com/">
 
   <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#161618" media="(prefers-color-scheme: dark)">
@@ -19,9 +20,7 @@
   <link rel="apple-touch-icon" href="icon.png">
 
   <noscript>
-    <style>
-      .filters { display: none; }
-    </style>
+    <link rel="stylesheet" href="css/no-js.css">
   </noscript>
 
   <script src="javascript/main.js" defer></script>
@@ -49,11 +48,14 @@
     <nav class="filters" role="navigation" aria-label="Filter by category">
       <ul class="filters__list">
         <% foreach my $category (@{$categories}) { %>
-          <li class="filters__chip<%= $category eq 'All' ? ' filters__chip--active' : '' %>" data-category="<%= $category %>"><%= $category %></li>
+          <li>
+            <button class="filters__chip<%= $category eq 'All' ? ' filters__chip--active' : '' %>" type="button" data-category="<%= $category %>" aria-pressed="<%= $category eq 'All' ? 'true' : 'false' %>"><%= $category %></button>
+          </li>
         <% } %>
       </ul>
     </nav>
 
+    <p class="feed__status" aria-live="polite"><%= $current_sources %> current sources &middot; Generated <time datetime="<%= $generated_at %>"><%= $generated_at %></time></p>
     <main class="feed">
       <% foreach my $entry_group (@{$grouped_entries}) { %>
         <section class="feed__group">
@@ -61,7 +63,7 @@
           <ul class="feed__list">
             <% foreach my $entry (@{$entry_group->{entries}}) { %>
               <li class="feed__item" data-category="<%= $entry->{category} %>">
-                <a href="<%= $entry->{url} %>" rel="nofollow" target="_blank" class="feed__link"><%= $entry->{name} %></a>
+                <a href="<%= $entry->{url} %>" rel="nofollow noopener noreferrer" target="_blank" class="feed__link"><%= $entry->{name} %></a>
               </li>
             <% } %>
           </ul>

@@ -19,7 +19,7 @@ use constant OUTPUT_FILE   => 'public/index.html';
 
 sub _build_html {
   my $json = read_json_file();
-  my $mt   = Mojo::Template->new( vars => 1 );
+  my $mt   = Mojo::Template->new( vars => 1, auto_escape => 1 );
 
   my $html = $mt->render_file(
     TEMPLATE_FILE,
@@ -31,7 +31,9 @@ sub _build_html {
       subtitle        => $json->{subtitle},
       developer       => $json->{developer},
       source_url      => $json->{source_url},
-      api_path        => $json->{api_path}
+      api_path        => $json->{api_path},
+      generated_at    => $json->{generated_at},
+      current_sources => $json->{current_sources},
     }
   );
 
